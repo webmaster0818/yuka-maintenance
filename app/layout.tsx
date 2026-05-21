@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   keywords: "床メンテナンス, フローリング, ワックスがけ, フロアコーティング, 床クリーニング, 業者比較",
   metadataBase: new URL("https://yuka-maintenance-110.com"),
   alternates: { canonical: "/" },
+  twitter: {
+    card: "summary_large_image",
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
