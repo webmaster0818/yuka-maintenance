@@ -46,7 +46,12 @@ export default function RootLayout({
       </head>
       <body className={`${noto.variable} antialiased min-h-screen flex flex-col bg-[#FFFBEB]`}>
         <SiteHeader />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">{children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"床メンテナンス\",\"url\":\"https://yuka-maintenance-deploy.pages.dev/\",\"logo\":\"https://yuka-maintenance-deploy.pages.dev/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://yuka-maintenance-deploy.pages.dev/about/\"]}" }}
+        />
+        </main>
         <SiteFooter />
       </body>
     </html>
