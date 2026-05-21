@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "床メンテナンス110番は、フローリング・大理石・カーペットなど床種別の専門業者を比較・口コミで探せるサービスです。ワックスがけ・フロアコーティング・傷補修など費用相場も掲載。",
   keywords: "床メンテナンス, フローリング, ワックスがけ, フロアコーティング, 床クリーニング, 業者比較",
   metadataBase: new URL("https://yuka-maintenance-110.com"),
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "ja_JP",
