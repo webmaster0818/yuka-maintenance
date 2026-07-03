@@ -18,6 +18,7 @@ export async function generateMetadata({
   return {
     title: `${company.name}の口コミ・評判・料金 | 床メンテナンス110番`,
     description: `${company.name}の床メンテナンスサービスを詳しくレビュー。料金目安${company.priceRange}、口コミ${company.reviewCount}件掲載。${company.catchphrase}`,
+    alternates: { canonical: `/company/${company.slug}/` },
   };
 }
 

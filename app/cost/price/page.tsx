@@ -3,6 +3,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
   title: "床メンテナンスの料金相場・費用一覧 | 床メンテナンス110番",
+  alternates: { canonical: "/cost/price/" },
   description:
     "床メンテナンスの料金相場を徹底調査。フローリングワックス・フロアコーティング・傷補修など、サービス別・床材別の費用目安を詳しく紹介します。",
 };

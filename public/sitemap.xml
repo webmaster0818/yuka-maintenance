@@ -2,21 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- TOP -->
   <url>
-    <loc>https://yuka-maintenance-110.com/</loc>
+    <loc>https://yuka-maintenance.com/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://yuka-maintenance.com/about/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
   <!-- Ranking -->
   <url>
-    <loc>https://yuka-maintenance-110.com/ranking/</loc>
+    <loc>https://yuka-maintenance.com/ranking/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/ranking/cheap/</loc>
+    <loc>https://yuka-maintenance.com/ranking/cheap/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -24,61 +30,61 @@
 
   <!-- Companies -->
   <url>
-    <loc>https://yuka-maintenance-110.com/company/osoujihonpo/</loc>
+    <loc>https://yuka-maintenance.com/company/osoujihonpo/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/duskin/</loc>
+    <loc>https://yuka-maintenance.com/company/duskin/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/osoujikakumei/</loc>
+    <loc>https://yuka-maintenance.com/company/osoujikakumei/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/saniclean/</loc>
+    <loc>https://yuka-maintenance.com/company/saniclean/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/bears/</loc>
+    <loc>https://yuka-maintenance.com/company/bears/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/kurashino-market/</loc>
+    <loc>https://yuka-maintenance.com/company/kurashino-market/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/meetsmore/</loc>
+    <loc>https://yuka-maintenance.com/company/meetsmore/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/flexpartner/</loc>
+    <loc>https://yuka-maintenance.com/company/flexpartner/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/emeao/</loc>
+    <loc>https://yuka-maintenance.com/company/emeao/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/company/sumai-hotline/</loc>
+    <loc>https://yuka-maintenance.com/company/sumai-hotline/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -86,31 +92,31 @@
 
   <!-- Floors -->
   <url>
-    <loc>https://yuka-maintenance-110.com/floor/flooring/</loc>
+    <loc>https://yuka-maintenance.com/floor/flooring/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/floor/cushion-floor/</loc>
+    <loc>https://yuka-maintenance.com/floor/cushion-floor/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/floor/tile/</loc>
+    <loc>https://yuka-maintenance.com/floor/tile/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/floor/marble/</loc>
+    <loc>https://yuka-maintenance.com/floor/marble/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/floor/carpet/</loc>
+    <loc>https://yuka-maintenance.com/floor/carpet/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -118,31 +124,31 @@
 
   <!-- Services -->
   <url>
-    <loc>https://yuka-maintenance-110.com/service/wax/</loc>
+    <loc>https://yuka-maintenance.com/service/wax/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/service/floor-coating/</loc>
+    <loc>https://yuka-maintenance.com/service/floor-coating/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/service/stripping-wash/</loc>
+    <loc>https://yuka-maintenance.com/service/stripping-wash/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/service/scratch-repair/</loc>
+    <loc>https://yuka-maintenance.com/service/scratch-repair/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/service/regular-maintenance/</loc>
+    <loc>https://yuka-maintenance.com/service/regular-maintenance/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -150,13 +156,13 @@
 
   <!-- Cost -->
   <url>
-    <loc>https://yuka-maintenance-110.com/cost/price/</loc>
+    <loc>https://yuka-maintenance.com/cost/price/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/cost/diy-vs-pro/</loc>
+    <loc>https://yuka-maintenance.com/cost/diy-vs-pro/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -164,32 +170,32 @@
 
   <!-- Legal -->
   <url>
-    <loc>https://yuka-maintenance-110.com/terms/</loc>
+    <loc>https://yuka-maintenance.com/terms/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/privacy/</loc>
+    <loc>https://yuka-maintenance.com/privacy/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://yuka-maintenance-110.com/content-policy/</loc>
+    <loc>https://yuka-maintenance.com/content-policy/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url><loc>https://yuka-maintenance-110.com/review/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/osoujihonpo/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/duskin/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/osoujikakumei/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/saniclean/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/bears/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/kurashino-market/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/meetsmore/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/flexpartner/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/emeao/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yuka-maintenance-110.com/review/sumai-hotline/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/osoujihonpo/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/duskin/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/osoujikakumei/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/saniclean/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/bears/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/kurashino-market/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/meetsmore/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/flexpartner/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/emeao/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/sumai-hotline/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -2,6 +2,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
   title: "コンテンツポリシー | 床メンテナンス110番",
+  alternates: { canonical: "/content-policy/" },
   description: "床メンテナンス110番のコンテンツ制作・掲載基準についてご説明します。",
 };
 

@@ -7,6 +7,7 @@ export const metadata = {
   title: "床メンテナンス110番 | プロの床クリーニング業者比較・口コミ",
   description:
     "フローリング・大理石・カーペットなど床種別の専門業者を比較・口コミで探せる。ワックスがけ・フロアコーティング・傷補修の費用相場も掲載。",
+  alternates: { canonical: "/" },
 };
 
 function StarRating({ rating }: { rating: number }) {

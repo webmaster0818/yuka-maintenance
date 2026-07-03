@@ -4,6 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "床メンテナンス業者激安ランキング | 料金が安い順 | 床メンテナンス110番",
+  alternates: { canonical: "/ranking/cheap/" },
   description:
     "床メンテナンス業者を料金の安い順に比較したランキングです。コストを抑えながら高品質なサービスを受けられる業者を厳選しました。",
 };

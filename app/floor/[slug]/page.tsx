@@ -18,6 +18,7 @@ export async function generateMetadata({
   return {
     title: `${floor.name}のメンテナンス方法・費用相場 | 床メンテナンス110番`,
     description: `${floor.name}のメンテナンス方法を徹底解説。費用相場${floor.avgCost}、推奨サービス・注意点など専門情報を掲載。`,
+    alternates: { canonical: `/floor/${floor.slug}/` },
   };
 }
 

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const r = reviewsData.find((x) => x.slug === slug);
   if (!r) return {};
-  const url = `https://yuka-maintenance-110.com/review/${r.slug}/`;
+  const url = `https://yuka-maintenance.com/review/${r.slug}/`;
   return {
     title: r.title,
     description: r.metaDescription,
@@ -47,11 +47,11 @@ export default async function ReviewPage({ params }: Props) {
         "@type": "Article",
         headline: r.title,
         description: r.metaDescription,
-        image: `https://yuka-maintenance-110.com${r.heroImage}`,
+        image: `https://yuka-maintenance.com${r.heroImage}`,
         dateModified: "2026-06-16",
         author: { "@type": "Organization", name: "床メンテナンス110番" },
-        publisher: { "@type": "Organization", name: "床メンテナンス110番", url: "https://yuka-maintenance-110.com/" },
-        mainEntityOfPage: `https://yuka-maintenance-110.com/review/${r.slug}/`,
+        publisher: { "@type": "Organization", name: "床メンテナンス110番", url: "https://yuka-maintenance.com/" },
+        mainEntityOfPage: `https://yuka-maintenance.com/review/${r.slug}/`,
       },
       {
         "@type": "FAQPage",

@@ -6,7 +6,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "床メンテナンス・ハウスクリーニング業者の口コミ・評判まとめ｜実際のGoogleレビューで検証",
   description: "床メンテナンス・ハウスクリーニングの業者や比較サービスを、実際のGoogle口コミと運営会社の公開情報で中立的に検証します。",
-  alternates: { canonical: "https://yuka-maintenance-110.com/review/" },
+  alternates: { canonical: "https://yuka-maintenance.com/review/" },
 };
 
 export default function ReviewIndex() {

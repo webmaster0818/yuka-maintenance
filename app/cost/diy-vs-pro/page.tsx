@@ -3,6 +3,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
   title: "床メンテナンス DIY vs プロに頼む どちらがいい？ | 床メンテナンス110番",
+  alternates: { canonical: "/cost/diy-vs-pro/" },
   description:
     "床メンテナンスをDIYで行うべきか、プロに依頼すべきか徹底比較。費用・時間・仕上がり・リスクの観点から最適な選択をご案内します。",
 };

@@ -4,6 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "床メンテナンス業者おすすめランキング10選 | 床メンテナンス110番",
+  alternates: { canonical: "/ranking/" },
   description:
     "床メンテナンス業者のおすすめランキングを徹底比較。口コミ・料金・サービス内容をもとにプロが厳選した10社を紹介します。",
 };

@@ -12,15 +12,15 @@
 
 ## 主要コンテンツ
 
-- トップページ: https://yuka-maintenance-deploy.pages.dev/
-- プライバシーポリシー: https://yuka-maintenance-deploy.pages.dev/privacy-policy (または /privacy)
-- 利用規約: https://yuka-maintenance-deploy.pages.dev/terms (または /terms-of-service)
-- サイトマップ: https://yuka-maintenance-deploy.pages.dev/sitemap.xml
+- トップページ: https://yuka-maintenance.com/
+- プライバシーポリシー: https://yuka-maintenance.com/privacy-policy (または /privacy)
+- 利用規約: https://yuka-maintenance.com/terms (または /terms-of-service)
+- サイトマップ: https://yuka-maintenance.com/sitemap.xml
 
 ## クローラー向けポリシー
 
 - AI クローラー (GPTBot / ClaudeBot / PerplexityBot / Google-Extended 等) のアクセスを許可しています
-- 詳細は https://yuka-maintenance-deploy.pages.dev/robots.txt を参照してください
+- 詳細は https://yuka-maintenance.com/robots.txt を参照してください
 - 引用時は本ドメインへのリンクを残していただくようお願いします
 
 ## 最終更新
