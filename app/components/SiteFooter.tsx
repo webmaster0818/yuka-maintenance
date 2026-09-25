@@ -66,6 +66,19 @@ export default function SiteFooter() {
           </div>
         </div>
 
+        {/* Area & Guides */}
+        <div className="border-t border-[#44403C] pt-6 mb-6">
+          <h3 className="font-bold text-white mb-3 text-sm">エリア別比較・基礎知識</h3>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            <Link href="/area/tokyo/" className="hover:text-[#F59E0B] transition-colors">東京都</Link>
+            <Link href="/area/osaka/" className="hover:text-[#F59E0B] transition-colors">大阪府</Link>
+            <Link href="/area/kanagawa/" className="hover:text-[#F59E0B] transition-colors">神奈川県</Link>
+            <Link href="/area/aichi/" className="hover:text-[#F59E0B] transition-colors">愛知県</Link>
+            <Link href="/know/no-wax-floor/" className="hover:text-[#F59E0B] transition-colors">ワックスができない床材</Link>
+            <Link href="/know/after-work-trouble/" className="hover:text-[#F59E0B] transition-colors">施工後のトラブル対策</Link>
+          </div>
+        </div>
+
         {/* Bottom */}
         <div className="border-t border-[#44403C] pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-wrap gap-4 text-xs text-[#A8A29E]">
