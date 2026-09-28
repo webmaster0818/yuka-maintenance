@@ -50,6 +50,27 @@ export default async function AreaPage({ params }: Props) {
 
   const otherAreas = areas.filter((a) => a.slug !== area.slug);
 
+  // focus.questions / questionsHeading は後から追加した任意項目。
+  // 既存エリアのデータには存在しないため、存在するときだけ描画する。
+  const focus = area.focus as {
+    heading: string;
+    intro: string;
+    points: { title: string; body: string }[];
+    questionsHeading?: string;
+    questions?: string[];
+  };
+
+  // 既存4エリア（tokyo/osaka/kanagawa/aichi）のページ文言は変更しない方針のため、
+  // 今回追加したエリア（questions を持つもの）だけ、共通セクションの見出しに
+  // 県名を含めてページ間の見出し重複を避ける。
+  const scopedHeading = Boolean(focus.questions);
+  const serviceHeading = scopedHeading
+    ? `対応サービスから掲載社を絞り込む（${area.name}から依頼する場合）`
+    : "対応サービスから掲載社を絞り込む";
+  const otherAreasHeading = scopedHeading
+    ? `${area.name}以外のエリアのページ`
+    : "他のエリアのページ";
+
   const serviceGroups = SERVICE_KEYWORDS.map((s) => ({
     ...s,
     matches: companies.filter((c) =>
@@ -178,7 +199,7 @@ export default async function AreaPage({ params }: Props) {
 
         {/* 3. サービス別絞り込み */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-8">
-          <h2 className="text-lg font-bold text-[#1C1917] mb-2">対応サービスから掲載社を絞り込む</h2>
+          <h2 className="text-lg font-bold text-[#1C1917] mb-2">{serviceHeading}</h2>
           <p className="text-sm text-[#78716C] mb-4">
             各社が公表している対応サービスの表記をキーワードで機械的に分類したものです。表記のゆれにより、実際には対応していても下記に含まれない場合があります。詳細は各社にご確認ください。
           </p>
@@ -214,10 +235,10 @@ export default async function AreaPage({ params }: Props) {
 
         {/* 4. エリア固有の切り口 */}
         <div className="bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-5 mb-8">
-          <h2 className="text-lg font-bold text-[#1C1917] mb-2">{area.focus.heading}</h2>
-          <p className="text-sm text-[#57534E] mb-4">{area.focus.intro}</p>
+          <h2 className="text-lg font-bold text-[#1C1917] mb-2">{focus.heading}</h2>
+          <p className="text-sm text-[#57534E] mb-4">{focus.intro}</p>
           <div className="grid md:grid-cols-2 gap-4">
-            {area.focus.points.map((p) => (
+            {focus.points.map((p) => (
               <div key={p.title} className="flex gap-3">
                 <div className="w-2 h-2 bg-[#92400E] rounded-full mt-2 shrink-0"></div>
                 <div>
@@ -227,6 +248,25 @@ export default async function AreaPage({ params }: Props) {
               </div>
             ))}
           </div>
+
+          {focus.questionsHeading && focus.questions && (
+            <div className="mt-5 bg-white border border-[#F0ECE8] rounded-lg p-4">
+              <h3 className="font-bold text-sm text-[#92400E] mb-3">
+                {focus.questionsHeading}
+              </h3>
+              <ul className="space-y-2 text-sm text-[#57534E]">
+                {focus.questions.map((q) => (
+                  <li key={q} className="flex items-start gap-2">
+                    <span className="text-[#92400E] font-bold shrink-0">Q.</span>
+                    <span>{q}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-[#78716C] mt-3">
+                回答は会社や現場の状況によって変わります。ここに挙げた質問は、条件をそろえて比較するための確認項目であり、回答内容そのものを当サイトが保証するものではありません。
+              </p>
+            </div>
+          )}
         </div>
 
         {/* 掲載社カード（公式サイト導線） */}
@@ -294,7 +334,7 @@ export default async function AreaPage({ params }: Props) {
 
         {/* 5. 他エリア */}
         <div>
-          <h2 className="font-bold text-[#1C1917] mb-4">他のエリアのページ</h2>
+          <h2 className="font-bold text-[#1C1917] mb-4">{otherAreasHeading}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {otherAreas.map((a) => (
               <Link

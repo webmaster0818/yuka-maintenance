@@ -74,8 +74,39 @@ export default function SiteFooter() {
             <Link href="/area/osaka/" className="hover:text-[#F59E0B] transition-colors">大阪府</Link>
             <Link href="/area/kanagawa/" className="hover:text-[#F59E0B] transition-colors">神奈川県</Link>
             <Link href="/area/aichi/" className="hover:text-[#F59E0B] transition-colors">愛知県</Link>
+            <Link href="/area/saitama/" className="hover:text-[#F59E0B] transition-colors">埼玉県</Link>
+            <Link href="/area/chiba/" className="hover:text-[#F59E0B] transition-colors">千葉県</Link>
+            <Link href="/area/hyogo/" className="hover:text-[#F59E0B] transition-colors">兵庫県</Link>
+            <Link href="/area/hokkaido/" className="hover:text-[#F59E0B] transition-colors">北海道</Link>
+            <Link href="/area/fukuoka/" className="hover:text-[#F59E0B] transition-colors">福岡県</Link>
+            <Link href="/area/shizuoka/" className="hover:text-[#F59E0B] transition-colors">静岡県</Link>
+            <Link href="/area/hiroshima/" className="hover:text-[#F59E0B] transition-colors">広島県</Link>
+            <Link href="/area/ibaraki/" className="hover:text-[#F59E0B] transition-colors">茨城県</Link>
+            <Link href="/area/kyoto/" className="hover:text-[#F59E0B] transition-colors">京都府</Link>
+            <Link href="/area/miyagi/" className="hover:text-[#F59E0B] transition-colors">宮城県</Link>
+            <Link href="/area/niigata/" className="hover:text-[#F59E0B] transition-colors">新潟県</Link>
+            <Link href="/area/nagano/" className="hover:text-[#F59E0B] transition-colors">長野県</Link>
+            <Link href="/area/gifu/" className="hover:text-[#F59E0B] transition-colors">岐阜県</Link>
+            <Link href="/area/gunma/" className="hover:text-[#F59E0B] transition-colors">群馬県</Link>
+            <Link href="/area/tochigi/" className="hover:text-[#F59E0B] transition-colors">栃木県</Link>
+            <Link href="/area/fukushima/" className="hover:text-[#F59E0B] transition-colors">福島県</Link>
+            <Link href="/area/okayama/" className="hover:text-[#F59E0B] transition-colors">岡山県</Link>
+            <Link href="/area/kumamoto/" className="hover:text-[#F59E0B] transition-colors">熊本県</Link>
+            <Link href="/area/mie/" className="hover:text-[#F59E0B] transition-colors">三重県</Link>
+            <Link href="/area/okinawa/" className="hover:text-[#F59E0B] transition-colors">沖縄県</Link>
             <Link href="/know/no-wax-floor/" className="hover:text-[#F59E0B] transition-colors">ワックスができない床材</Link>
             <Link href="/know/after-work-trouble/" className="hover:text-[#F59E0B] transition-colors">施工後のトラブル対策</Link>
+            <Link href="/know/wax-types/" className="hover:text-[#F59E0B] transition-colors">ワックスの種類と選び方</Link>
+            <Link href="/know/recoat-timing/" className="hover:text-[#F59E0B] transition-colors">塗り替え時期の見きわめ</Link>
+            <Link href="/know/stripping-decision/" className="hover:text-[#F59E0B] transition-colors">剥離洗浄の判断</Link>
+            <Link href="/know/coating-types/" className="hover:text-[#F59E0B] transition-colors">コーティングの種類の違い</Link>
+            <Link href="/know/daily-care/" className="hover:text-[#F59E0B] transition-colors">施工後の日常の手入れ</Link>
+            <Link href="/know/estimate-reading/" className="hover:text-[#F59E0B] transition-colors">見積書の読み方</Link>
+            <Link href="/know/floor-symptoms/" className="hover:text-[#F59E0B] transition-colors">症状から原因を切り分ける</Link>
+            <Link href="/know/purpose-first/" className="hover:text-[#F59E0B] transition-colors">目的から作業を選ぶ</Link>
+            <Link href="/know/wax-or-coating/" className="hover:text-[#F59E0B] transition-colors">ワックスかコーティングか</Link>
+            <Link href="/know/quote-routes/" className="hover:text-[#F59E0B] transition-colors">見積もりが出るまでの流れ</Link>
+            <Link href="/know/review-reading/" className="hover:text-[#F59E0B] transition-colors">口コミの読み方</Link>
           </div>
         </div>
 
