@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import companies from "@/data/companies.json";
+import { hasRating, comparablePrice } from "@/app/lib/company";
 
 export const metadata = {
   title: "床メンテナンス業者激安ランキング | 料金が安い順 | 床メンテナンス110番",
@@ -9,11 +10,14 @@ export const metadata = {
     "床メンテナンス業者を料金の安い順に比較したランキングです。コストを抑えながら高品質なサービスを受けられる業者を厳選しました。",
 };
 
-const cheapCompanies = [...companies].sort((a, b) => {
-  const priceA = parseInt(a.priceRange.replace(/[^0-9]/g, ""));
-  const priceB = parseInt(b.priceRange.replace(/[^0-9]/g, ""));
-  return priceA - priceB;
-});
+// 1件あたりの最低料金として比較できる表記の掲載社だけを安い順に並べる。
+// 1畳単価・1平方メートル単価・価格表記なしの社は、総額と並べると誤解を招くため
+// 順位づけから外し、ページ下部に別枠で掲載する。
+const cheapCompanies = [...companies]
+  .filter((c) => comparablePrice(c.priceRange) !== null)
+  .sort((a, b) => comparablePrice(a.priceRange)! - comparablePrice(b.priceRange)!);
+
+const notRanked = companies.filter((c) => comparablePrice(c.priceRange) === null);
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -111,9 +115,17 @@ export default function CheapRankingPage() {
                   <p className="text-sm text-[#57534E] mb-2">{company.catchphrase}</p>
 
                   <div className="flex items-center gap-2 mb-3">
-                    <StarRating rating={company.rating} />
-                    <span className="font-bold text-[#F59E0B]">{company.rating}</span>
-                    <span className="text-xs text-[#78716C]">（{company.reviewCount}件）</span>
+                    {hasRating(company) ? (
+                      <>
+                        <StarRating rating={company.rating} />
+                        <span className="font-bold text-[#F59E0B]">{company.rating}</span>
+                        <span className="text-xs text-[#78716C]">（{company.reviewCount}件）</span>
+                      </>
+                    ) : (
+                      <span className="text-xs text-[#78716C]">
+                        評価スコア・口コミ件数は当サイトでは保有していません
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex flex-wrap gap-2">
@@ -128,7 +140,7 @@ export default function CheapRankingPage() {
                 <div className="md:text-right shrink-0">
                   <div className="text-xs text-[#78716C] mb-0.5">最低料金目安</div>
                   <div className="text-2xl font-bold text-[#059669] mb-1">{company.priceRange}</div>
-                  <div className="text-xs text-[#78716C] mb-3">（税込・最低料金）</div>
+                  <div className="text-xs text-[#78716C] mb-3">（各社公式サイトの料金表記より）</div>
                   <div className="flex flex-col gap-2">
                     <a
                       href={company.url}
@@ -150,6 +162,35 @@ export default function CheapRankingPage() {
             </div>
           ))}
         </div>
+
+        {notRanked.length > 0 && (
+          <div className="mt-8 bg-white border border-[#D6D3D1] rounded-xl p-5">
+            <h2 className="font-bold text-[#1C1917] mb-2">
+              料金の安い順に並べていない掲載社（{notRanked.length}社）
+            </h2>
+            <p className="text-sm text-[#57534E] leading-relaxed mb-4">
+              次の掲載社は、公式サイトの料金が1畳あたり・1平方メートルあたりの単価で示されているか、価格表そのものが公開されていません。
+              1件あたりの総額と並べると安さを取り違えるおそれがあるため、順位は付けずに掲載しています。
+            </p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {notRanked.map((c) => (
+                <div key={c.slug} className="border border-[#D6D3D1] rounded-lg p-4">
+                  <div className="flex items-center gap-2 flex-wrap mb-1">
+                    <Link
+                      href={`/company/${c.slug}/`}
+                      className="font-bold text-[#1C1917] hover:text-[#92400E]"
+                    >
+                      {c.name}
+                    </Link>
+                    <span className="bg-[#F59E0B]/10 text-[#92400E] text-xs font-bold px-2 py-0.5 rounded">PR</span>
+                  </div>
+                  <p className="text-xs text-[#57534E] mb-2">{c.catchphrase}</p>
+                  <p className="text-sm font-bold text-[#92400E]">{c.priceRange}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-8 bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-5">
           <h2 className="font-bold text-[#1C1917] mb-3">安い業者を選ぶ際の注意点</h2>

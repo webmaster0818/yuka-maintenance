@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import companies from "@/data/companies.json";
+import { hasRating } from "@/app/lib/company";
 import Link from "next/link";
 
 export async function generateStaticParams() {
@@ -16,8 +17,13 @@ export async function generateMetadata({
   const company = companies.find((c) => c.slug === slug);
   if (!company) return {};
   return {
-    title: `${company.name}の口コミ・評判・料金 | 床メンテナンス110番`,
-    description: `${company.name}の床メンテナンスサービスを詳しくレビュー。料金目安${company.priceRange}、口コミ${company.reviewCount}件掲載。${company.catchphrase}`,
+    // 口コミを掲載していない社に「口コミ・評判」のタイトルを付けない
+    title: company.reviews.length
+      ? `${company.name}の口コミ・評判・料金 | 床メンテナンス110番`
+      : `${company.name}の料金・対応サービスと会社概要 | 床メンテナンス110番`,
+    description: hasRating(company)
+      ? `${company.name}の床メンテナンスサービスを詳しくレビュー。料金目安${company.priceRange}、口コミ${company.reviewCount}件掲載。${company.catchphrase}`
+      : `${company.name}の床メンテナンスサービスを、公式サイトで確認できる会社情報・料金・対応サービスから整理しました。料金目安${company.priceRange}。${company.catchphrase}`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
@@ -74,9 +80,17 @@ export default async function CompanyPage({
               <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-1">{company.name}</h1>
               <p className="text-[#57534E] mb-3">{company.catchphrase}</p>
               <div className="flex items-center gap-3 flex-wrap">
-                <StarRating rating={company.rating} />
-                <span className="text-xl font-bold text-[#F59E0B]">{company.rating}</span>
-                <span className="text-sm text-[#78716C]">（{company.reviewCount}件のレビュー）</span>
+                {hasRating(company) ? (
+                  <>
+                    <StarRating rating={company.rating} />
+                    <span className="text-xl font-bold text-[#F59E0B]">{company.rating}</span>
+                    <span className="text-sm text-[#78716C]">（{company.reviewCount}件のレビュー）</span>
+                  </>
+                ) : (
+                  <span className="text-sm text-[#57534E] bg-[#FFFBEB] border border-[#D6D3D1] rounded px-3 py-1">
+                    当サイトでは評価スコア・口コミ件数を保有していません
+                  </span>
+                )}
               </div>
             </div>
             <div className="md:text-right">
@@ -133,6 +147,16 @@ export default async function CompanyPage({
         </div>
 
         {/* Reviews */}
+        {company.reviews.length === 0 ? (
+          <div className="bg-white rounded-2xl border border-[#D6D3D1] p-6 mb-8">
+            <h2 className="text-xl font-bold text-[#1C1917] mb-3">口コミの掲載について</h2>
+            <p className="text-sm text-[#57534E] leading-relaxed">
+              {company.name}については、当サイトで内容を確認できた利用者の口コミがありません。
+              出所の確かめられない口コミを載せることはしないため、このページでは公式サイトで確認できた会社情報・料金・対応サービスのみを掲載しています。
+              実際の評判は、公式サイトの施工事例や見積もり時の説明とあわせてご判断ください。
+            </p>
+          </div>
+        ) : (
         <div className="bg-white rounded-2xl border border-[#D6D3D1] p-6 mb-8">
           <h2 className="text-xl font-bold text-[#1C1917] mb-5 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[#F59E0B]" viewBox="0 0 20 20" fill="currentColor">
@@ -164,6 +188,7 @@ export default async function CompanyPage({
             ))}
           </div>
         </div>
+        )}
 
         {/* CTA */}
         <div className="bg-[#F59E0B] rounded-2xl p-6 text-center">

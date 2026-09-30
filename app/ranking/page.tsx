@@ -1,15 +1,20 @@
 import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import companies from "@/data/companies.json";
+import { hasRating } from "@/app/lib/company";
 
 export const metadata = {
-  title: "床メンテナンス業者おすすめランキング10選 | 床メンテナンス110番",
+  title: "床メンテナンス業者おすすめランキング16選 | 床メンテナンス110番",
   alternates: { canonical: "/ranking/" },
   description:
-    "床メンテナンス業者のおすすめランキングを徹底比較。口コミ・料金・サービス内容をもとにプロが厳選した10社を紹介します。",
+    "床メンテナンス業者のおすすめランキングを徹底比較。口コミ・料金・サービス内容をもとに公式サイトで確認できる会社情報・料金をもとに16社を掲載しています。",
 };
 
-const sortedCompanies = [...companies].sort((a, b) => b.rating - a.rating);
+// 評価スコアを持つ掲載社を高い順に並べ、スコアが無い掲載社（公式情報のみ確認できた社）は
+// 順位を付けずに後ろへ回す。無い値を0点や5点として扱わない。
+const sortedCompanies = [...companies].sort(
+  (a, b) => (b.rating ?? -1) - (a.rating ?? -1)
+);
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -43,7 +48,7 @@ export default function RankingPage() {
             <span className="text-sm text-[#78716C]">2026年4月更新</span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            床メンテナンス業者おすすめランキング10選
+            床メンテナンス業者おすすめランキング16選
           </h1>
           <p className="text-[#57534E] leading-relaxed">
             実際の口コミ・料金・対応サービスを徹底比較した、信頼できる床メンテナンス業者のランキングです。フローリング・カーペット・大理石など様々な床材に対応した業者を厳選しました。
@@ -115,9 +120,17 @@ export default function RankingPage() {
                   <p className="text-sm text-[#57534E] mb-2">{company.catchphrase}</p>
 
                   <div className="flex items-center gap-2 mb-3">
-                    <StarRating rating={company.rating} />
-                    <span className="font-bold text-[#F59E0B]">{company.rating}</span>
-                    <span className="text-xs text-[#78716C]">（{company.reviewCount}件）</span>
+                    {hasRating(company) ? (
+                      <>
+                        <StarRating rating={company.rating} />
+                        <span className="font-bold text-[#F59E0B]">{company.rating}</span>
+                        <span className="text-xs text-[#78716C]">（{company.reviewCount}件）</span>
+                      </>
+                    ) : (
+                      <span className="text-xs text-[#78716C]">
+                        評価スコア・口コミ件数は当サイトでは保有していません（公式サイトで確認できた会社情報・料金のみ掲載）
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-3">

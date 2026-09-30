@@ -1,5 +1,6 @@
 import Link from "next/link";
 import companies from "@/data/companies.json";
+import { hasRating } from "@/app/lib/company";
 import floors from "@/data/floors.json";
 import services from "@/data/services.json";
 
@@ -65,7 +66,7 @@ export default function HomePage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              10社以上を徹底比較
+              {companies.length}社を徹底比較
             </span>
             <span className="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
@@ -118,9 +119,15 @@ export default function HomePage() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="font-bold text-[#1C1917] group-hover:text-[#92400E]">{company.name}</span>
-                    <StarRating rating={company.rating} />
-                    <span className="text-sm text-[#57534E]">{company.rating}</span>
-                    <span className="text-xs text-[#78716C]">({company.reviewCount}件)</span>
+                    {hasRating(company) ? (
+                      <>
+                        <StarRating rating={company.rating} />
+                        <span className="text-sm text-[#57534E]">{company.rating}</span>
+                        <span className="text-xs text-[#78716C]">({company.reviewCount}件)</span>
+                      </>
+                    ) : (
+                      <span className="text-xs text-[#78716C]">評価スコアなし（公式情報のみ掲載）</span>
+                    )}
                   </div>
                   <p className="text-sm text-[#57534E] mt-1 truncate">{company.catchphrase}</p>
                   <div className="flex flex-wrap gap-2 mt-2">
@@ -146,7 +153,7 @@ export default function HomePage() {
               href="/ranking/"
               className="inline-block bg-[#92400E] text-white font-bold py-3 px-8 rounded-full hover:bg-[#78350F] transition-colors"
             >
-              全ランキングを見る（10社）
+              全ランキングを見る（{companies.length}社）
             </Link>
           </div>
         </div>
