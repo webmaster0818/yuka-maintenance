@@ -16,7 +16,7 @@ export async function generateMetadata({
   const floor = floors.find((f) => f.slug === slug);
   if (!floor) return {};
   return {
-    title: `${floor.name}のメンテナンス方法・費用相場 | 床メンテナンス110番`,
+    title: `${floor.name}のメンテナンス方法・費用相場`,
     description: `${floor.name}のメンテナンス方法を徹底解説。費用相場${floor.avgCost}、推奨サービス・注意点など専門情報を掲載。`,
     alternates: { canonical: `/floor/${floor.slug}/` },
   };

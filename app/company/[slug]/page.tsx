@@ -19,8 +19,8 @@ export async function generateMetadata({
   return {
     // 口コミを掲載していない社に「口コミ・評判」のタイトルを付けない
     title: company.reviews.length
-      ? `${company.name}の口コミ・評判・料金 | 床メンテナンス110番`
-      : `${company.name}の料金・対応サービスと会社概要 | 床メンテナンス110番`,
+      ? `${company.name}の口コミ・評判・料金`
+      : `${company.name}の料金・対応サービスと会社概要`,
     description: hasRating(company)
       ? `${company.name}の床メンテナンスサービスを詳しくレビュー。料金目安${company.priceRange}、口コミ${company.reviewCount}件掲載。${company.catchphrase}`
       : `${company.name}の床メンテナンスサービスを、公式サイトで確認できる会社情報・料金・対応サービスから整理しました。料金目安${company.priceRange}。${company.catchphrase}`,

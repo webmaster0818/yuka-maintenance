@@ -307,7 +307,7 @@ export default async function AreaPage({ params }: Props) {
                       href={`/company/${company.slug}/`}
                       className="border border-[#92400E] text-[#92400E] font-bold py-2 px-5 rounded-full text-sm hover:bg-[#FFFBEB] transition-colors text-center"
                     >
-                      詳細・口コミを見る
+                      {company.reviews.length ? "詳細・口コミを見る" : "料金・会社概要を見る"}
                     </Link>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ export async function generateMetadata({
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.name}の費用・業者選び方 | 床メンテナンス110番`,
+    title: `${service.name}の費用・業者選び方`,
     description: `${service.name}の費用相場・作業工程・メリット・デメリットを解説。${service.avgCost}。専門業者に依頼する際のポイントも紹介。`,
     alternates: { canonical: `/service/${service.slug}/` },
   };

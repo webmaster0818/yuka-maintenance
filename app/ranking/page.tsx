@@ -4,10 +4,10 @@ import companies from "@/data/companies.json";
 import { hasRating } from "@/app/lib/company";
 
 export const metadata = {
-  title: "床メンテナンス業者おすすめランキング16選 | 床メンテナンス110番",
+  title: `床メンテナンス業者おすすめランキング${companies.length}選`,
   alternates: { canonical: "/ranking/" },
   description:
-    "床メンテナンス業者のおすすめランキングを徹底比較。口コミ・料金・サービス内容をもとに公式サイトで確認できる会社情報・料金をもとに16社を掲載しています。",
+    `床メンテナンス業者のおすすめランキングを徹底比較。公式サイトで確認できる会社情報・料金・対応サービスをもとに${companies.length}社を掲載しています。`,
 };
 
 // 評価スコアを持つ掲載社を高い順に並べ、スコアが無い掲載社（公式情報のみ確認できた社）は
@@ -48,7 +48,7 @@ export default function RankingPage() {
             <span className="text-sm text-[#78716C]">2026年4月更新</span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            床メンテナンス業者おすすめランキング16選
+            床メンテナンス業者おすすめランキング{companies.length}選
           </h1>
           <p className="text-[#57534E] leading-relaxed">
             実際の口コミ・料金・対応サービスを徹底比較した、信頼できる床メンテナンス業者のランキングです。フローリング・カーペット・大理石など様々な床材に対応した業者を厳選しました。
