@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import areas from "@/data/areas.json";
 import companies from "@/data/companies.json";
+import { DEFAULT_OG_IMAGE } from "../../lib/og";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article" },
+    openGraph: { title, description, url, type: "article", images: [DEFAULT_OG_IMAGE] },
   };
 }
 

@@ -116,6 +116,7 @@ export default function SiteFooter() {
             <Link href="/terms/" className="hover:text-[#F59E0B] transition-colors">利用規約</Link>
             <Link href="/privacy/" className="hover:text-[#F59E0B] transition-colors">プライバシーポリシー</Link>
             <Link href="/content-policy/" className="hover:text-[#F59E0B] transition-colors">コンテンツポリシー</Link>
+            <Link href="/about/" className="hover:text-[#F59E0B] transition-colors">運営者情報</Link>
           </div>
           <p className="text-xs text-[#78716C]">
             &copy; {new Date().getFullYear()} 床メンテナンス110番. All rights reserved.

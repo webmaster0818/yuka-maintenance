@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
+import { DEFAULT_OG_IMAGE } from "./lib/og";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 
@@ -23,11 +24,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://yuka-maintenance.com"),
   twitter: {
     card: "summary_large_image",
+    images: [DEFAULT_OG_IMAGE.url],
   },
   openGraph: {
     type: "website",
     locale: "ja_JP",
     siteName: "床メンテナンス110番",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
