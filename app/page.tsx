@@ -5,9 +5,9 @@ import floors from "@/data/floors.json";
 import services from "@/data/services.json";
 
 export const metadata = {
-  title: "床メンテナンス110番 | プロの床クリーニング業者比較・口コミ",
+  title: "床メンテナンス110番 | 床クリーニング業者の比較・口コミ情報",
   description:
-    "フローリング・大理石・カーペットなど床種別の専門業者を比較・口コミで探せる。ワックスがけ・フロアコーティング・傷補修の費用相場も掲載。",
+    "フローリング・大理石・カーペットなど床材別の専門業者を、公式情報と口コミをもとに比較できる情報サイトです。ワックスがけ・フロアコーティング・傷補修の費用相場も掲載しています。",
   alternates: { canonical: "/" },
 };
 
@@ -21,14 +21,14 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-[#92400E] to-[#78350F] text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-[#F59E0B] text-[#92400E] text-xs font-bold px-3 py-1 rounded-full mb-4">
-            全国対応・無料一括比較
+            床メンテナンス業者の比較情報サイト
           </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-5 leading-tight">
-            プロの床メンテナンスで、<br className="hidden sm:block" />
-            <span className="text-[#FCD34D]">足元から美しく。</span>
+            床メンテナンス業者の選定に<br className="hidden sm:block" />
+            <span className="text-[#FCD34D]">必要な情報を掲載します</span>
           </h1>
           <p className="text-lg text-[#FDE68A] mb-8 max-w-2xl mx-auto">
-            フローリング・大理石・カーペット…あらゆる床材に対応したプロ業者を徹底比較。費用相場・口コミ・選び方まで、床メンテナンスのすべてがわかります。
+            フローリング・大理石・カーペットなど、床材に対応した専門業者を比較して掲載しています。費用相場・口コミ・業者の選び方まで、床メンテナンスの検討に必要な情報をまとめています。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -49,19 +49,19 @@ export default function HomePage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              {companies.length}社を徹底比較
+              {companies.length}社を比較
             </span>
             <span className="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              出典つきの口コミのみ掲載
+              出典を確認できた口コミのみ掲載
             </span>
             <span className="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              床種別ガイド完備
+              床材別ガイドを掲載
             </span>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function HomePage() {
               <span className="text-[#92400E]">おすすめ</span>業者ランキング
             </h2>
             <Link href="/ranking/" className="text-sm text-[#92400E] font-medium hover:underline flex items-center gap-1">
-              全件見る
+              すべて見る
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
@@ -138,7 +138,7 @@ export default function HomePage() {
       <section className="py-12 px-4 bg-[#FFFBEB]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-[#1C1917] mb-2">床種別メンテナンスガイド</h2>
-          <p className="text-[#57534E] mb-6">あなたの床材に合った最適なメンテナンス方法をご紹介します</p>
+          <p className="text-[#57534E] mb-6">床材に適したメンテナンス方法をご紹介します</p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {floors.map((floor) => (
               <Link
@@ -163,7 +163,7 @@ export default function HomePage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-[#1C1917] mb-2">床メンテナンスのサービス一覧</h2>
-          <p className="text-[#57534E] mb-6">目的別に最適なサービスを選びましょう</p>
+          <p className="text-[#57534E] mb-6">目的に応じたサービスをお選びください</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
               <Link
@@ -188,26 +188,26 @@ export default function HomePage() {
       {/* Trust Section */}
       <section className="py-12 px-4 bg-[#059669]/5 border-t border-[#059669]/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-[#1C1917] mb-8">床メンテナンス110番が選ばれる理由</h2>
+          <h2 className="text-2xl font-bold text-[#1C1917] mb-8">床メンテナンス110番の編集方針</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "出典のある情報だけを掲載",
-                desc: "口コミ・評価は公式サイトやGoogleマップなど出典を確認できたものだけを、出典・取得日つきで掲載しています。",
+                title: "出典を確認できた情報のみを掲載します",
+                desc: "口コミ・評価は、公式サイトやGoogleマップなど出典を確認できたものに限り、出典と取得日を記載して掲載しています。",
                 icon: (
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 ),
               },
               {
-                title: "費用相場が一目でわかる",
-                desc: "ワックスがけからフロアコーティングまで、サービス別・床材別の費用相場を掲載。",
+                title: "費用相場を一覧で掲載します",
+                desc: "ワックスがけからフロアコーティングまで、サービス別・床材別の費用相場を掲載しています。",
                 icon: (
                   <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 ),
               },
               {
-                title: "床種別の専門ガイド",
-                desc: "フローリング・大理石・カーペットなど5種類の床材に対応した専門メンテナンス情報。",
+                title: "床材別のガイドを掲載します",
+                desc: "フローリング・大理石・カーペットなど、5種類の床材別にメンテナンス情報を掲載しています。",
                 icon: (
                   <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 ),
@@ -231,10 +231,10 @@ export default function HomePage() {
       <section className="py-12 px-4 bg-[#F59E0B]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-[#92400E] mb-3">
-            まずは料金の相場を確認しましょう
+            依頼前に料金の相場をご確認ください
           </h2>
           <p className="text-[#78350F] mb-6">
-            依頼前に費用の目安を把握しておくことで、業者との交渉もスムーズに。
+            費用の目安を把握しておくと、業者との相談を円滑に進められます。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -247,7 +247,7 @@ export default function HomePage() {
               href="/cost/diy-vs-pro/"
               className="bg-white text-[#92400E] font-bold py-3 px-8 rounded-full hover:bg-[#FFFBEB] transition-colors border border-[#92400E]"
             >
-              DIY vs プロを比較
+              DIYと業者依頼の比較
             </Link>
           </div>
         </div>

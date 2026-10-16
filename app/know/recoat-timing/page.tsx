@@ -5,7 +5,7 @@ export const metadata = {
   title: "ワックスの塗り替え時期を年数ではなくサインで判断する方法",
   alternates: { canonical: "/know/recoat-timing/" },
   description:
-    "床ワックスの塗り替え時期は年数だけでは決まりません。見た目・歩いたときの感触・清掃のしやすさに出るサインの見方、部屋ごとに進み方が変わる理由、塗り重ねでよい場合と剥離が必要な場合の分かれ目を整理しました。",
+    "床ワックスの塗り替え時期は年数だけでは決まりません。見た目・歩いたときの感触・清掃のしやすさに出るサインの見方、部屋ごとに進み方が変わる理由、塗り重ねでよい場合と剥離が必要な場合の分かれ目を整理しています。",
 };
 
 const visualSigns = [
@@ -173,7 +173,7 @@ export default function RecoatTimingPage() {
               <thead className="bg-[#FFFBEB] border-b border-[#D6D3D1]">
                 <tr>
                   <th className="text-left px-3 py-2 font-bold text-[#1C1917] whitespace-nowrap">条件</th>
-                  <th className="text-left px-3 py-2 font-bold text-[#1C1917]">見るポイント</th>
+                  <th className="text-left px-3 py-2 font-bold text-[#1C1917]">確認する事項</th>
                 </tr>
               </thead>
               <tbody>

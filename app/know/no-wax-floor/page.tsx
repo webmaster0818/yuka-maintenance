@@ -19,7 +19,7 @@ const checkSteps = [
   },
   {
     title: "施工会社・管理会社に問い合わせる",
-    body: "書類が見つからない場合は、建てた会社・リフォーム会社、賃貸なら管理会社に品番を照会します。賃貸では勝手な施工が契約上の問題になることもあるため、この確認は兼ねて行う価値があります。",
+    body: "書類が見つからない場合は、建てた会社・リフォーム会社、賃貸なら管理会社に品番を照会します。賃貸では勝手な施工が契約上の問題になることもあるため、この確認もあわせて行うことをおすすめします。",
   },
   {
     title: "目視や簡易テストは「目安」にとどめる",
@@ -34,7 +34,7 @@ const alternatives = [
   },
   {
     title: "床材に指定された専用メンテナンス剤",
-    body: "ノンワックス仕様や無垢材向けに、メーカーが専用のクリーナーやオイルを指定していることがあります。指定品があるならそれに従うのが無難です。",
+    body: "ノンワックス仕様や無垢材向けに、メーカーが専用のクリーナーやオイルを指定していることがあります。指定品がある場合は、それに従うことが確実です。",
   },
   {
     title: "フロアコーティング（可否の確認が前提）",
@@ -70,7 +70,7 @@ export default function NoWaxFloorPage() {
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900 mb-8">
-          <strong>先に結論:</strong>{" "}
+          <strong>要点:</strong>{" "}
           床材の可否はメーカーと製品ごとに異なります。ここで挙げる内容は一般的な傾向であり、最終的な判断は床材の取扱説明書、メーカーの案内、施工会社への確認によって行ってください。
         </div>
 
@@ -171,7 +171,7 @@ export default function NoWaxFloorPage() {
             判断できないときに聞く相手と聞き方
           </h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            品番が分からない、書類が残っていないというケースは珍しくありません。その場合は、次の相手に次の内容を伝えると話が早く進みます。
+            品番が分からない、書類が残っていないというケースは珍しくありません。その場合は、次の相手に次の内容を伝えると確認が円滑に進みます。
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -237,7 +237,7 @@ export default function NoWaxFloorPage() {
         </div>
 
         <div>
-          <h2 className="font-bold text-[#1C1917] mb-4">あわせて読みたい</h2>
+          <h2 className="font-bold text-[#1C1917] mb-4">関連ページ</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { href: "/know/after-work-trouble/", label: "施工後のトラブル対策" },

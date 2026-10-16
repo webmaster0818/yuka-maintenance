@@ -1,7 +1,7 @@
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
-  title: "プライバシーポリシー | 床メンテナンス110番",
+  title: "プライバシーポリシー",
   alternates: { canonical: "/privacy/" },
   description: "床メンテナンス110番のプライバシーポリシーです。個人情報の取り扱いについてご説明します。",
 };

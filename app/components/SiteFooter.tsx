@@ -22,7 +22,7 @@ export default function SiteFooter() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-[#A8A29E]">
-              床の専門家があなたの床メンテナンスをサポート。業者比較から費用相場まで、役立つ情報をお届けします。
+              床メンテナンス業者の比較から費用相場まで、依頼の検討に必要な情報を掲載する情報サイトです。
             </p>
             <div className="mt-4 inline-block bg-[#92400E] text-[#FCD34D] text-xs font-bold px-2 py-1 rounded">
               PR・広告掲載あり
@@ -34,7 +34,7 @@ export default function SiteFooter() {
             <h3 className="font-bold text-white mb-3 text-sm">業者情報</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/ranking/" className="hover:text-[#F59E0B] transition-colors">おすすめランキング</Link></li>
-              <li><Link href="/ranking/cheap/" className="hover:text-[#F59E0B] transition-colors">激安ランキング</Link></li>
+              <li><Link href="/ranking/cheap/" className="hover:text-[#F59E0B] transition-colors">格安ランキング</Link></li>
               <li><Link href="/company/osoujihonpo/" className="hover:text-[#F59E0B] transition-colors">おそうじ本舗</Link></li>
               <li><Link href="/company/duskin/" className="hover:text-[#F59E0B] transition-colors">ダスキン</Link></li>
               <li><Link href="/company/bears/" className="hover:text-[#F59E0B] transition-colors">ベアーズ</Link></li>
@@ -61,7 +61,7 @@ export default function SiteFooter() {
               <li><Link href="/service/floor-coating/" className="hover:text-[#F59E0B] transition-colors">フロアコーティング</Link></li>
               <li><Link href="/service/stripping-wash/" className="hover:text-[#F59E0B] transition-colors">剥離洗浄</Link></li>
               <li><Link href="/cost/price/" className="hover:text-[#F59E0B] transition-colors">料金相場</Link></li>
-              <li><Link href="/cost/diy-vs-pro/" className="hover:text-[#F59E0B] transition-colors">DIY vs プロ比較</Link></li>
+              <li><Link href="/cost/diy-vs-pro/" className="hover:text-[#F59E0B] transition-colors">DIYと業者依頼の比較</Link></li>
             </ul>
           </div>
         </div>

@@ -5,7 +5,7 @@ export const metadata = {
   title: "床メンテナンスの見積書の読み方｜「一式」表記と単位の確かめ方",
   alternates: { canonical: "/know/estimate-reading/" },
   description:
-    "床のワックスがけやコーティングの見積書を、どの欄から読み、どこで行き違いが起きるのかを整理しました。一式表記の扱い、数量と単位の違い、値引き行の読み方、備考欄の但し書き、複数社の見積書を同じ表に並べ替える方法を解説します。",
+    "床のワックスがけやコーティングの見積書を、どの欄から読み、どこで行き違いが起きるのかを整理しています。一式表記の扱い、数量と単位の違い、値引き行の読み方、備考欄の但し書き、複数社の見積書を同じ表に並べ替える方法を解説します。",
 };
 
 const firstLook: [string, string][] = [
@@ -42,7 +42,7 @@ const lumpSum = [
   },
   {
     t: "内訳を出せない事情がある場合もある",
-    b: "現地を見ないと決められない、という理由で一式になっていることもあります。その場合は、現地調査のあとに内訳つきで出し直してもらえるかを聞きます。",
+    b: "現地を見ないと決められない、という理由で一式になっていることもあります。その場合は、現地調査のあとに内訳を付けて出し直してもらえるかを聞きます。",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function EstimateReadingPage() {
             床メンテナンスの見積書の読み方｜「一式」表記と単位の確かめ方
           </h1>
           <p className="text-[#57534E] leading-relaxed">
-            見積書を受け取ると、つい合計の欄から見てしまいます。ただし床の作業は、
+            見積書を受け取ると、合計の欄から確認しがちです。ただし床の作業は、
             <strong>同じ金額でも含まれている工程と範囲が会社ごとに違う</strong>ため、合計だけでは比べられません。
             このページでは、どの欄から読むのか、どこで行き違いが起きやすいのか、そして複数社のものを並べ替えて比べる手順を整理します。
           </p>
@@ -135,7 +135,7 @@ export default function EstimateReadingPage() {
             見積書はどの欄から読み始めるか
           </h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            合計欄より先に見ておくと、あとの確認が楽になる欄があります。順番としては次のとおりです。
+            合計欄より先に見ておくと、あとの確認が容易になる欄があります。順番としては次のとおりです。
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -201,7 +201,7 @@ export default function EstimateReadingPage() {
               <thead className="bg-[#FFFBEB] border-b border-[#D6D3D1]">
                 <tr>
                   <th className="text-left px-3 py-2 font-bold text-[#1C1917] whitespace-nowrap">計上のしかた</th>
-                  <th className="text-left px-3 py-2 font-bold text-[#1C1917]">確認するポイント</th>
+                  <th className="text-left px-3 py-2 font-bold text-[#1C1917]">確認する事項</th>
                 </tr>
               </thead>
               <tbody>
@@ -303,7 +303,7 @@ export default function EstimateReadingPage() {
             {[
               { href: "/know/stripping-decision/", label: "剥離が必要かの判断" },
               { href: "/know/floor-symptoms/", label: "症状から原因を切り分ける" },
-              { href: "/cost/diy-vs-pro/", label: "DIYとプロの比較" },
+              { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
               { href: "/area/nagano/", label: "契約書面と支払い条件" },
             ].map((l) => (
               <Link

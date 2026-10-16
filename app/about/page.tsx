@@ -3,13 +3,13 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "運営者情報・サイトについて｜床メンテナンス",
+  title: "運営者情報・サイトについて",
   description:
-    "床メンテナンスの運営者情報、運営方針、編集ポリシー、お問い合わせ先を掲載しています。",
+    "床メンテナンス110番の運営者情報、運営方針、編集ポリシー、お問い合わせ先を掲載しています。",
   alternates: { canonical: "/about/" },
 };
 
-const SITE_NAME = "床メンテナンス";
+const SITE_NAME = "床メンテナンス110番";
 
 export default function AboutPage() {
   return (
@@ -25,7 +25,7 @@ export default function AboutPage() {
         <section className="mb-10 prose prose-gray max-w-none text-sm leading-relaxed space-y-4">
           <h2 className="text-xl font-bold mt-2 mb-3">{SITE_NAME} について</h2>
           <p>
-            {SITE_NAME} は、株式会社MediaXが運営する比較・情報サイトです。利用者が業者選び・サービス選定で失敗しないよう、独自調査・公式情報・業界データに基づく信頼できるコンテンツを提供することを目的としています。
+            {SITE_NAME} は、株式会社MediaXが運営する比較・情報サイトです。利用者が適切な業者・サービスを選定できるよう、独自調査・公式情報・業界データに基づく信頼できるコンテンツを提供することを目的としています。
           </p>
           <p>
             当サイトのコンテンツは、最新の業界動向・公式発表・公的データを参照し、編集部による事実確認(ファクトチェック)を経て公開しています。執筆プロセスにAIツールを活用する場合がありますが、すべての記事は人間の編集者による監督・編集を経た上で公開されます。
@@ -55,7 +55,7 @@ export default function AboutPage() {
           <ul className="list-disc pl-6 space-y-1">
             <li><strong>独自性</strong>：他サイトの転載ではなく、独自の調査・分析・比較に基づき作成しています</li>
             <li><strong>正確性</strong>：公式サイト・公的データを参照し、事実確認を経て公開しています</li>
-            <li><strong>中立性</strong>：特定の事業者を不当に優遇することなく、客観的な比較情報を提供します</li>
+            <li><strong>中立性</strong>：特定の業者を不当に優遇することなく、客観的な比較情報を提供します</li>
             <li><strong>透明性</strong>：アフィリエイトリンクの存在を明示し、収益構造を開示しています</li>
             <li><strong>更新性</strong>：法令・サービス内容の変更に応じて、コンテンツを継続的に更新しています</li>
           </ul>

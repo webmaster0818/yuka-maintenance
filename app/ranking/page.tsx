@@ -7,7 +7,7 @@ export const metadata = {
   title: `床メンテナンス業者おすすめランキング${companies.length}選`,
   alternates: { canonical: "/ranking/" },
   description:
-    `床メンテナンス業者のおすすめランキングを徹底比較。公式サイトで確認できる会社情報・料金・対応サービスをもとに${companies.length}社を掲載しています。`,
+    `床メンテナンス業者のおすすめランキングです。公式サイトで確認できる会社情報・料金・対応サービスをもとに、${companies.length}社を掲載しています。`,
 };
 
 // 出典のない評価スコアで順位を付けない。並びは掲載順（★・点数による序列ではない）。
@@ -31,7 +31,7 @@ export default function RankingPage() {
             床メンテナンス業者おすすめランキング{companies.length}選
           </h1>
           <p className="text-[#57534E] leading-relaxed">
-            公式サイトで確認できる料金・対応サービス・会社情報をもとに比較した、床メンテナンス業者の一覧です。フローリング・カーペット・大理石など様々な床材に対応した業者を厳選しました。
+            公式サイトで確認できる料金・対応サービス・会社情報をもとに比較した、床メンテナンス業者の一覧です。フローリング・カーペット・大理石などさまざまな床材に対応した業者を掲載しています。
           </p>
           <div className="mt-4 flex gap-4">
             <Link
@@ -44,7 +44,7 @@ export default function RankingPage() {
               href="/ranking/cheap/"
               className="bg-white text-[#92400E] text-sm font-bold px-4 py-2 rounded-full border border-[#92400E] hover:bg-[#FFFBEB] transition-colors"
             >
-              激安ランキング
+              格安ランキング
             </Link>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function RankingPage() {
         <div className="mt-10 bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-5">
           <h2 className="font-bold text-[#1C1917] mb-3">ランキングの選定基準について</h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            当ランキングは、公式サイトで確認できる料金の透明性・対応サービスの幅広さ・対応エリアなどをもとに編集部が掲載順を決めています。出典のない評価スコアや口コミ件数による順位付けは行っていません。評価を表示している社は、Googleマップで確認した値を出典・取得日つきで掲載しています。なお、当サイトは一部の業者よりPR掲載料をいただいており、ランキングはその影響を受ける場合があります。
+            当ランキングは、公式サイトで確認できる料金の透明性・対応サービスの幅広さ・対応エリアなどをもとに編集部が掲載順を決めています。出典のない評価スコアや口コミ件数による順位付けは行っていません。評価を表示している社は、Googleマップで確認した値を、出典と取得日を記載して掲載しています。なお、当サイトは一部の業者よりPR掲載料をいただいており、ランキングはその影響を受ける場合があります。
           </p>
           <p className="text-xs text-[#78716C]">
             最終更新: 2026年10月 | 掲載情報は変更される場合があります。最新情報は各業者の公式サイトをご確認ください。

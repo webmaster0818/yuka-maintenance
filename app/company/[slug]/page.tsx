@@ -22,7 +22,7 @@ export async function generateMetadata({
     title: company.reviews.length
       ? `${company.name}の口コミ・評判・料金`
       : `${company.name}の料金・対応サービスと会社概要`,
-    description: `${company.name}の床メンテナンスサービスを、公式サイトで確認できる会社情報・料金・対応サービスから整理しました。料金目安${company.priceRange}。${company.catchphrase}`,
+    description: `${company.name}の床メンテナンスサービスを、公式サイトで確認できる会社情報・料金・対応サービスから整理しています。料金目安${company.priceRange}。${company.catchphrase}`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
@@ -125,9 +125,9 @@ export default async function CompanyPage({
             <h2 className="text-xl font-bold text-[#1C1917] mb-3">口コミの掲載について</h2>
             <p className="text-sm text-[#57534E] leading-relaxed">
               {hasReviewArticle(company.slug)
-                ? `${company.name}の利用者の声は、出典を確認できたものだけを下記の検証記事に出典つきで掲載しています。`
+                ? `${company.name}の利用者の声は、出典を確認できたものに限り、出典を記載して下記の検証記事に掲載しています。`
                 : `${company.name}については、当サイトで内容を確認できた利用者の口コミがありません。`}
-              出所の確かめられない口コミを載せることはしないため、このページでは公式サイトで確認できた会社情報・料金・対応サービスのみを掲載しています。
+              出所を確認できない口コミは掲載しない方針のため、このページでは公式サイトで確認できた会社情報・料金・対応サービスのみを掲載しています。
               実際の評判は、公式サイトの施工事例や見積もり時の説明とあわせてご判断ください。
             </p>
             {hasReviewArticle(company.slug) && (
@@ -142,10 +142,10 @@ export default async function CompanyPage({
         {/* CTA */}
         <div className="bg-[#F59E0B] rounded-2xl p-6 text-center">
           <h2 className="text-xl font-bold text-[#92400E] mb-2">
-            {company.name}に相談してみましょう
+            {company.name}への相談をご検討ください
           </h2>
           <p className="text-sm text-[#78350F] mb-4">
-            料金の見積もりは無料です。まずはお気軽にお問い合わせを。
+            料金の見積もりは無料です。公式サイトからお問い合わせいただけます。
           </p>
           <a
             href={company.url}
@@ -160,7 +160,7 @@ export default async function CompanyPage({
 
         {/* Other Companies */}
         <div className="mt-8">
-          <h3 className="font-bold text-[#1C1917] mb-4">他の業者も見てみる</h3>
+          <h3 className="font-bold text-[#1C1917] mb-4">他の業者を見る</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {companies
               .filter((c) => c.slug !== company.slug)

@@ -1,7 +1,7 @@
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
-  title: "利用規約 | 床メンテナンス110番",
+  title: "利用規約",
   alternates: { canonical: "/terms/" },
   description: "床メンテナンス110番の利用規約です。当サイトをご利用いただく前にご確認ください。",
 };

@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!floor) return {};
   return {
     title: `${floor.name}のメンテナンス方法・費用相場`,
-    description: `${floor.name}のメンテナンス方法を徹底解説。費用相場${floor.avgCost}、推奨サービス・注意点など専門情報を掲載。`,
+    description: `${floor.name}のメンテナンス方法を解説します。費用相場${floor.avgCost}、推奨サービス・注意点などを掲載しています。`,
     alternates: { canonical: `/floor/${floor.slug}/` },
   };
 }
@@ -117,7 +117,7 @@ export default async function FloorPage({
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[#059669]" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            メンテナンスのポイント
+            メンテナンスの要点
           </h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {floor.maintenanceTips.map((tip, i) => (
@@ -157,7 +157,7 @@ export default async function FloorPage({
             {floor.name}のメンテナンスをプロに依頼する
           </h2>
           <p className="text-sm text-[#78350F] mb-4">
-            専門業者に依頼することで、より美しく長持ちする床に仕上がります。
+            専門業者に依頼することで、より美しく、長持ちする仕上がりが期待できます。
           </p>
           <Link
             href="/ranking/"
@@ -169,7 +169,7 @@ export default async function FloorPage({
 
         {/* Other Floors */}
         <div className="mt-8">
-          <h3 className="font-bold text-[#1C1917] mb-4">他の床種別ガイドも見る</h3>
+          <h3 className="font-bold text-[#1C1917] mb-4">他の床材別ガイドを見る</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {floors
               .filter((f) => f.slug !== floor.slug)

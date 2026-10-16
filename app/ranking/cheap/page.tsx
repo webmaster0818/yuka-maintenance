@@ -5,10 +5,10 @@ import { comparablePrice } from "@/app/lib/company";
 import SourcedRating from "@/app/components/SourcedRating";
 
 export const metadata = {
-  title: "床メンテナンス業者激安ランキング | 料金が安い順",
+  title: "床メンテナンス業者格安ランキング | 料金が安い順",
   alternates: { canonical: "/ranking/cheap/" },
   description:
-    "床メンテナンス業者を料金の安い順に比較したランキングです。コストを抑えながら高品質なサービスを受けられる業者を厳選しました。",
+    "床メンテナンス業者を料金の安い順に比較したランキングです。費用を抑えて依頼できる業者を掲載しています。",
 };
 
 // 1件あたりの最低料金として比較できる表記の掲載社だけを安い順に並べる。
@@ -27,7 +27,7 @@ export default function CheapRankingPage() {
       <Breadcrumb
         items={[
           { label: "ランキング", href: "/ranking/" },
-          { label: "激安ランキング" },
+          { label: "格安ランキング" },
         ]}
       />
 
@@ -40,13 +40,13 @@ export default function CheapRankingPage() {
             <span className="text-sm text-[#78716C]">2026年4月更新</span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            床メンテナンス業者 激安ランキング
+            床メンテナンス業者 格安ランキング
           </h1>
           <p className="text-[#57534E] leading-relaxed mb-4">
-            料金の安い順に床メンテナンス業者を比較しました。コストを抑えつつも、品質は妥協したくない方へのおすすめ業者を厳選しています。
+            料金の安い順に床メンテナンス業者を比較しています。費用を抑えつつ、品質も重視したい方に向けて業者を掲載しています。
           </p>
           <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800">
-            <strong>注意:</strong> 表示価格はあくまでも目安です。作業範囲・床材の状態・地域によって異なります。必ず事前に見積もりを取得してください。
+            <strong>注意:</strong> 表示価格は目安です。作業範囲・床材の状態・地域によって異なるため、事前に見積もりを取得してください。
           </div>
           <div className="mt-4 flex gap-4">
             <Link
@@ -59,7 +59,7 @@ export default function CheapRankingPage() {
               href="/ranking/cheap/"
               className="bg-[#92400E] text-white text-sm font-bold px-4 py-2 rounded-full"
             >
-              激安ランキング
+              格安ランキング
             </Link>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function CheapRankingPage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#F59E0B] mt-0.5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
               </svg>
-              損害賠償保険の加入有無を必ず確認しましょう
+              損害賠償保険の加入の有無をご確認ください
             </li>
             <li className="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#F59E0B] mt-0.5 shrink-0" viewBox="0 0 20 20" fill="currentColor">

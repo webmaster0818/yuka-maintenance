@@ -6,7 +6,7 @@ export const metadata = {
   title: "床メンテナンス施工後に起こりうる症状と依頼前の取り決め",
   alternates: { canonical: "/know/after-work-trouble/" },
   description:
-    "ワックスがけやコーティングの施工後に起こりうる症状と考えられる原因、依頼前に書面で残しておきたい項目、保険・保証の確認方法、不具合に気づいたときの連絡手順を整理しました。",
+    "ワックスがけやコーティングの施工後に起こりうる症状と考えられる原因、依頼前に書面で残しておきたい項目、保険・保証の確認方法、不具合に気づいたときの連絡手順を整理しています。",
 };
 
 /** companies.json の features 表記を機械的に照合するだけで、掲載社データは改変しない */
@@ -75,7 +75,7 @@ export default function AfterWorkTroublePage() {
           <p className="text-[#57534E] leading-relaxed">
             床の施工は、仕上がったあとに気づく点が出てくることがあります。多くは
             <strong>依頼前の取り決めをはっきりさせておくことで、相談しやすくなります</strong>。
-            このページでは、起こりうる症状と考えられる原因、依頼前に書面で残したい項目、そして実際に気づいたときの進め方を整理しました。
+            このページでは、起こりうる症状と考えられる原因、依頼前に書面で残したい項目、そして実際に気づいたときの進め方を整理しています。
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export default function AfterWorkTroublePage() {
             保険・保証の記載がある掲載社をデータで確認する
           </h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-4">
-            作業中に床や家財を傷つけてしまった場合に備え、損害賠償保険に加入しているかを確認しておくと安心です。
+            作業中に床や家財を傷つけてしまった場合に備え、損害賠償保険に加入しているかを確認しておくことをおすすめします。
             当サイトが掲載している{companies.length}社の特徴データのうち、保険・保証に関する記載があるのは次の
             {insuranceMentioned.length}社です。
           </p>
@@ -178,8 +178,8 @@ export default function AfterWorkTroublePage() {
           <div className="space-y-3">
             {[
               { t: "すぐに写真を撮る", b: "症状が出ている箇所を、全体が分かる写真と近くで撮った写真の両方で記録します。日付が残る形で保存しておきます。" },
-              { t: "自分で手を加えない", b: "洗剤でこすったり削ったりすると、原因の切り分けが難しくなります。まずは状態を変えずに連絡します。" },
-              { t: "施工した会社へ連絡する", b: "作業日・担当者名・症状・気づいた日を伝えます。見積書や作業指示書の控えを手元に用意しておくとやり取りが早く進みます。" },
+              { t: "自分で手を加えない", b: "洗剤でこすったり削ったりすると、原因の切り分けが難しくなります。まず状態を変えずに連絡します。" },
+              { t: "施工した会社へ連絡する", b: "作業日・担当者名・症状・気づいた日を伝えます。見積書や作業指示書の控えを手元に用意しておくとやり取りが円滑に進みます。" },
               { t: "対応内容を記録に残す", b: "電話で話した場合も、合意した内容をメールなど文字で残しておくと、後から確認できます。" },
               { t: "解決しない場合の相談先を知っておく", b: "当事者間で折り合いがつかない場合は、お住まいの自治体の消費生活センターなど公的な相談窓口を利用する方法があります。" },
             ].map((s, i) => (
@@ -202,7 +202,7 @@ export default function AfterWorkTroublePage() {
             申込先と施工者が別になる場合の問い合わせ先
           </h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-4">
-            申し込んだ窓口と、実際に作業をする事業者が同じとは限りません。別々の場合、不具合の連絡先がどちらになるのかを申し込み時点で確認しておく必要があります。
+            申し込んだ窓口と、実際に作業をする業者が同じとは限りません。別々の場合、不具合の連絡先がどちらになるのかを申し込み時点で確認しておく必要があります。
             当サイトの掲載データでは、サービス概要に「マッチング」「一括比較」の記載がある会社が{matchingType.length}社あります。
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
@@ -222,7 +222,7 @@ export default function AfterWorkTroublePage() {
                 ))}
               </div>
               <p className="text-xs text-[#57534E] leading-relaxed">
-                実際に作業を行うのは、紹介・成約した事業者になります。不具合の一次窓口が運営側か施工事業者かを、申し込み前に確認しておきましょう。
+                実際に作業を行うのは、紹介・成約した業者になります。不具合の一次窓口が運営側か施工業者かを、申し込み前に確認しておいてください。
               </p>
             </div>
             <div className="border border-[#F0ECE8] rounded-lg p-4 bg-[#FAFAF9]">
@@ -241,7 +241,7 @@ export default function AfterWorkTroublePage() {
                 ))}
               </div>
               <p className="text-xs text-[#57534E] leading-relaxed">
-                フランチャイズや加盟店の形をとる会社では、作業を行うのが加盟店になることがあります。この場合も、連絡先が本部か店舗かを確認しておくと安心です。
+                フランチャイズや加盟店の形をとる会社では、作業を行うのが加盟店になることがあります。この場合も、連絡先が本部か店舗かを確認しておくことをおすすめします。
               </p>
             </div>
           </div>
@@ -266,13 +266,13 @@ export default function AfterWorkTroublePage() {
         </div>
 
         <div>
-          <h2 className="font-bold text-[#1C1917] mb-4">あわせて読みたい</h2>
+          <h2 className="font-bold text-[#1C1917] mb-4">関連ページ</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { href: "/know/no-wax-floor/", label: "ワックス不可の床材" },
               { href: "/area/tokyo/", label: "東京都で比較" },
               { href: "/service/stripping-wash/", label: "剥離洗浄" },
-              { href: "/cost/diy-vs-pro/", label: "DIY vs プロ" },
+              { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
             ].map((l) => (
               <Link
                 key={l.href}

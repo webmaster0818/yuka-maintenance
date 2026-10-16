@@ -2,10 +2,10 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
-  title: "床メンテナンス DIY vs プロに頼む どちらがいい？",
+  title: "床メンテナンスはDIYとプロへの依頼のどちらが適しているか｜費用・仕上がりの比較",
   alternates: { canonical: "/cost/diy-vs-pro/" },
   description:
-    "床メンテナンスをDIYで行うべきか、プロに依頼すべきか徹底比較。費用・時間・仕上がり・リスクの観点から最適な選択をご案内します。",
+    "床メンテナンスをDIYで行うべきか、専門業者に依頼すべきかを、費用・時間・仕上がり・リスクの観点から比較しています。",
 };
 
 const comparisons = [
@@ -18,29 +18,29 @@ const comparisons = [
   },
   {
     category: "仕上がり品質",
-    diy: "ムラになりやすく、均一な仕上がりが難しい",
-    pro: "プロの技術と機器で均一で美しい仕上がり",
+    diy: "ムラになりやすく、均一に仕上げることが難しい",
+    pro: "専門の技術と機器で均一な仕上がりが期待できる",
     winner: "pro",
-    note: "特に大理石・フロアコーティングはプロ必須",
+    note: "大理石・フロアコーティングは専門業者への依頼が必要",
   },
   {
     category: "所要時間",
-    diy: "6畳で2〜4時間（慣れていない場合さらに長く）",
-    pro: "プロは同じ作業を1〜2時間で完了",
+    diy: "6畳で2〜4時間（慣れていない場合はさらに長い）",
+    pro: "専門業者は同じ作業を1〜2時間で完了",
     winner: "pro",
     note: "作業経験の差が大きく影響",
   },
   {
     category: "リスク",
-    diy: "失敗すると床を傷める可能性あり。補修費用が発生することも",
-    pro: "損害賠償保険加入業者なら万が一の補償あり",
+    diy: "失敗すると床を傷める可能性があり、補修費用が発生する場合もある",
+    pro: "損害賠償保険に加入している業者であれば万一の補償がある",
     winner: "pro",
     note: "特に高級床材はDIYリスクが高い",
   },
   {
     category: "頻度",
     diy: "いつでも好きなタイミングで実施できる",
-    pro: "予約が必要。繁忙期は2〜3週間待つ場合も",
+    pro: "予約が必要で、繁忙期は2〜3週間待つ場合もある",
     winner: "diy",
     note: "緊急時はDIYが便利",
   },
@@ -59,17 +59,17 @@ export default function DiyVsProPage() {
       <Breadcrumb
         items={[
           { label: "費用・料金", href: "/cost/price/" },
-          { label: "DIY vs プロ" },
+          { label: "DIYと業者依頼の比較" },
         ]}
       />
 
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            床メンテナンス DIY vs プロに依頼 徹底比較
+            床メンテナンスのDIYと業者依頼の比較
           </h1>
           <p className="text-[#57534E] leading-relaxed">
-            「自分でワックスがけをすべきか？」「やはりプロに頼むべきか？」床のメンテナンスで悩む多くの方の疑問にお答えします。費用・仕上がり・リスクを多角的に比較しました。
+            自分でワックスがけを行うか、専門業者に依頼するかは、多くの方が迷う点です。本ページでは、費用・仕上がり・リスクの観点から比較しています。
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function DiyVsProPage() {
                   <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
                 </svg>
               </div>
-              <h2 className="text-xl font-bold text-[#1C1917]">DIYでやる場合</h2>
+              <h2 className="text-xl font-bold text-[#1C1917]">DIYで行う場合</h2>
             </div>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2 text-[#059669]">
@@ -123,7 +123,7 @@ export default function DiyVsProPage() {
               </li>
             </ul>
             <div className="mt-4 pt-4 border-t border-[#F59E0B]/30">
-              <div className="text-sm font-bold text-[#92400E]">こんな方にDIYがおすすめ</div>
+              <div className="text-sm font-bold text-[#92400E]">DIYが適している方</div>
               <p className="text-xs text-[#57534E] mt-1">
                 軽い汚れのフローリング洗浄・フラット床での日常メンテナンス・賃貸のクッションフロアケア
               </p>
@@ -156,7 +156,7 @@ export default function DiyVsProPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mt-0.5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                損害賠償保険で安心・保証あり
+                損害賠償保険による補償がある
               </li>
               <li className="flex items-start gap-2 text-red-600">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 mt-0.5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
@@ -172,7 +172,7 @@ export default function DiyVsProPage() {
               </li>
             </ul>
             <div className="mt-4 pt-4 border-t border-[#92400E]/30">
-              <div className="text-sm font-bold text-[#92400E]">こんな方にプロがおすすめ</div>
+              <div className="text-sm font-bold text-[#92400E]">専門業者への依頼が適している方</div>
               <p className="text-xs text-[#57534E] mt-1">
                 大理石・高級フローリング・フロアコーティング・賃貸退去前の原状回復・広い施工面積
               </p>
@@ -219,12 +219,12 @@ export default function DiyVsProPage() {
 
         {/* Conclusion */}
         <div className="bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-5 mb-8">
-          <h2 className="text-lg font-bold text-[#1C1917] mb-3">結論：どちらを選ぶべき？</h2>
+          <h2 className="text-lg font-bold text-[#1C1917] mb-3">DIYと業者依頼の選び方</h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            <strong className="text-[#1C1917]">日常的な軽いメンテナンスはDIYで十分です。</strong>ただし、フロアコーティング・大理石の研磨・剥離洗浄・深い傷の補修などは、専門技術と機器が必要なためプロへの依頼をおすすめします。
+            <strong className="text-[#1C1917]">日常的な軽いメンテナンスはDIYで対応できます。</strong>ただし、フロアコーティング・大理石の研磨・剥離洗浄・深い傷の補修などは、専門技術と機器が必要なためプロへの依頼をおすすめします。
           </p>
           <p className="text-sm text-[#57534E] leading-relaxed">
-            特に高級床材や賃貸の原状回復など、失敗が許されない場面では、損害賠償保険に加入したプロの業者に依頼することで安心して任せられます。
+            特に高級床材や賃貸の原状回復など、失敗が許されない場面では、損害賠償保険に加入した専門業者への依頼をおすすめします。
           </p>
         </div>
 

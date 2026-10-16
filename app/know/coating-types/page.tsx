@@ -5,7 +5,7 @@ export const metadata = {
   title: "フロアコーティングの種類の違い｜膜の素材別の考え方と確認事項",
   alternates: { canonical: "/know/coating-types/" },
   description:
-    "フロアコーティングはUV硬化・ガラス・シリコン・ウレタンなど呼び名が分かれます。膜の素材と固め方という2つの軸での整理、仕上がりの確認方法、手直しできるかという観点、保証書で見る項目をまとめました。",
+    "フロアコーティングはUV硬化・ガラス・シリコン・ウレタンなど呼び名が分かれます。膜の素材と固め方という2つの軸での整理、仕上がりの確認方法、手直しできるかという観点、保証書で見る項目をまとめています。",
 };
 
 const materials = [
@@ -118,7 +118,7 @@ export default function CoatingTypesPage() {
             仕上がりのつやと質感をどう確認するか
           </h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            コーティングは一度施工すると、ワックスのように気軽にやり直せるとは限りません。仕上がりの見え方は、契約前に確認しておきたい要素です。
+            コーティングは一度施工すると、ワックスのように容易にやり直せるとは限りません。仕上がりの見え方は、契約前に確認しておきたい要素です。
           </p>
           <ul className="space-y-2 text-sm text-[#57534E]">
             {glossChecks.map((t) => (
@@ -227,7 +227,7 @@ export default function CoatingTypesPage() {
             施工前に業者へ渡しておく情報
           </h2>
           <p className="text-sm text-[#374151] leading-relaxed mb-3">
-            同じ条件で見積もりを比べるには、こちらから渡す情報もそろえる必要があります。次の内容を一度まとめておくと、複数社への問い合わせが楽になります。
+            同じ条件で見積もりを比べるには、こちらから渡す情報もそろえる必要があります。次の内容を一度まとめておくと、複数社への問い合わせが容易になります。
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -271,7 +271,7 @@ export default function CoatingTypesPage() {
               { href: "/know/wax-types/", label: "ワックスの種類" },
               { href: "/know/stripping-decision/", label: "剥離が必要かの判断" },
               { href: "/know/no-wax-floor/", label: "ワックス不可の床材" },
-              { href: "/cost/diy-vs-pro/", label: "DIYとプロの比較" },
+              { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
             ].map((l) => (
               <Link
                 key={l.href}

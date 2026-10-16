@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!service) return {};
   return {
     title: `${service.name}の費用・業者選び方`,
-    description: `${service.name}の費用相場・作業工程・メリット・デメリットを解説。${service.avgCost}。専門業者に依頼する際のポイントも紹介。`,
+    description: `${service.name}の費用相場・作業工程・メリット・デメリットを解説します。${service.avgCost}。専門業者に依頼する際の確認事項も掲載しています。`,
     alternates: { canonical: `/service/${service.slug}/` },
   };
 }
@@ -63,7 +63,7 @@ export default async function ServicePage({
 
         {/* Description */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
-          <h2 className="font-bold text-[#1C1917] mb-3">{service.name}とは？</h2>
+          <h2 className="font-bold text-[#1C1917] mb-3">{service.name}の概要</h2>
           <p className="text-[#57534E] leading-relaxed">{service.description}</p>
           <div className="mt-4 pt-4 border-t border-[#F0ECE8]">
             <h3 className="text-sm font-bold text-[#1C1917] mb-2">対応する床材</h3>
@@ -152,7 +152,7 @@ export default async function ServicePage({
             {service.name}を依頼できる業者を探す
           </h2>
           <p className="text-sm text-[#78350F] mb-4">
-            実績豊富なプロの業者に相談して、最適な施工プランを提案してもらいましょう。
+            実績のある専門業者に相談し、施工プランの提案を受けることをおすすめします。
           </p>
           <Link
             href="/ranking/"
