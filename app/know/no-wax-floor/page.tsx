@@ -70,8 +70,7 @@ export default function NoWaxFloorPage() {
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900 mb-8">
-          <strong>要点:</strong>{" "}
-          床材の可否はメーカーと製品ごとに異なります。ここで挙げる内容は一般的な傾向であり、最終的な判断は床材の取扱説明書、メーカーの案内、施工会社への確認によって行ってください。
+          最も重要なのは、ワックスがけの可否が床材のメーカーと製品ごとに異なるという点です。ここで挙げる内容は一般的な傾向であり、最終的な判断は床材の取扱説明書、メーカーの案内、施工会社への確認によって行ってください。
         </div>
 
         {/* H2-1 */}

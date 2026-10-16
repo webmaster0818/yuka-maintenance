@@ -80,7 +80,6 @@ export default function AfterWorkTroublePage() {
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900 mb-8">
-          <strong>注意:</strong>{" "}
           症状の原因は床材・薬剤・施工条件によって異なり、ここでの説明は一般的に挙げられる可能性を整理したものです。個別の判断は施工した会社や専門家にご相談ください。
         </div>
 

@@ -46,7 +46,7 @@ export default function CheapRankingPage() {
             料金の安い順に床メンテナンス業者を比較しています。費用を抑えつつ、品質も重視したい方に向けて業者を掲載しています。
           </p>
           <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-800">
-            <strong>注意:</strong> 表示価格は目安です。作業範囲・床材の状態・地域によって異なるため、事前に見積もりを取得してください。
+            掲載している価格は目安です。作業範囲・床材の状態・地域によって異なるため、事前に見積もりを取得してください。
           </div>
           <div className="mt-4 flex gap-4">
             <Link
