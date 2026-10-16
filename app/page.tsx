@@ -1,6 +1,6 @@
 import Link from "next/link";
 import companies from "@/data/companies.json";
-import { hasRating } from "@/app/lib/company";
+import SourcedRating from "@/app/components/SourcedRating";
 import floors from "@/data/floors.json";
 import services from "@/data/services.json";
 
@@ -11,23 +11,6 @@ export const metadata = {
   alternates: { canonical: "/" },
 };
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <span className="flex items-center gap-0.5" aria-label={`評価 ${rating}点`}>
-      {[1, 2, 3, 4, 5].map((star) => (
-        <svg
-          key={star}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill={star <= Math.round(rating) ? "#F59E0B" : "#D6D3D1"}
-          className="w-4 h-4"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </span>
-  );
-}
 
 export default function HomePage() {
   const topCompanies = companies.slice(0, 3);
@@ -72,7 +55,7 @@ export default function HomePage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              実際の口コミ掲載
+              出典つきの口コミのみ掲載
             </span>
             <span className="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
@@ -119,15 +102,7 @@ export default function HomePage() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="font-bold text-[#1C1917] group-hover:text-[#92400E]">{company.name}</span>
-                    {hasRating(company) ? (
-                      <>
-                        <StarRating rating={company.rating} />
-                        <span className="text-sm text-[#57534E]">{company.rating}</span>
-                        <span className="text-xs text-[#78716C]">({company.reviewCount}件)</span>
-                      </>
-                    ) : (
-                      <span className="text-xs text-[#78716C]">評価スコアなし（公式情報のみ掲載）</span>
-                    )}
+                    <SourcedRating slug={company.slug} emptyText="評価スコアなし（公式情報のみ掲載）" />
                   </div>
                   <p className="text-sm text-[#57534E] mt-1 truncate">{company.catchphrase}</p>
                   <div className="flex flex-wrap gap-2 mt-2">
@@ -217,8 +192,8 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "信頼の口コミ情報",
-                desc: "実際に利用したお客様の口コミをもとに、業者の品質を正直に評価しています。",
+                title: "出典のある情報だけを掲載",
+                desc: "口コミ・評価は公式サイトやGoogleマップなど出典を確認できたものだけを、出典・取得日つきで掲載しています。",
                 icon: (
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 ),

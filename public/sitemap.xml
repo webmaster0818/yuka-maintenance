@@ -3,7 +3,7 @@
   <!-- TOP -->
   <url>
     <loc>https://yuka-maintenance.com/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,13 +17,13 @@
   <!-- Ranking -->
   <url>
     <loc>https://yuka-maintenance.com/ranking/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/ranking/cheap/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -31,61 +31,61 @@
   <!-- Companies -->
   <url>
     <loc>https://yuka-maintenance.com/company/osoujihonpo/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/duskin/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/osoujikakumei/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/saniclean/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/bears/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/kurashino-market/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/meetsmore/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/flexpartner/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/emeao/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/company/sumai-hotline/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -259,7 +259,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url><loc>https://yuka-maintenance.com/review/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/</loc><lastmod>2026-10-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yuka-maintenance.com/review/osoujihonpo/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yuka-maintenance.com/review/duskin/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yuka-maintenance.com/review/osoujikakumei/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -274,145 +274,145 @@
   <!-- Area -->
   <url>
     <loc>https://yuka-maintenance.com/area/tokyo/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/osaka/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/kanagawa/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/aichi/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/saitama/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/chiba/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/hyogo/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/hokkaido/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/fukuoka/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/shizuoka/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/hiroshima/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/ibaraki/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/kyoto/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/miyagi/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/niigata/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/nagano/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/gifu/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/gunma/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/tochigi/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/fukushima/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/okayama/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/kumamoto/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/mie/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/area/okinawa/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

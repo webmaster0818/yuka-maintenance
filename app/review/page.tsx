@@ -24,8 +24,8 @@ export default function ReviewIndex() {
             <div className="flex items-center justify-between gap-3 mb-2">
               <h2 className="font-bold text-text-primary">{r.companyName}</h2>
               {(r as any).ratingBlock ? (
-                <span className="text-sm text-text-muted whitespace-nowrap">
-                  <span className="text-warning">★</span> {(r as any).ratingBlock.rating}（{(r as any).ratingBlock.reviewCount}件）
+                <span className="text-sm text-text-muted text-right">
+                  <span className="text-warning">★</span> {(r as any).ratingBlock.rating}（{(r as any).ratingBlock.sourceLabel}・{(r as any).ratingBlock.reviewCount.toLocaleString("ja-JP")}件・{(r as any).ratingBlock.fetchedAt}取得）
                 </span>
               ) : (
                 <span className="text-xs text-text-muted whitespace-nowrap">公式の声</span>

@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import companies from "@/data/companies.json";
-import { hasRating } from "@/app/lib/company";
+import SourcedRating from "@/app/components/SourcedRating";
+import { hasReviewArticle } from "@/app/lib/verifiedRating";
 import Link from "next/link";
 
 export async function generateStaticParams() {
@@ -21,30 +22,11 @@ export async function generateMetadata({
     title: company.reviews.length
       ? `${company.name}の口コミ・評判・料金`
       : `${company.name}の料金・対応サービスと会社概要`,
-    description: hasRating(company)
-      ? `${company.name}の床メンテナンスサービスを詳しくレビュー。料金目安${company.priceRange}、口コミ${company.reviewCount}件掲載。${company.catchphrase}`
-      : `${company.name}の床メンテナンスサービスを、公式サイトで確認できる会社情報・料金・対応サービスから整理しました。料金目安${company.priceRange}。${company.catchphrase}`,
+    description: `${company.name}の床メンテナンスサービスを、公式サイトで確認できる会社情報・料金・対応サービスから整理しました。料金目安${company.priceRange}。${company.catchphrase}`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <span className="flex items-center gap-0.5" aria-label={`評価 ${rating}点`}>
-      {[1, 2, 3, 4, 5].map((star) => (
-        <svg
-          key={star}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill={star <= Math.round(rating) ? "#F59E0B" : "#D6D3D1"}
-          className="w-5 h-5"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </span>
-  );
-}
 
 export default async function CompanyPage({
   params,
@@ -80,17 +62,8 @@ export default async function CompanyPage({
               <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-1">{company.name}</h1>
               <p className="text-[#57534E] mb-3">{company.catchphrase}</p>
               <div className="flex items-center gap-3 flex-wrap">
-                {hasRating(company) ? (
-                  <>
-                    <StarRating rating={company.rating} />
-                    <span className="text-xl font-bold text-[#F59E0B]">{company.rating}</span>
-                    <span className="text-sm text-[#78716C]">（{company.reviewCount}件のレビュー）</span>
-                  </>
-                ) : (
-                  <span className="text-sm text-[#57534E] bg-[#FFFBEB] border border-[#D6D3D1] rounded px-3 py-1">
-                    当サイトでは評価スコア・口コミ件数を保有していません
-                  </span>
-                )}
+                {/* 評価：Googleマップで一次確認できた社のみ出典・取得日つきで表示 */}
+                <SourcedRating slug={company.slug} size="md" />
               </div>
             </div>
             <div className="md:text-right">
@@ -147,48 +120,24 @@ export default async function CompanyPage({
         </div>
 
         {/* Reviews */}
-        {company.reviews.length === 0 ? (
+        {/* 口コミ：出典を確認できない口コミは掲載しない（companies.json の口コミ文は 2026-10-16 に削除） */}
           <div className="bg-white rounded-2xl border border-[#D6D3D1] p-6 mb-8">
             <h2 className="text-xl font-bold text-[#1C1917] mb-3">口コミの掲載について</h2>
             <p className="text-sm text-[#57534E] leading-relaxed">
-              {company.name}については、当サイトで内容を確認できた利用者の口コミがありません。
+              {hasReviewArticle(company.slug)
+                ? `${company.name}の利用者の声は、出典を確認できたものだけを下記の検証記事に出典つきで掲載しています。`
+                : `${company.name}については、当サイトで内容を確認できた利用者の口コミがありません。`}
               出所の確かめられない口コミを載せることはしないため、このページでは公式サイトで確認できた会社情報・料金・対応サービスのみを掲載しています。
               実際の評判は、公式サイトの施工事例や見積もり時の説明とあわせてご判断ください。
             </p>
+            {hasReviewArticle(company.slug) && (
+              <p className="mt-3 text-sm">
+                <Link href={`/review/${company.slug}/`} className="text-[#92400E] font-bold underline underline-offset-2">
+                  {company.name}の評判を公開情報で検証した記事を見る
+                </Link>
+              </p>
+            )}
           </div>
-        ) : (
-        <div className="bg-white rounded-2xl border border-[#D6D3D1] p-6 mb-8">
-          <h2 className="text-xl font-bold text-[#1C1917] mb-5 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-[#F59E0B]" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            ユーザーの口コミ・レビュー（{company.reviewCount}件中 抜粋）
-          </h2>
-          <div className="space-y-4">
-            {company.reviews.map((review, index) => (
-              <div key={index} className="border border-[#F0ECE8] rounded-xl p-4 bg-[#FFFBEB]">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium text-sm text-[#1C1917]">{review.author}</span>
-                  <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg
-                        key={star}
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill={star <= review.score ? "#F59E0B" : "#D6D3D1"}
-                        className="w-4 h-4"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-sm text-[#57534E] leading-relaxed">{review.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        )}
 
         {/* CTA */}
         <div className="bg-[#F59E0B] rounded-2xl p-6 text-center">

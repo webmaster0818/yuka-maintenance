@@ -1,13 +1,9 @@
 /**
  * companies.json の掲載社データを扱う共通ヘルパー。
  *
- * 掲載社には2種類ある。
- *  1) 既存の掲載社 … rating / reviewCount を持つ
- *  2) 2026年9月に追加した掲載社 … 公式サイトで会社情報・料金を一次確認したが、
- *     評価スコアと口コミ件数は一次情報が無いため rating = null / reviewCount = null
- *
- * 数値を持たない掲載社に星やスコアを表示すると事実でない情報になるため、
- * 表示側は必ず hasRating() で分岐する。
+ * companies.json の rating / reviewCount / reviews は出典が無かったため、2026-10-16 に全社 null / [] にした。
+ * 評価を表示するときは app/lib/verifiedRating.ts（reviews.json の ratingBlock：Googleマップ・取得日つき）だけを使う。
+ * 出典のない値を companies.json に戻さないこと。
  */
 
 export type Company = {

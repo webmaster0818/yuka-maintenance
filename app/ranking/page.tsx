@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import companies from "@/data/companies.json";
-import { hasRating } from "@/app/lib/company";
+import SourcedRating from "@/app/components/SourcedRating";
 
 export const metadata = {
   title: `床メンテナンス業者おすすめランキング${companies.length}選`,
@@ -10,29 +10,9 @@ export const metadata = {
     `床メンテナンス業者のおすすめランキングを徹底比較。公式サイトで確認できる会社情報・料金・対応サービスをもとに${companies.length}社を掲載しています。`,
 };
 
-// 評価スコアを持つ掲載社を高い順に並べ、スコアが無い掲載社（公式情報のみ確認できた社）は
-// 順位を付けずに後ろへ回す。無い値を0点や5点として扱わない。
-const sortedCompanies = [...companies].sort(
-  (a, b) => (b.rating ?? -1) - (a.rating ?? -1)
-);
+// 出典のない評価スコアで順位を付けない。並びは掲載順（★・点数による序列ではない）。
+const sortedCompanies = companies;
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <span className="flex items-center gap-0.5">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <svg
-          key={star}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill={star <= Math.round(rating) ? "#F59E0B" : "#D6D3D1"}
-          className="w-4 h-4"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </span>
-  );
-}
 
 export default function RankingPage() {
   return (
@@ -45,13 +25,13 @@ export default function RankingPage() {
             <span className="bg-[#F59E0B] text-[#92400E] text-xs font-bold px-2 py-1 rounded">
               PR・広告掲載あり
             </span>
-            <span className="text-sm text-[#78716C]">2026年4月更新</span>
+            <span className="text-sm text-[#78716C]">2026年10月更新</span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
             床メンテナンス業者おすすめランキング{companies.length}選
           </h1>
           <p className="text-[#57534E] leading-relaxed">
-            実際の口コミ・料金・対応サービスを徹底比較した、信頼できる床メンテナンス業者のランキングです。フローリング・カーペット・大理石など様々な床材に対応した業者を厳選しました。
+            公式サイトで確認できる料金・対応サービス・会社情報をもとに比較した、床メンテナンス業者の一覧です。フローリング・カーペット・大理石など様々な床材に対応した業者を厳選しました。
           </p>
           <div className="mt-4 flex gap-4">
             <Link
@@ -120,17 +100,10 @@ export default function RankingPage() {
                   <p className="text-sm text-[#57534E] mb-2">{company.catchphrase}</p>
 
                   <div className="flex items-center gap-2 mb-3">
-                    {hasRating(company) ? (
-                      <>
-                        <StarRating rating={company.rating} />
-                        <span className="font-bold text-[#F59E0B]">{company.rating}</span>
-                        <span className="text-xs text-[#78716C]">（{company.reviewCount}件）</span>
-                      </>
-                    ) : (
-                      <span className="text-xs text-[#78716C]">
-                        評価スコア・口コミ件数は当サイトでは保有していません（公式サイトで確認できた会社情報・料金のみ掲載）
-                      </span>
-                    )}
+                    <SourcedRating
+                      slug={company.slug}
+                      emptyText="評価スコア・口コミ件数は当サイトでは保有していません（公式サイトで確認できた会社情報・料金のみ掲載）"
+                    />
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-3">
@@ -166,7 +139,7 @@ export default function RankingPage() {
                       href={`/company/${company.slug}/`}
                       className="border border-[#92400E] text-[#92400E] font-bold py-2 px-5 rounded-full text-sm hover:bg-[#FFFBEB] transition-colors text-center"
                     >
-                      口コミを見る
+                      {company.reviews.length ? "口コミを見る" : "料金・会社概要を見る"}
                     </Link>
                   </div>
                 </div>
@@ -178,10 +151,10 @@ export default function RankingPage() {
         <div className="mt-10 bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-5">
           <h2 className="font-bold text-[#1C1917] mb-3">ランキングの選定基準について</h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            当ランキングは、実際のユーザー口コミ・料金透明性・対応サービスの幅広さ・スタッフの技術力などを総合的に評価して選定しています。なお、当サイトは一部の業者よりPR掲載料をいただいており、ランキングはその影響を受ける場合があります。
+            当ランキングは、公式サイトで確認できる料金の透明性・対応サービスの幅広さ・対応エリアなどをもとに編集部が掲載順を決めています。出典のない評価スコアや口コミ件数による順位付けは行っていません。評価を表示している社は、Googleマップで確認した値を出典・取得日つきで掲載しています。なお、当サイトは一部の業者よりPR掲載料をいただいており、ランキングはその影響を受ける場合があります。
           </p>
           <p className="text-xs text-[#78716C]">
-            最終更新: 2026年4月 | 掲載情報は変更される場合があります。最新情報は各業者の公式サイトをご確認ください。
+            最終更新: 2026年10月 | 掲載情報は変更される場合があります。最新情報は各業者の公式サイトをご確認ください。
           </p>
         </div>
       </div>
