@@ -289,12 +289,6 @@ export default function EstimateReadingPage() {
           >
             サービス別の料金相場を見る
           </Link>
-          <Link
-            href="/area/kyoto/"
-            className="flex-1 border-2 border-[#92400E] text-[#92400E] font-bold py-3 px-6 rounded-full text-center hover:bg-[#FFFBEB] transition-colors"
-          >
-            相見積もりの進め方を見る
-          </Link>
         </div>
 
         <div>
@@ -304,7 +298,6 @@ export default function EstimateReadingPage() {
               { href: "/know/stripping-decision/", label: "剥離が必要かの判断" },
               { href: "/know/floor-symptoms/", label: "症状から原因を切り分ける" },
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
-              { href: "/area/nagano/", label: "契約書面と支払い条件" },
               { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
               { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
             ].map((l) => (

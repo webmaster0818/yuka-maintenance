@@ -328,13 +328,6 @@ export default function FloorSymptomsPage() {
               </li>
             ))}
           </ul>
-          <p className="text-xs text-[#4B5563] mt-3">
-            床の状態を写真と言葉でどう伝えるかは「
-            <Link href="/area/gunma/" className="text-[#059669] underline">
-              傷みが進んだ床を相談するときの伝え方
-            </Link>
-            」でも整理しています。
-          </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
