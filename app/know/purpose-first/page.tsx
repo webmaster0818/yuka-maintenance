@@ -310,6 +310,8 @@ export default function PurposeFirstPage() {
               { href: "/know/quote-routes/", label: "見積もりが出るまでの流れ" },
               { href: "/know/estimate-reading/", label: "見積書の読み方" },
               { href: "/know/review-reading/", label: "口コミの読み方" },
+              { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
+              { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
             ].map((l) => (
               <Link
                 key={l.href}

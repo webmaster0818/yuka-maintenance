@@ -324,6 +324,7 @@ export default function ReviewReadingPage() {
               { href: "/know/after-work-trouble/", label: "施工後のトラブル対策" },
               { href: "/know/purpose-first/", label: "目的から作業を選ぶ" },
               { href: "/ranking/", label: "総合ランキング" },
+              { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
             ].map((l) => (
               <Link
                 key={l.href}

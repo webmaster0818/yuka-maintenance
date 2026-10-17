@@ -272,6 +272,7 @@ export default function AfterWorkTroublePage() {
               { href: "/area/tokyo/", label: "東京都で比較" },
               { href: "/service/stripping-wash/", label: "剥離洗浄" },
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
+              { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
             ].map((l) => (
               <Link
                 key={l.href}

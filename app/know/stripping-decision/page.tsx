@@ -264,6 +264,8 @@ export default function StrippingDecisionPage() {
               { href: "/know/wax-types/", label: "ワックスの種類" },
               { href: "/know/coating-types/", label: "コーティングの種類" },
               { href: "/service/scratch-repair/", label: "傷補修" },
+              { href: "/know/floor-sanding/", label: "フローリングの研磨" },
+              { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
             ].map((l) => (
               <Link
                 key={l.href}

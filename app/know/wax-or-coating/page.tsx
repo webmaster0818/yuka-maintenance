@@ -281,6 +281,8 @@ export default function WaxOrCoatingPage() {
               { href: "/know/coating-types/", label: "コーティングの種類" },
               { href: "/know/purpose-first/", label: "目的から作業を選ぶ" },
               { href: "/know/quote-routes/", label: "見積もりが出るまでの流れ" },
+              { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+              { href: "/know/skip-wax/", label: "ワックスをかけない場合" },
             ].map((l) => (
               <Link
                 key={l.href}

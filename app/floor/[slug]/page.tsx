@@ -2,6 +2,23 @@ import { notFound } from "next/navigation";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import floors from "@/data/floors.json";
 import Link from "next/link";
+import RelatedKnow from "@/app/components/RelatedKnow";
+
+const relatedKnow: Record<string, { href: string; label: string }[]> = {
+  flooring: [
+    { href: "/know/floor-sanding/", label: "フローリングの研磨" },
+    { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
+    { href: "/know/skip-wax/", label: "ワックスをかけない場合" },
+  ],
+  "cushion-floor": [
+    { href: "/know/toilet-sanitary-floor/", label: "トイレ・洗面所の床" },
+    { href: "/know/vinyl-tile-wax/", label: "タイルの床とワックス" },
+  ],
+  tile: [
+    { href: "/know/vinyl-tile-wax/", label: "タイルの床とワックス" },
+    { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
+  ],
+};
 
 export async function generateStaticParams() {
   return floors.map((f) => ({ slug: f.slug }));
@@ -166,6 +183,8 @@ export default async function FloorPage({
             おすすめ業者ランキングを見る
           </Link>
         </div>
+
+        <RelatedKnow items={relatedKnow[floor.slug] ?? []} />
 
         {/* Other Floors */}
         <div className="mt-8">

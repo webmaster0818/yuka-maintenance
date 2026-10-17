@@ -291,6 +291,8 @@ export default function WaxTypesPage() {
               { href: "/know/recoat-timing/", label: "塗り替えのサイン" },
               { href: "/know/stripping-decision/", label: "剥離が必要かの判断" },
               { href: "/floor/flooring/", label: "フローリングのガイド" },
+              { href: "/know/vinyl-tile-wax/", label: "タイルの床とワックス" },
+              { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
             ].map((l) => (
               <Link
                 key={l.href}

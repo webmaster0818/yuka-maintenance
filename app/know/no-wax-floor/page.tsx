@@ -243,6 +243,9 @@ export default function NoWaxFloorPage() {
               { href: "/cost/price/", label: "料金相場" },
               { href: "/service/floor-coating/", label: "フロアコーティング" },
               { href: "/service/scratch-repair/", label: "傷補修" },
+              { href: "/know/skip-wax/", label: "ワックスをかけない場合" },
+              { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
+              { href: "/know/toilet-sanitary-floor/", label: "トイレ・洗面所の床" },
             ].map((l) => (
               <Link
                 key={l.href}

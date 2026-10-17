@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RelatedKnow from "@/app/components/RelatedKnow";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import areas from "@/data/areas.json";
@@ -331,6 +332,18 @@ export default async function AreaPage({ params }: Props) {
           >
             総合ランキングを見る
           </Link>
+        </div>
+
+        <div className="mb-8">
+          <RelatedKnow
+            heading="依頼前に確認したい基礎知識"
+            items={[
+              { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
+              { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
+              { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
+              { href: "/know/floor-sanding/", label: "フローリングの研磨" },
+            ]}
+          />
         </div>
 
         {/* 5. 他エリア */}

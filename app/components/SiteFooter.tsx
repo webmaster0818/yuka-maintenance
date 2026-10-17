@@ -107,6 +107,15 @@ export default function SiteFooter() {
             <Link href="/know/wax-or-coating/" className="hover:text-[#F59E0B] transition-colors">ワックスかコーティングか</Link>
             <Link href="/know/quote-routes/" className="hover:text-[#F59E0B] transition-colors">見積もりが出るまでの流れ</Link>
             <Link href="/know/review-reading/" className="hover:text-[#F59E0B] transition-colors">口コミの読み方</Link>
+            <Link href="/know/floor-sanding/" className="hover:text-[#F59E0B] transition-colors">フローリングの研磨</Link>
+            <Link href="/know/muku-floor-care/" className="hover:text-[#F59E0B] transition-colors">無垢フローリングの手入れ</Link>
+            <Link href="/know/skip-wax/" className="hover:text-[#F59E0B] transition-colors">ワックスをかけない場合</Link>
+            <Link href="/know/toilet-sanitary-floor/" className="hover:text-[#F59E0B] transition-colors">トイレ・洗面所の床</Link>
+            <Link href="/know/vinyl-tile-wax/" className="hover:text-[#F59E0B] transition-colors">タイルの床とワックス</Link>
+            <Link href="/know/coating-warranty/" className="hover:text-[#F59E0B] transition-colors">コーティングの保証と点検</Link>
+            <Link href="/know/floor-cleaning-menu/" className="hover:text-[#F59E0B] transition-colors">床クリーニングの作業内容</Link>
+            <Link href="/know/wax-price-official/" className="hover:text-[#F59E0B] transition-colors">ワックスがけ料金の比較</Link>
+            <Link href="/know/store-office-floor/" className="hover:text-[#F59E0B] transition-colors">店舗・事務所の床清掃</Link>
           </div>
         </div>
 

@@ -290,6 +290,8 @@ export default function RecoatTimingPage() {
               { href: "/know/stripping-decision/", label: "剥離が必要かの判断" },
               { href: "/know/after-work-trouble/", label: "施工後のトラブル対策" },
               { href: "/cost/price/", label: "料金相場" },
+              { href: "/know/skip-wax/", label: "ワックスをかけない場合" },
+              { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
             ].map((l) => (
               <Link
                 key={l.href}

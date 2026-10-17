@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RelatedKnow from "@/app/components/RelatedKnow";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
@@ -224,6 +225,18 @@ export default function PricePage() {
               定期的なメンテナンスで状態を保ち、大きな修繕を防ぐ
             </li>
           </ul>
+        </div>
+
+        <div className="mb-8">
+          <RelatedKnow
+            heading="料金とあわせて確認したい基礎知識"
+            items={[
+              { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
+              { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
+              { href: "/know/floor-sanding/", label: "フローリングの研磨" },
+              { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+            ]}
+          />
         </div>
 
         {/* Navigation Links */}

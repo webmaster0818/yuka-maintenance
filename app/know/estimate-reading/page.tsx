@@ -305,6 +305,8 @@ export default function EstimateReadingPage() {
               { href: "/know/floor-symptoms/", label: "症状から原因を切り分ける" },
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
               { href: "/area/nagano/", label: "契約書面と支払い条件" },
+              { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
+              { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
             ].map((l) => (
               <Link
                 key={l.href}

@@ -2,6 +2,31 @@ import { notFound } from "next/navigation";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import services from "@/data/services.json";
 import Link from "next/link";
+import RelatedKnow from "@/app/components/RelatedKnow";
+
+const relatedKnow: Record<string, { href: string; label: string }[]> = {
+  wax: [
+    { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
+    { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
+    { href: "/know/skip-wax/", label: "ワックスをかけない場合" },
+    { href: "/know/vinyl-tile-wax/", label: "タイルの床とワックス" },
+  ],
+  "floor-coating": [
+    { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+  ],
+  "regular-maintenance": [
+    { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
+    { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
+  ],
+  "scratch-repair": [
+    { href: "/know/floor-sanding/", label: "フローリングの研磨" },
+    { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
+  ],
+  "stripping-wash": [
+    { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
+    { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
+  ],
+};
 
 export async function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -162,6 +187,8 @@ export default async function ServicePage({
           </Link>
           <p className="text-xs text-[#92400E] mt-3 font-medium">※当サイトはPR・広告を含みます</p>
         </div>
+
+        <RelatedKnow items={relatedKnow[service.slug] ?? []} />
 
         {/* Other Services */}
         <div className="mt-8">

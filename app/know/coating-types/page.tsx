@@ -272,6 +272,7 @@ export default function CoatingTypesPage() {
               { href: "/know/stripping-decision/", label: "剥離が必要かの判断" },
               { href: "/know/no-wax-floor/", label: "ワックス不可の床材" },
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
+              { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
             ].map((l) => (
               <Link
                 key={l.href}

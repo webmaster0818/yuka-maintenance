@@ -360,6 +360,8 @@ export default function FloorSymptomsPage() {
               { href: "/know/estimate-reading/", label: "見積書の読み方" },
               { href: "/know/no-wax-floor/", label: "ワックス不可の床材" },
               { href: "/know/coating-types/", label: "コーティングの種類" },
+              { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
+              { href: "/know/floor-sanding/", label: "フローリングの研磨" },
             ].map((l) => (
               <Link
                 key={l.href}

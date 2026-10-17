@@ -259,6 +259,8 @@ export default function QuoteRoutesPage() {
               { href: "/know/review-reading/", label: "口コミの読み方" },
               { href: "/know/after-work-trouble/", label: "施工後のトラブル対策" },
               { href: "/know/purpose-first/", label: "目的から作業を選ぶ" },
+              { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
+              { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
             ].map((l) => (
               <Link
                 key={l.href}

@@ -303,6 +303,8 @@ export default function DailyCarePage() {
               { href: "/know/wax-types/", label: "ワックスの種類と選び方" },
               { href: "/know/after-work-trouble/", label: "施工後のトラブル対策" },
               { href: "/floor/flooring/", label: "フローリングのガイド" },
+              { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+              { href: "/know/toilet-sanitary-floor/", label: "トイレ・洗面所の床" },
             ].map((l) => (
               <Link
                 key={l.href}
