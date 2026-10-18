@@ -13,7 +13,7 @@ export default function ContentPolicyPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-2">コンテンツポリシー</h1>
-        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年4月1日</p>
+        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年10月18日</p>
 
         <div className="bg-[#059669]/5 border border-[#059669]/20 rounded-xl p-5 mb-8">
           <p className="text-sm text-[#374151] leading-relaxed">
@@ -72,16 +72,15 @@ export default function ContentPolicyPage() {
           <section>
             <h2 className="text-lg font-bold text-[#1C1917] mb-3 border-l-4 border-[#92400E] pl-3">ランキングの選定基準</h2>
             <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-              当サイトのランキングは以下の基準を総合的に評価して作成しています。
+              当サイトのランキングは、各業者の公式サイトで確認できる以下の情報をもとに作成しています。口コミや評価スコアは順位の判断に用いていません。
             </p>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                { title: "口コミ・評判", desc: "実際のユーザーの口コミ・評価スコア" },
-                { title: "料金の透明性", desc: "料金体系が明確で追加料金が少ない" },
+                { title: "料金の公開状況", desc: "公式サイトに料金・面積の区切り・税表記が記載されているか" },
                 { title: "サービスの幅", desc: "対応できる床材・サービスの種類" },
-                { title: "スタッフの技術力", desc: "資格保有者数・研修制度" },
                 { title: "対応エリア", desc: "全国対応か地域限定か" },
-                { title: "保険・保証", desc: "損害賠償保険加入・アフターサービス" },
+                { title: "会社情報", desc: "運営会社・所在地などの公開状況" },
+                { title: "保険・保証", desc: "損害賠償保険・保証の公式サイトでの記載" },
               ].map((item) => (
                 <div key={item.title} className="bg-[#FFFBEB] rounded-lg p-3">
                   <div className="font-bold text-sm text-[#1C1917]">{item.title}</div>
@@ -97,7 +96,7 @@ export default function ContentPolicyPage() {
           <section>
             <h2 className="text-lg font-bold text-[#1C1917] mb-3 border-l-4 border-[#92400E] pl-3">口コミの掲載について</h2>
             <p className="text-sm text-[#57534E] leading-relaxed">
-              当サイトに掲載している口コミは、実際のサービス利用者から収集した情報を基にしています。掲載にあたっては個人を特定できる情報を削除し、内容の事実確認に努めています。明らかに虚偽または誹謗中傷と判断されるものは掲載を見合わせています。
+              当サイトでは、利用者から口コミを独自に収集していません。口コミを掲載する場合は、業者の公式サイトに掲載された利用者の声など出典を確認できるものに限り、原文のまま引用し、出典を明記しています。評価スコア（★・点数）と口コミ件数は、Googleマップなど出典と取得日を示せるものに限って表示します。出典を確認できない評価スコア・口コミは掲載していません。
             </p>
           </section>
 
