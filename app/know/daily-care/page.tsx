@@ -251,7 +251,7 @@ export default function DailyCarePage() {
           <p className="text-xs text-[#78716C] mt-3">
             塗り直しの相談に進むかどうかの見きわめは「
             <Link href="/know/recoat-timing/" className="text-[#92400E] underline">
-              ワックスの塗り替え時期を年数ではなくサインで判断する方法
+              フローリングワックスの塗り替え時期の目安
             </Link>
             」で扱っています。
           </p>

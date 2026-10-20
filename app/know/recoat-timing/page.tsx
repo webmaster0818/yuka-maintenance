@@ -2,10 +2,10 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
-  title: "ワックスの塗り替え時期を年数ではなくサインで判断する方法",
+  title: "フローリングワックスの塗り替え時期の目安｜製品の耐久性と床のサインで判断",
   alternates: { canonical: "/know/recoat-timing/" },
   description:
-    "床ワックスの塗り替え時期は年数だけでは決まりません。見た目・歩いたときの感触・清掃のしやすさに出るサインの見方、部屋ごとに進み方が変わる理由、塗り重ねでよい場合と剥離が必要な場合の分かれ目を整理しています。",
+    "フローリングワックスの塗り替え時期は、使っている製品の耐久性の表示が目安です。リンレイの家庭用ワックスは製品により約1ヶ月〜約2年と公表されています。耐久性の一覧と、つや・感触・汚れの落ち方など床に出る塗り替えのサイン、塗り重ねと剥離の分かれ目をご説明します。",
 };
 
 const visualSigns = [
@@ -46,6 +46,20 @@ const touchSigns = [
   },
 ];
 
+const durability: [string, string][] = [
+  ["つやピカワックス シート（シートタイプ）", "約1ヶ月"],
+  ["つやピカワックス（スプレータイプ）", "約3ヶ月"],
+  ["オールワックスシート（シートタイプ）", "約4ヶ月"],
+  ["オール（ベーシックな樹脂ワックス）", "約6ヶ月"],
+  ["高光沢樹脂ワックス", "約6ヶ月"],
+  ["ハイテクフローリングコート", "約6ヶ月"],
+  ["フローリング専用ワックス", "約1年"],
+  ["ハイプロテクトワックス", "約1年"],
+  ["スーパーグロス", "約1年"],
+  ["防水タフコート", "約1年"],
+  ["ウルトラタフコート", "約2年"],
+];
+
 const roomFactors = [
   ["人の通る量", "廊下や出入口付近など、通行の多い場所ほど表面への負担が集中します。"],
   ["椅子・家具の動き", "キャスター付きの椅子を使う場所や、頻繁に動かす家具の下では変化が出やすくなります。"],
@@ -67,18 +81,54 @@ export default function RecoatTimingPage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            ワックスの塗り替え時期を年数ではなくサインで判断する方法
+            フローリングワックスの塗り替え時期の目安｜製品の耐久性と床のサインで判断
           </h1>
+          <p className="text-[#57534E] leading-relaxed mb-3">
+            塗り替え時期の目安は、<strong>使っているワックスの容器や公式サイトに表示されている「耐久性」</strong>です。
+            家庭用ワックスでは製品によって幅が大きく、たとえばリンレイは、スプレー・シートタイプで約1〜4ヶ月、
+            一般的な樹脂ワックスで約6ヶ月〜約1年、耐久性を高めた製品で約2年と公表しています。
+          </p>
           <p className="text-[#57534E] leading-relaxed">
-            「ワックスは何年もちますか」という質問はよく出ますが、年数だけで決めると早すぎたり遅すぎたりします。
-            実際の判断材料になるのは、床に出ている変化です。このページでは、自分で確認できるサインと、
-            塗り重ねでよいのか、いったん剥がす必要があるのかを切り分ける考え方を整理します。
+            ただし耐久性は目安で、通行の多い場所や水まわりでは早く傷みます。表示の期間が近づいたら、
+            このページで紹介する床のサイン（つや・感触・汚れの落ち方）を確認し、塗り重ねでよいのか、
+            いったん剥がす必要があるのかを判断してください。
           </p>
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900 mb-8">
           <strong>先に前提:</strong>{" "}
-          膜の持ちは、使った製品・床材・その家の使い方によって大きく変わります。当ページでは「何年で塗り替え」といった数値の目安は示しません。最終的な判断は、床の状態を見た施工者の説明にもとづいて行ってください。
+          膜の持ちは、使った製品・床材・その家の使い方によって大きく変わります。下の耐久性はメーカーが公表している製品ごとの目安で、すべての床にあてはまる期間ではありません。業者に施工を依頼した場合は、使用したワックスと塗り替えの目安を施工者に確認してください。
+        </div>
+
+        <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
+          <h2 className="text-lg font-bold text-[#1C1917] mb-3">
+            家庭用ワックスの耐久性の目安（リンレイ公表値）
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-[#F5F5F4] text-[#1C1917]">
+                  <th className="px-3 py-2 text-left font-bold">製品（タイプ）</th>
+                  <th className="px-3 py-2 text-left font-bold">耐久性</th>
+                </tr>
+              </thead>
+              <tbody>
+                {durability.map(([n, d]) => (
+                  <tr key={n} className="border-t border-[#E7E5E4]">
+                    <td className="px-3 py-2 text-[#57534E]">{n}</td>
+                    <td className="px-3 py-2 font-bold text-[#1C1917]">{d}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-[#78716C] mt-3 leading-relaxed">
+            出典：
+            <a href="https://www.rinrei.co.jp/home_care/howto/" target="_blank" rel="noopener noreferrer" className="underline">
+              リンレイ公式「ワックスの準備から塗り方」
+            </a>
+            （2026年10月20日確認）。他社の製品は、容器の表示や各メーカーの公式サイトでご確認ください。
+          </p>
         </div>
 
         {/* H2-1 */}
