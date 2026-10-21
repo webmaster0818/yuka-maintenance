@@ -18,8 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const area = areas.find((a) => a.slug === slug);
   if (!area) return {};
   const url = `https://yuka-maintenance.com/area/${area.slug}/`;
-  const title = `${area.name}の床メンテナンス業者を比較｜料金目安と対応サービス一覧`;
-  const description = `${area.name}で床のワックスがけ・フロアコーティング・剥離洗浄を依頼したい方向けに、掲載${companies.length}社の最低料金目安と対応サービスを一覧で比較。対応エリアの可否は各社への確認が必要です。`;
+  // seoTitle / seoDescription は検索語に合わせて個別に調整したエリアだけが持つ任意項目。
+  const seo = area as { seoTitle?: string; seoDescription?: string };
+  const title =
+    seo.seoTitle ?? `${area.name}の床メンテナンス業者を比較｜料金目安と対応サービス一覧`;
+  const description =
+    seo.seoDescription ??
+    `${area.name}で床のワックスがけ・フロアコーティング・剥離洗浄を依頼したい方向けに、掲載${companies.length}社の最低料金目安と対応サービスを一覧で比較。対応エリアの可否は各社への確認が必要です。`;
   return {
     title,
     description,
@@ -66,6 +71,23 @@ export default async function AreaPage({ params }: Props) {
   // 今回追加したエリア（questions を持つもの）だけ、共通セクションの見出しに
   // 県名を含めてページ間の見出し重複を避ける。
   const scopedHeading = Boolean(focus.questions);
+
+  // coverage は、公式サイトの対応エリアを個別に確認したエリアだけが持つ任意項目。
+  const coverage = (area as {
+    coverage?: {
+      heading: string;
+      intro: string;
+      checkedOn: string;
+      items: { slug: string; basis: string; sourceLabel: string; sourceUrl: string }[];
+      note?: string;
+    };
+  }).coverage;
+  const coverageRows = coverage
+    ? coverage.items.flatMap((item) => {
+        const company = companies.find((c) => c.slug === item.slug);
+        return company ? [{ ...item, company }] : [];
+      })
+    : [];
   const serviceHeading = scopedHeading
     ? `対応サービスから掲載社を絞り込む（${area.name}から依頼する場合）`
     : "対応サービスから掲載社を絞り込む";
@@ -121,6 +143,47 @@ export default async function AreaPage({ params }: Props) {
           </h1>
           <p className="text-[#57534E] leading-relaxed">{area.lead}</p>
         </div>
+
+        {coverage && coverageRows.length > 0 && (
+          <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-8">
+            <h2 className="text-lg font-bold text-[#1C1917] mb-2">{coverage.heading}</h2>
+            <p className="text-sm text-[#57534E] mb-4">{coverage.intro}</p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-[#F5F5F4] text-[#1C1917]">
+                    <th className="px-3 py-2 text-left font-bold whitespace-nowrap">社名</th>
+                    <th className="px-3 py-2 text-left font-bold">料金目安</th>
+                    <th className="px-3 py-2 text-left font-bold">公式サイトの記載</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {coverageRows.map((row) => (
+                    <tr key={row.slug} className="border-t border-[#E7E5E4] align-top">
+                      <td className="px-3 py-2 font-medium text-[#1C1917] whitespace-nowrap">
+                        <Link href={`/company/${row.slug}/`} className="hover:text-[#92400E] underline decoration-[#D6D3D1] underline-offset-2">
+                          {row.company.name}
+                        </Link>
+                      </td>
+                      <td className="px-3 py-2 text-[#92400E] font-bold">{row.company.priceRange}</td>
+                      <td className="px-3 py-2 text-[#57534E]">
+                        {row.basis}（出典：
+                        <a href={row.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">
+                          {row.sourceLabel}
+                        </a>
+                        ）
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-[#78716C] mt-3 leading-relaxed">
+              {coverage.checkedOn}に各社の公式サイトで確認しました。
+              {coverage.note}
+            </p>
+          </div>
+        )}
 
         {/* 1. 対応可否 */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
