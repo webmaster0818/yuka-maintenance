@@ -12,6 +12,7 @@ type CompanyAnswer = {
   description: string;
   heading: string;
   lead: string[];
+  priceTable?: { caption: string; head: string[]; rows: string[][]; note: string; sourceHref: string };
   faq: { q: string; a: string }[];
   sources: { label: string; href: string; checked: string }[];
 };
@@ -120,6 +121,36 @@ export default async function CompanyPage({
                 <p key={p}>{p}</p>
               ))}
             </div>
+            {answer.priceTable && (
+              <div className="mt-6">
+                <h3 className="font-bold text-[#1C1917] mb-3">地域別の料金表</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm border border-[#D6D3D1]">
+                    <caption className="text-left text-xs text-[#78716C] mb-2">{answer.priceTable.caption}</caption>
+                    <thead className="bg-[#FFFBEB]">
+                      <tr>
+                        {answer.priceTable.head.map((h) => (
+                          <th key={h} className="px-3 py-2 text-left font-bold text-[#1C1917] border-b border-[#D6D3D1]">{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {answer.priceTable.rows.map((r) => (
+                        <tr key={r[0]} className="border-b border-[#D6D3D1]">
+                          {r.map((c, i) => (
+                            <td key={i} className={i === 0 ? "px-3 py-2 font-bold text-[#1C1917] whitespace-nowrap" : "px-3 py-2 text-[#57534E]"}>{c}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-xs text-[#78716C] mt-2">
+                  {answer.priceTable.note}
+                  <a href={answer.priceTable.sourceHref} target="_blank" rel="noopener noreferrer" className="underline ml-1">公式の価格・料金一覧を見る</a>
+                </p>
+              </div>
+            )}
             <h3 className="font-bold text-[#1C1917] mt-6 mb-3">よくある質問</h3>
             <div className="space-y-3">
               {answer.faq.map((f) => (

@@ -33,7 +33,7 @@ export default function WaxPriceOfficialPage() {
             rows: [
               [
                 <Link key="d" href="/company/duskin/" className={linkCls}>ダスキン「フロアクリーニング」（フローリング・クッションフロア）</Link>,
-                "東京・神奈川（Sエリア）と、茨城・大阪など（Aエリア）：10平方メートル 11,425円〜、17平方メートル 18,929円〜、25平方メートル 26,413円〜。北海道・福岡など（Bエリア）：10平方メートル 10,081円〜",
+                "東京・神奈川（Sエリア）と、茨城・大阪など（Aエリア）：10平方メートル 11,425円〜、17平方メートル 18,929円〜、25平方メートル 26,413円〜。北海道・福岡など（Bエリア）：10平方メートル 10,081円〜、17平方メートル 16,703円〜、25平方メートル 23,305円〜",
                 "税込（税抜額も併記）",
                 "土日・祝日・夜間の作業は、受けられない場合や追加費用が発生する場合があると記載",
               ],
@@ -129,7 +129,7 @@ export default function WaxPriceOfficialPage() {
         { href: "/know/recoat-timing/", label: "塗り替え時期の見きわめ" },
       ]}
       sources={[
-        { label: "ダスキン「フロアクリーニング」価格・料金一覧", href: "https://www.duskin.jp/servicemaster/spot/sm000030/", checked: "2026年10月17日" },
+        { label: "ダスキン「フロアクリーニング」価格・料金一覧", href: "https://www.duskin.jp/servicemaster/spot/sm000030/", checked: "2026年10月23日" },
         { label: "クリーンクルー「床（フローリング）クリーニング」", href: "https://www.cleancrew.jp/housecleaning/product/flooring", checked: "2026年10月17日" },
         { label: "PVSクリーニング「床のクリーニング・ワックスがけ」", href: "https://www.pvs-cleaning.com/menu/floor", checked: "2026年10月17日" },
         { label: "くまハウス「床・天井・カーペットクリーニング」", href: "https://www.kuma-house.jp/house/wax.html", checked: "2026年10月17日" },
