@@ -13,7 +13,7 @@ export default function PrivacyPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-2">プライバシーポリシー</h1>
-        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年4月1日</p>
+        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年10月23日</p>
 
         <div className="space-y-8">
           <section>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold text-[#1C1917] mb-3 border-l-4 border-[#92400E] pl-3">9. お問い合わせ</h2>
             <p className="text-sm text-[#57534E] leading-relaxed">
-              プライバシーポリシーに関するお問い合わせは、当サイトのお問い合わせフォームよりご連絡ください。
+              プライバシーポリシーに関するお問い合わせは、<a href="/about/" className="text-[#92400E] underline">運営者情報</a>に記載のメールアドレス（webmaster@mediax.biz）までご連絡ください。
             </p>
           </section>
         </div>

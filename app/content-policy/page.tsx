@@ -13,7 +13,7 @@ export default function ContentPolicyPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-2">コンテンツポリシー</h1>
-        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年10月18日</p>
+        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年10月23日</p>
 
         <div className="bg-[#059669]/5 border border-[#059669]/20 rounded-xl p-5 mb-8">
           <p className="text-sm text-[#374151] leading-relaxed">
@@ -103,7 +103,7 @@ export default function ContentPolicyPage() {
           <section>
             <h2 className="text-lg font-bold text-[#1C1917] mb-3 border-l-4 border-[#92400E] pl-3">情報の更新・訂正</h2>
             <p className="text-sm text-[#57534E] leading-relaxed">
-              掲載情報の誤りや変更が生じた場合は速やかに修正します。業者情報の変更（廃業・サービス内容の変更等）についても定期的な確認を行い、最新情報の維持に努めます。誤りを発見された場合はお問い合わせよりご連絡ください。
+              掲載情報の誤りや変更が生じた場合は速やかに修正します。業者情報の変更（廃業・サービス内容の変更等）についても定期的な確認を行い、最新情報の維持に努めます。誤りを発見された場合は、メール（webmaster@mediax.biz）でご連絡ください。
             </p>
           </section>
 

@@ -4,6 +4,18 @@ import companies from "@/data/companies.json";
 import SourcedRating from "@/app/components/SourcedRating";
 import { hasReviewArticle } from "@/app/lib/verifiedRating";
 import Link from "next/link";
+import companyAnswers from "@/data/company-answers.json";
+
+// 検索語に即答する冒頭・FAQ（公式出典つき）を持つ社だけ、data/company-answers.json で上書きする
+type CompanyAnswer = {
+  title: string;
+  description: string;
+  heading: string;
+  lead: string[];
+  faq: { q: string; a: string }[];
+  sources: { label: string; href: string; checked: string }[];
+};
+const answers = companyAnswers as Record<string, CompanyAnswer>;
 
 export async function generateStaticParams() {
   return companies.map((c) => ({ slug: c.slug }));
@@ -17,6 +29,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const company = companies.find((c) => c.slug === slug);
   if (!company) return {};
+  const answer = answers[slug];
+  if (answer) {
+    return {
+      title: answer.title,
+      description: answer.description,
+      alternates: { canonical: `/company/${company.slug}/` },
+    };
+  }
   return {
     // 口コミを掲載していない社に「口コミ・評判」のタイトルを付けない
     title: company.reviews.length
@@ -36,6 +56,14 @@ export default async function CompanyPage({
   const { slug } = await params;
   const company = companies.find((c) => c.slug === slug);
   if (!company) notFound();
+  const answer = answers[company.slug];
+  const faqLd = answer
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: answer.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      }
+    : null;
 
   return (
     <>
@@ -80,6 +108,38 @@ export default async function CompanyPage({
             </div>
           </div>
         </div>
+
+        {answer && (
+          <section className="bg-white rounded-2xl border border-[#D6D3D1] p-6 mb-6 shadow-sm">
+            {faqLd && (
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+            )}
+            <h2 className="text-xl font-bold text-[#1C1917] mb-3">{answer.heading}</h2>
+            <div className="space-y-3 text-sm text-[#57534E] leading-relaxed">
+              {answer.lead.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+            <h3 className="font-bold text-[#1C1917] mt-6 mb-3">よくある質問</h3>
+            <div className="space-y-3">
+              {answer.faq.map((f) => (
+                <div key={f.q} className="rounded-xl bg-[#FFFBEB] border border-[#D6D3D1] p-4">
+                  <p className="font-bold text-sm text-[#1C1917] mb-1">Q. {f.q}</p>
+                  <p className="text-sm text-[#57534E] leading-relaxed">A. {f.a}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-[#78716C] mt-4">
+              出典：
+              {answer.sources.map((src, i) => (
+                <span key={src.href}>
+                  {i > 0 && "／"}
+                  <a href={src.href} target="_blank" rel="noopener noreferrer" className="underline">{src.label}</a>（{src.checked}確認）
+                </span>
+              ))}
+            </p>
+          </section>
+        )}
 
         <div className="grid md:grid-cols-3 gap-6 mb-6">
           {/* Features */}
