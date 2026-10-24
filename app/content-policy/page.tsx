@@ -13,7 +13,7 @@ export default function ContentPolicyPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-2">コンテンツポリシー</h1>
-        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年10月23日</p>
+        <p className="text-sm text-[#78716C] mb-8">最終更新日: 2026年10月24日</p>
 
         <div className="bg-[#059669]/5 border border-[#059669]/20 rounded-xl p-5 mb-8">
           <p className="text-sm text-[#374151] leading-relaxed">
@@ -25,7 +25,7 @@ export default function ContentPolicyPage() {
           <section>
             <h2 className="text-lg font-bold text-[#1C1917] mb-3 border-l-4 border-[#92400E] pl-3">編集方針</h2>
             <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-              当サイトのコンテンツは、床メンテナンスに関する専門的な知識と実際のユーザー体験を基に作成されています。
+              当サイトのコンテンツは、編集部が各社の公式サイトと、公的機関・床材メーカーの公開情報を確認して作成しています。独自の調査・アンケートや、編集部による施工の体験・検証は行っていません。
             </p>
             <ul className="space-y-2 text-sm text-[#57534E]">
               <li className="flex items-start gap-2">

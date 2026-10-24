@@ -2,10 +2,10 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
-  title: "床用ワックスの種類と選び方｜樹脂・乳化性・油性の違い",
+  title: "フローリングワックスの違い｜水性（樹脂系）・乳化性・油性の見分け方と選び方",
   alternates: { canonical: "/know/wax-types/" },
   description:
-    "床用ワックスは膜をつくる成分によって性質が変わります。水性樹脂・乳化性・油性それぞれの考え方、つや表記の読み方、床材との組み合わせで起きやすい行き違い、製品表示で確認する項目を整理しています。",
+    "フローリングワックスの違いは、容器の「種類」の表示で分かります。家庭用品品質表示法の規程は、ワックスの種類を水性・乳化性・油性で表示し、合成樹脂が主成分なら「樹脂系」を付けると定めています。フローリングに使う種類はメーカーの指定で確認します。",
 };
 
 const glossTable: [string, string][] = [
@@ -55,9 +55,37 @@ const labelChecks = [
   "つやの区分と、仕上がりの表記",
 ];
 
+const faqs = [
+  {
+    q: "フローリングワックスの水性・乳化性・油性は、どう違いますか？",
+    a: "消費者庁の雑貨工業品品質表示規程では、ろう・油脂・合成樹脂などを水に溶解・乳化・可溶化したものを「水性」、有機溶剤とともに水に乳化したものを「乳化性」、そのどちらにも当たらないものを「油性」と表示します。合成樹脂が主成分のものは「水性（樹脂系）」のように「樹脂系」が付きます。",
+  },
+  {
+    q: "樹脂ワックスかどうかは、どこで見分けますか？",
+    a: "容器の品質表示の「種類」の欄に「樹脂系」と書かれているかで確認できます。成分の欄にも、含有量1%以上の主要成分が「合成樹脂」「ろう」「有機溶剤」「水」などの名称で表示されます。",
+  },
+  {
+    q: "フローリングにはどの種類のワックスを使えばよいですか？",
+    a: "床材メーカーの指定に従います。パナソニックは同社の木質床材について水性樹脂タイプを用意し、ロウタイプ・油性タイプは使わないよう案内しています。ワックス不要・ワックス禁止の床材もあるため、まず品番で塗ってよい床かを確認してください。",
+  },
+];
+
+const sources = [
+  { label: "消費者庁「雑貨工業品品質表示規程（三十 住宅用又は家具用のワックス）」", href: "https://www.caa.go.jp/policies/policy/representation/household_goods/law/law_07/item_030.html", checked: "2026年10月24日" },
+  { label: "パナソニック「木質床材・フローリングのお手入れ（お掃除）」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年10月24日" },
+  { label: "東リ 床材FAQ「複層ビニル床タイルのメンテナンスでは、ワックスが必要でしょうか」", href: "https://www.toli.co.jp/faq/floor/32.html", checked: "2026年10月24日" },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
+
 export default function WaxTypesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Breadcrumb
         items={[
           { label: "床メンテナンスの基礎知識" },
@@ -68,12 +96,16 @@ export default function WaxTypesPage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            床用ワックスの種類と選び方｜樹脂・乳化性・油性の違い
+            フローリングワックスの違い｜水性（樹脂系）・乳化性・油性の見分け方と選び方
           </h1>
+          <p className="text-[#57534E] leading-relaxed mb-3">
+            フローリングワックスの違いは、容器の「種類」と「成分」の表示で確かめられます。家庭用品品質表示法にもとづく消費者庁の雑貨工業品品質表示規程は、住宅用のワックスの種類を「水性」「乳化性」「油性」のいずれかで表示し、合成樹脂を主成分とするものは「水性（樹脂系）」のように「樹脂系」と書き添えるよう定めています。
+          </p>
+          <p className="text-[#57534E] leading-relaxed mb-3">
+            フローリングに使える種類は、床材メーカーの指定で決まります。たとえばパナソニックは、同社の木質床材にワックスをかける場合は水性樹脂タイプを用意し、ロウタイプ・油性タイプは使わないよう案内しています。東リは、ワックスの塗布を推奨する複層ビニル床タイルについて、メーカー推奨品以外でもビニル床材用の樹脂ワックスであれば使用できるとしています。種類を選ぶ前に、お使いの床材の取扱説明書やメーカーの案内を確認してください。
+          </p>
           <p className="text-[#57534E] leading-relaxed">
-            「床用ワックス」とひとくくりに呼ばれていますが、膜をつくる成分によって性質も扱い方も変わります。
-            種類の違いを知らずに選ぶと、床材と合わずにムラが出たり、後からはがしにくくなったりすることがあります。
-            このページでは、製品を選ぶ前に押さえておきたい分類の考え方と、確認すべき表示項目を整理します。
+            このページでは、表示の規程にもとづく3種類の違い、床材との組み合わせで起きやすい行き違い、製品表示で確認する項目を整理します。
           </p>
         </div>
 
@@ -85,26 +117,25 @@ export default function WaxTypesPage() {
         {/* H2-1 */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
           <h2 className="text-lg font-bold text-[#1C1917] mb-3">
-            床用ワックスは「何でできた膜か」で分かれる
+            水性・乳化性・油性の違い（表示の規程による区分）
           </h2>
           <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            床用ワックスの分類でまず押さえたいのは、床の上に残る膜が何でできているかという点です。
-            大きくは、合成樹脂の膜をつくるタイプと、ろう成分を主体としたタイプに分けて考えると整理しやすくなります。
-            さらに、その成分を運ぶ液体が水なのか溶剤なのかという軸が重なります。
+            雑貨工業品品質表示規程は、住宅用・家具用のワックスについて、成分（ろう・油脂・有機溶剤・合成樹脂・シリコーン・水など、含有量1%以上の主要成分）と種類の表示を求めています。
+            種類は、ろう・油脂・合成樹脂などの成分を何に溶かしたり乳化させたりしているかで、次の3つに分かれます。
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             {[
               {
-                t: "水性樹脂タイプ",
-                b: "合成樹脂を水に分散させたもので、乾くと樹脂の膜が残ります。住宅用として一般に流通している製品の多くがこの考え方にあたります。",
+                t: "水性",
+                b: "ろう・油脂・合成樹脂などを水に溶解、乳化または可溶化したものです。合成樹脂が主成分のものは「水性（樹脂系）」と表示され、一般に「樹脂ワックス」「水性樹脂ワックス」と呼ばれます。",
               },
               {
-                t: "乳化性タイプ",
-                b: "ろう成分と樹脂などを水に乳化させたもので、しっとりとした仕上がりを狙う製品に用いられる考え方です。",
+                t: "乳化性",
+                b: "ろう・油脂・合成樹脂などと有機溶剤を、水に乳化したものです。水と有機溶剤の両方を含む点が、水性との違いです。",
               },
               {
-                t: "油性タイプ",
-                b: "溶剤にろう成分を溶かしたもので、水を嫌う床材に向けて案内されることがあります。においや換気の扱いが水性と異なります。",
+                t: "油性",
+                b: "ろう・油脂・合成樹脂などを成分とするもので、水性・乳化性のどちらにも当たらないものです。においや換気の扱いが水性と異なるため、製品の使用上の注意を確認します。",
               },
             ].map((x) => (
               <div key={x.t} className="bg-[#FFFBEB] rounded-lg p-4 border border-[#F0ECE8]">
@@ -114,7 +145,7 @@ export default function WaxTypesPage() {
             ))}
           </div>
           <p className="text-xs text-[#78716C] mt-3">
-            分類の呼び方はメーカーによって異なります。店頭やカタログの区分名が上記と一致しないこともあるため、名称よりも「適用できる床材」「使えない場所」の記載を優先して読んでください。
+            「樹脂ワックス」「ロウタイプ」などの呼び方は商品名やカタログの表現で、表示の規程の区分名とは一致しないことがあります。見分けるときは容器の「種類」「成分」の欄を見て、あわせて「適用できる床材」「使えない場所」の記載を確認してください。
           </p>
         </div>
 
@@ -266,6 +297,29 @@ export default function WaxTypesPage() {
           <p className="text-xs text-[#4B5563] mt-3">
             業者に依頼する場合は「どの種類のワックスを使うのか」「その床材に適合しているか」の2点を見積もり時に確認し、回答を書面やメールで残しておくと後で照合できます。
           </p>
+        </div>
+
+        <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
+          <h2 className="text-lg font-bold text-[#1C1917] mb-3">よくある質問</h2>
+          <div className="space-y-4">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="font-bold text-sm text-[#1C1917] mb-1">Q. {f.q}</h3>
+                <p className="text-sm text-[#57534E] leading-relaxed">A. {f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-8">
+          <h2 className="text-lg font-bold text-[#1C1917] mb-3">出典</h2>
+          <ul className="space-y-1 text-xs text-[#57534E] list-disc pl-5">
+            {sources.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className="text-[#92400E] underline">{s.label}</a>（{s.checked}確認）
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
