@@ -125,7 +125,7 @@ export default function EstimateReadingPage() {
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900 mb-8">
           <strong>先に前提:</strong>{" "}
           見積書の様式は会社ごとに異なり、ここで挙げる欄がすべて存在するとは限りません。金額そのものは作業範囲・床材の状態・面積によって変わるため、当ページでは具体的な金額を示していません。各社の料金の考え方は
-          <Link href="/cost/price/" className="underline font-bold">サービス別の料金相場</Link>
+          <Link href="/cost/price/" className="underline font-bold">各社の公式掲載料金</Link>
           のページと、実際に受け取る見積もりでご確認ください。
         </div>
 

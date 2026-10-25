@@ -214,7 +214,7 @@ export default function WaxOrCoatingPage() {
             ))}
           </div>
           <p className="text-xs text-[#78716C] mt-3">
-            掲載各社が公表している最低料金目安は
+            掲載各社が公式サイトに掲載している料金は
             <Link href="/cost/price/" className="text-[#92400E] underline">料金相場のページ</Link>
             にまとめています。金額は作業範囲・床材・面積によって変わるため、必ず見積もりで確認してください。
           </p>

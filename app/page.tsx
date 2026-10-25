@@ -7,7 +7,7 @@ import services from "@/data/services.json";
 export const metadata = {
   title: "床メンテナンス110番 | 床クリーニング業者の比較・口コミ情報",
   description:
-    "フローリング・大理石・カーペットなど床材別の専門業者を、公式情報と口コミをもとに比較できる情報サイトです。ワックスがけ・フロアコーティング・傷補修の費用相場も掲載しています。",
+    "フローリング・大理石・カーペットなど床材別の専門業者を、公式情報と口コミをもとに比較できる情報サイトです。ワックスがけ・フロアコーティングなどの料金は、各社が公式サイトに掲載している金額を掲載しています。",
   alternates: { canonical: "/" },
 };
 
@@ -28,7 +28,7 @@ export default function HomePage() {
             <span className="text-[#FCD34D]">必要な情報を掲載します</span>
           </h1>
           <p className="text-lg text-[#FDE68A] mb-8 max-w-2xl mx-auto">
-            フローリング・大理石・カーペットなど、床材に対応した専門業者を比較して掲載しています。費用相場・口コミ・業者の選び方まで、床メンテナンスの検討に必要な情報をまとめています。
+            フローリング・大理石・カーペットなど、床材に対応した専門業者を比較して掲載しています。各社の公式掲載料金・口コミ・業者の選び方まで、床メンテナンスの検討に必要な情報をまとめています。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -152,7 +152,6 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <div className="font-bold text-[#1C1917] group-hover:text-[#92400E] text-sm">{floor.name}</div>
-                <div className="text-xs text-[#78716C] mt-1">{floor.avgCost}</div>
               </Link>
             ))}
           </div>
@@ -174,7 +173,7 @@ export default function HomePage() {
                 <h3 className="font-bold text-[#1C1917] group-hover:text-[#92400E] mb-2">{service.name}</h3>
                 <p className="text-sm text-[#57534E] mb-3 line-clamp-2">{service.shortDescription}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#78716C]">平均費用: {service.avgCost}</span>
+                  <span className="text-xs text-[#78716C]">費用は見積もりで確認</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-[#A8A29E] group-hover:text-[#92400E]" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
@@ -199,8 +198,8 @@ export default function HomePage() {
                 ),
               },
               {
-                title: "費用相場を一覧で掲載します",
-                desc: "ワックスがけからフロアコーティングまで、サービス別・床材別の費用相場を掲載しています。",
+                title: "公式に掲載された料金を一覧で掲載します",
+                desc: "ワックスがけからフロアコーティングまで、各社が公式サイトに掲載している料金を、税込・税別と単位の条件つきで掲載しています。",
                 icon: (
                   <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 ),
@@ -234,7 +233,7 @@ export default function HomePage() {
             依頼前に料金の相場をご確認ください
           </h2>
           <p className="text-[#78350F] mb-6">
-            費用の目安を把握しておくと、業者との相談を円滑に進められます。
+            各社が公式に掲載している料金を確認しておくと、業者との相談を円滑に進められます。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

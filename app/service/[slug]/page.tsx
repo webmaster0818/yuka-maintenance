@@ -42,7 +42,7 @@ export async function generateMetadata({
   if (!service) return {};
   return {
     title: `${service.name}の費用・業者選び方`,
-    description: `${service.name}の費用相場・作業工程・メリット・デメリットを解説します。${service.avgCost}。専門業者に依頼する際の確認事項も掲載しています。`,
+    description: `${service.name}の作業工程・メリット・デメリットと、費用を見積もりで確認するときの注意点を解説します。専門業者に依頼する際の確認事項も掲載しています。`,
     alternates: { canonical: `/service/${service.slug}/` },
   };
 }
@@ -72,7 +72,7 @@ export default async function ServicePage({
           <p className="text-[#FDE68A] text-lg mb-4">{service.shortDescription}</p>
           <div className="flex flex-wrap gap-4 text-sm">
             <div className="bg-white/10 rounded-lg px-4 py-2">
-              <div className="text-[#FDE68A] text-xs">平均費用</div>
+              <div className="text-[#FDE68A] text-xs">費用</div>
               <div className="font-bold text-white">{service.avgCost}</div>
             </div>
             <div className="bg-white/10 rounded-lg px-4 py-2">

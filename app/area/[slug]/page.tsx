@@ -387,7 +387,7 @@ export default async function AreaPage({ params }: Props) {
             href="/cost/price/"
             className="flex-1 bg-[#92400E] text-white font-bold py-3 px-6 rounded-full text-center hover:bg-[#78350F] transition-colors"
           >
-            サービス別の料金相場を見る
+            各社の公式掲載料金を見る
           </Link>
           <Link
             href="/ranking/"

@@ -22,7 +22,7 @@ export default function SiteFooter() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-[#A8A29E]">
-              床メンテナンス業者の比較から費用相場まで、依頼の検討に必要な情報を掲載する情報サイトです。
+              床メンテナンス業者の比較から各社の公式掲載料金まで、依頼の検討に必要な情報を掲載する情報サイトです。
             </p>
             <div className="mt-4 inline-block bg-[#92400E] text-[#FCD34D] text-xs font-bold px-2 py-1 rounded">
               PR・広告掲載あり

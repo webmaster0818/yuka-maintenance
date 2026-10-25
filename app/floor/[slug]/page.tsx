@@ -33,8 +33,8 @@ export async function generateMetadata({
   const floor = floors.find((f) => f.slug === slug);
   if (!floor) return {};
   return {
-    title: `${floor.name}のメンテナンス方法・費用相場`,
-    description: `${floor.name}のメンテナンス方法を解説します。費用相場${floor.avgCost}、推奨サービス・注意点などを掲載しています。`,
+    title: `${floor.name}のメンテナンス方法・費用の確認点`,
+    description: `${floor.name}のメンテナンス方法を解説します。推奨サービス・注意点と、費用を見積もりで確認するときの要点を掲載しています。`,
     alternates: { canonical: `/floor/${floor.slug}/` },
   };
 }
@@ -79,7 +79,7 @@ export default async function FloorPage({
           <p className="text-[#FDE68A] leading-relaxed">{floor.description}</p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm">
             <div className="bg-white/10 rounded-lg px-4 py-2">
-              <div className="text-[#FDE68A] text-xs">平均費用</div>
+              <div className="text-[#FDE68A] text-xs">費用</div>
               <div className="font-bold text-white">{floor.avgCost}</div>
             </div>
             <div className="bg-white/10 rounded-lg px-4 py-2">

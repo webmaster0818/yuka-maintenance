@@ -1,96 +1,20 @@
 import Link from "next/link";
 import RelatedKnow from "@/app/components/RelatedKnow";
 import Breadcrumb from "@/app/components/Breadcrumb";
+import companies from "@/data/companies.json";
+import type { Company } from "@/app/lib/company";
 
 export const metadata = {
-  title: "床メンテナンスの料金相場・費用一覧",
+  title: "床メンテナンスの料金｜公式に料金を掲載している会社の一覧",
   alternates: { canonical: "/cost/price/" },
   description:
-    "床メンテナンスの料金相場を、フローリングのワックスがけ・フロアコーティング・傷補修など、サービス別・床材別に掲載しています。",
+    "床のワックスがけ・フロアコーティングなどの料金を、各社が公式サイトに掲載している最低料金（税込・税別・単位の条件つき）で一覧にしています。料金表のない会社は見積もりで確認してください。",
 };
 
-const priceData = [
-  {
-    service: "ワックスがけ（フローリング）",
-    unit: "6畳あたり",
-    min: "8,000",
-    max: "15,000",
-    avg: "11,000",
-    notes: "汚れの度合いにより変動",
-  },
-  {
-    service: "ワックスがけ（クッションフロア）",
-    unit: "6畳あたり",
-    min: "6,000",
-    max: "12,000",
-    avg: "9,000",
-    notes: "素材の状態により変動",
-  },
-  {
-    service: "フロアコーティング（UV硬化型）",
-    unit: "一般住宅全体",
-    min: "80,000",
-    max: "200,000",
-    avg: "130,000",
-    notes: "広さ・コーティング種類による",
-  },
-  {
-    service: "フロアコーティング（ガラスコーティング）",
-    unit: "一般住宅全体",
-    min: "50,000",
-    max: "150,000",
-    avg: "90,000",
-    notes: "施工面積により変動",
-  },
-  {
-    service: "剥離洗浄",
-    unit: "6畳あたり",
-    min: "15,000",
-    max: "35,000",
-    avg: "22,000",
-    notes: "ワックスの層数による",
-  },
-  {
-    service: "フローリング傷補修",
-    unit: "1箇所あたり",
-    min: "3,000",
-    max: "15,000",
-    avg: "7,000",
-    notes: "傷の深さ・大きさによる",
-  },
-  {
-    service: "大理石研磨・コーティング",
-    unit: "6畳あたり",
-    min: "30,000",
-    max: "80,000",
-    avg: "50,000",
-    notes: "汚れ・傷の程度による",
-  },
-  {
-    service: "カーペット洗浄",
-    unit: "6畳あたり",
-    min: "10,000",
-    max: "30,000",
-    avg: "18,000",
-    notes: "汚れの度合い・素材による",
-  },
-  {
-    service: "タイル洗浄・コーティング",
-    unit: "6畳あたり",
-    min: "12,000",
-    max: "40,000",
-    avg: "22,000",
-    notes: "タイルの種類による",
-  },
-  {
-    service: "定期メンテナンス（月1回）",
-    unit: "月額",
-    min: "5,000",
-    max: "20,000",
-    avg: "10,000",
-    notes: "床面積・作業内容による",
-  },
-];
+// 料金は各社公式サイトの記載だけを掲載する（2026-10-25 既定案：根拠のない相場表は削除）。
+// 値と出典・確認日は data/companies.json（各社の紹介ページに出典を記載）を正とする。
+const priced = (companies as Company[]).filter((c) => /^[0-9]/.test(c.priceRange));
+const unpriced = (companies as Company[]).filter((c) => !/^[0-9]/.test(c.priceRange));
 
 export default function PricePage() {
   return (
@@ -105,79 +29,55 @@ export default function PricePage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            床メンテナンスの料金相場
+            床メンテナンスの料金（各社公式の掲載料金）
           </h1>
           <p className="text-[#57534E] leading-relaxed">
-            サービス別・床材別の床メンテナンス費用の目安をご紹介します。実際の料金は業者・地域・作業内容によって異なるため、事前に複数の業者から見積もりを取ることをおすすめします。
+            掲載している金額は、各社が公式サイトに掲載している料金だけです。公的機関や業界団体が示す床メンテナンスの料金相場は確認できないため、当サイトでは独自の相場は掲載していません。単位（1件・1平方メートル・1畳など）と税込・税別の条件が会社ごとに異なるため、条件をそろえて比べ、金額は見積もりで確認してください。
           </p>
         </div>
 
-        {/* Summary Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          {[
-            { label: "ワックスがけ", price: "8,000円〜", unit: "6畳" },
-            { label: "フロアコーティング", price: "50,000円〜", unit: "全体" },
-            { label: "傷補修", price: "3,000円〜", unit: "1箇所" },
-            { label: "剥離洗浄", price: "15,000円〜", unit: "6畳" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-4 text-center"
-            >
-              <div className="text-xs text-[#78716C] mb-1">{item.label}</div>
-              <div className="text-lg font-bold text-[#92400E]">{item.price}</div>
-              <div className="text-xs text-[#A8A29E]">{item.unit}あたり</div>
-            </div>
-          ))}
-        </div>
-
         {/* Price Table */}
-        <div className="bg-white rounded-2xl border border-[#D6D3D1] overflow-hidden mb-8">
+        <div className="bg-white rounded-2xl border border-[#D6D3D1] overflow-hidden mb-4">
           <div className="bg-[#92400E] text-white px-5 py-3">
-            <h2 className="font-bold">サービス別料金相場一覧</h2>
+            <h2 className="font-bold">公式サイトに料金を掲載している会社（{priced.length}社）</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead className="bg-[#FFFBEB] border-b border-[#D6D3D1]">
                 <tr>
-                  <th className="text-left px-4 py-3 font-bold text-[#1C1917]">サービス</th>
-                  <th className="text-center px-3 py-3 font-bold text-[#1C1917]">単位</th>
-                  <th className="text-right px-3 py-3 font-bold text-[#1C1917]">最安値</th>
-                  <th className="text-right px-3 py-3 font-bold text-[#1C1917]">最高値</th>
-                  <th className="text-right px-3 py-3 font-bold text-[#92400E]">平均</th>
-                  <th className="text-left px-3 py-3 font-bold text-[#1C1917] hidden md:table-cell">備考</th>
+                  <th className="text-left px-4 py-3 font-bold text-[#1C1917]">会社</th>
+                  <th className="text-left px-3 py-3 font-bold text-[#92400E]">公式に掲載の最低料金と条件</th>
                 </tr>
               </thead>
               <tbody>
-                {priceData.map((row, i) => (
-                  <tr
-                    key={row.service}
-                    className={`border-b border-[#F0ECE8] ${i % 2 === 0 ? "bg-white" : "bg-[#FAFAF9]"}`}
-                  >
-                    <td className="px-4 py-3 font-medium text-[#1C1917]">{row.service}</td>
-                    <td className="px-3 py-3 text-center text-[#78716C]">{row.unit}</td>
-                    <td className="px-3 py-3 text-right text-[#57534E]">{row.min}円</td>
-                    <td className="px-3 py-3 text-right text-[#57534E]">{row.max}円</td>
-                    <td className="px-3 py-3 text-right font-bold text-[#92400E]">{row.avg}円</td>
-                    <td className="px-3 py-3 text-[#78716C] text-xs hidden md:table-cell">{row.notes}</td>
+                {priced.map((c, i) => (
+                  <tr key={c.slug} className={`border-b border-[#F0ECE8] ${i % 2 === 0 ? "bg-white" : "bg-[#FAFAF9]"}`}>
+                    <td className="px-4 py-3 font-medium text-[#1C1917]">
+                      <Link href={`/company/${c.slug}/`} className="underline">{c.name}</Link>
+                    </td>
+                    <td className="px-3 py-3 text-[#57534E]">{c.priceRange}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
         </div>
+        <p className="text-xs text-[#78716C] mb-8">
+          出典と確認日は各社の紹介ページに記載しています。ワックスがけの料金を条件ごとに並べた比較は
+          <Link href="/know/wax-price-official/" className="text-[#92400E] underline">ワックスがけ料金の比較</Link>
+          をご覧ください。料金表を公式に掲載していない会社（{unpriced.map((c) => c.name).join("・")}）は、見積もりで金額を確認してください。
+        </p>
 
         {/* Cost Factors */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-8">
           <h2 className="text-lg font-bold text-[#1C1917] mb-4">料金に影響する主な要因</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
-              { title: "床面積", desc: "作業面積が広いほど料金は高くなります。一般的に6畳あたりの単価で計算されます。" },
+              { title: "床面積", desc: "作業面積が広いほど料金は高くなります。料金の単位は1件（10帖までなど）・1平方メートル・1畳など会社ごとに異なります。" },
               { title: "床材の種類", desc: "大理石や特殊床材は専用の薬剤・技術が必要なため、フローリングより高額になる傾向があります。" },
               { title: "床の状態", desc: "汚れや傷がひどいほど、前処理に時間がかかり料金が上がります。" },
               { title: "地域", desc: "都市部は人件費が高く、地方より料金が高くなる場合があります。" },
               { title: "作業内容", desc: "ワックスの層数・使用薬剤の種類・追加作業（家具移動等）によって変動します。" },
-              { title: "業者の規模", desc: "大手は価格が安定していますが高め、地域密着型の小規模業者は安い場合があります。" },
             ].map((item) => (
               <div key={item.title} className="flex gap-3">
                 <div className="w-2 h-2 bg-[#92400E] rounded-full mt-2 shrink-0"></div>
