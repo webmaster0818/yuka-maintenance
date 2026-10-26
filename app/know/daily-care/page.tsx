@@ -2,10 +2,41 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
-  title: "ワックス・コーティング後の床の日常の手入れ｜避けたい掃除方法",
+  title: "フロアコーティングのメンテナンス方法｜施工後の日常の手入れと避けたい掃除",
   alternates: { canonical: "/know/daily-care/" },
   description:
-    "施工した床を普段どう扱うかで、次に業者へ相談するまでの間の見え方が変わります。膜を削らない掃除の考え方、掃除機やワイパーの使い方、水拭きと洗剤で起きやすい失敗、家具やラグが原因でつく跡、業者に確認しておく項目を整理しています。",
+    "フロアコーティング後の日常のメンテナンスは、から拭きでほこりを取り、汚れは固く絞ったぞうきんで水拭きし、そのあとから拭きで水分を取るのが基本です。床材メーカーはスチームモップを使わないよう案内しています。洗剤やワックスの可否は施工会社とメーカーの指定で確認します。",
+};
+
+const faqs = [
+  {
+    q: "フロアコーティングをした床は水拭きしてよいですか？",
+    a: "床材メーカーの案内では、日常は乾いたぞうきんなどでのから拭きが基本で、水拭きをする場合は固く絞ったぞうきんで拭いたあと、必ずから拭きして水分を取ります（DAIKEN）。絞らずに水拭きすると、ひび割れ・反り・膨れなどが生じる場合があるとされています（パナソニック）。コーティングの上の手入れは、施工会社の指定を優先してください。",
+  },
+  {
+    q: "スチームモップやロボット掃除機は使えますか？",
+    a: "パナソニックは同社の木質床材にスチームモップを使わないよう案内しています。DAIKENは湿式タイプのロボット掃除機とスチームモップを、変色・捲れ・膨れのおそれがあるため使わないよう案内し、ロボット掃除機も傷や艶落ちの可能性からすすめていません。",
+  },
+  {
+    q: "どの洗剤なら使えますか？",
+    a: "パナソニックは同社の木質床材について、住居用中性洗剤以外の洗剤は使わず、使用後はぞうきんで洗剤をふき取るよう案内しています。コーティングの種類によって使える洗剤が異なる場合があるため、施工会社に製品名か表示の見方を確認しておきます。",
+  },
+  {
+    q: "どの床でもフロアコーティングをしてよいですか？",
+    a: "床材メーカーによって扱いが異なります。DAIKENは同社の床材にフロアーコーティングを行わないよう案内し、パナソニックは不具合が発生する場合があるとしてコーティング業者やメーカーへの確認を求めています。依頼前に床材の品番とメーカーの案内を確認してください。",
+  },
+];
+
+const sources = [
+  { label: "DAIKEN よくあるご質問「床材の日常のお手入れはどのようにすればよいですか？」", href: "https://faq.daiken.jp/faq/show/44?site_domain=user", checked: "2026年10月26日" },
+  { label: "DAIKEN よくあるご質問「床材のお手入れ方法一覧」", href: "https://faq.daiken.jp/faq/show/3189?site_domain=user", checked: "2026年10月26日" },
+  { label: "パナソニック「床のお掃除｜木質床材・フローリングのお手入れ」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年10月26日" },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
 const dryTools = [
@@ -101,6 +132,7 @@ const askItems = [
 export default function DailyCarePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Breadcrumb
         items={[
           { label: "床メンテナンスの基礎知識" },
@@ -111,12 +143,16 @@ export default function DailyCarePage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            ワックス・コーティング後の床の日常の手入れ｜避けたい掃除方法
+            フロアコーティングのメンテナンス方法｜施工後の日常の手入れと避けたい掃除
           </h1>
+          <p className="text-[#57534E] leading-relaxed mb-3">
+            フロアコーティング後の日常のメンテナンスは、<strong>から拭きでほこりを取り、汚れが残るときは固く絞ったぞうきんで水拭きしてから、から拭きで水分を取る</strong>のが基本です。床材メーカーのDAIKENは、水分が床に残ると床と床の隙間から水が入り、表面にシミやヒビ割れが生じることがあると案内しています。
+          </p>
+          <p className="text-[#57534E] leading-relaxed mb-3">
+            避けたい道具として、パナソニックとDAIKENはいずれもスチームモップを使わないよう案内しています。洗剤についてパナソニックは、同社の木質床材では住居用中性洗剤以外を使わないとしています。コーティングの上で使える洗剤やワックスの可否は施工内容によって異なるため、施工会社の指定を優先してください。
+          </p>
           <p className="text-[#57534E] leading-relaxed">
-            施工が終わったあとの床は、普段の扱い方によって見え方の変わり方が違ってきます。
-            とくに多いのが、<strong>汚れを落とそうとした掃除が、かえって仕上げの膜を削ってしまう</strong>という行き違いです。
-            このページでは、日常の手入れで押さえておきたい考え方と、施工した会社に確認しておく項目を整理します。
+            このページでは、膜を削らない掃除の考え方、水拭きと洗剤で起きやすい失敗、家具やラグでつく跡への備え、施工会社に確認しておく項目を整理します。
           </p>
         </div>
 
@@ -278,6 +314,29 @@ export default function DailyCarePage() {
           <p className="text-xs text-[#4B5563] mt-3">
             保証が付く施工では、指定外の手入れを行ったことが保証の対象外の理由になる場合があります。保証書がある場合は、手入れに関する記載も一緒に読んでおいてください。
           </p>
+        </div>
+
+        <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
+          <h2 className="text-lg font-bold text-[#1C1917] mb-3">よくある質問</h2>
+          <div className="space-y-4">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="font-bold text-sm text-[#1C1917] mb-1">Q. {f.q}</h3>
+                <p className="text-sm text-[#57534E] leading-relaxed">A. {f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-8">
+          <h2 className="text-lg font-bold text-[#1C1917] mb-3">出典</h2>
+          <ul className="space-y-1 text-xs text-[#57534E] list-disc pl-5">
+            {sources.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className="text-[#92400E] underline">{s.label}</a>（{s.checked}確認）
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
