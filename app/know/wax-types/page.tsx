@@ -177,47 +177,6 @@ export default function WaxTypesPage() {
           </p>
         </div>
 
-        {/* H2-3 */}
-        <div className="bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-5 mb-6">
-          <h2 className="text-lg font-bold text-[#1C1917] mb-3">
-            乳化性・油性タイプが選ばれる場面
-          </h2>
-          <p className="text-sm text-[#57534E] leading-relaxed mb-3">
-            樹脂の膜をつくるタイプ以外が案内されるのは、仕上がりの質感や床材の事情がある場合です。代表的な考え方を挙げます。
-          </p>
-          <div className="grid md:grid-cols-2 gap-4">
-            {[
-              {
-                t: "強い光沢を出したくないとき",
-                b: "樹脂膜の光沢が住まいの雰囲気に合わないと感じる場合、ろう成分を主体とした製品が候補になることがあります。",
-              },
-              {
-                t: "水分をできるだけ避けたい床のとき",
-                b: "水分に弱い床材では、水性以外の選択肢を提案されることがあります。ただし溶剤側にも適・不適があるため、床材の指定を必ず確認します。",
-              },
-              {
-                t: "既存の仕上げと考え方をそろえたいとき",
-                b: "もともとろう系の手入れをしてきた床では、同じ考え方の製品で続けるほうが仕上がりがそろいやすい場合があります。",
-              },
-              {
-                t: "部分的な手入れを繰り返したいとき",
-                b: "全面を一度にやり直すのではなく、気になる場所を都度手入れしたい場合に、扱い方の異なる製品が案内されることがあります。",
-              },
-            ].map((x) => (
-              <div key={x.t} className="flex gap-3">
-                <div className="w-2 h-2 bg-[#92400E] rounded-full mt-2 shrink-0"></div>
-                <div>
-                  <div className="font-bold text-sm text-[#1C1917]">{x.t}</div>
-                  <p className="text-sm text-[#57534E] mt-0.5 leading-relaxed">{x.b}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs text-[#78716C] mt-3">
-            油性・溶剤系の製品では、においと換気の扱いが水性と変わります。同居する家族の事情がある場合は、選ぶ前に業者へ相談してください。
-          </p>
-        </div>
-
         {/* H2-4 */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
           <h2 className="text-lg font-bold text-[#1C1917] mb-3">
