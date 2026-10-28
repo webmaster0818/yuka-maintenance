@@ -1,5 +1,6 @@
 import Link from "next/link";
 import KnowArticle from "@/app/components/KnowArticle";
+import DaikenCoatingNotice from "@/app/components/DaikenCoatingNotice";
 
 export const metadata = {
   title: "フロアコーティングの保証と施工後のメンテナンス｜保証書で確認すること",
@@ -21,6 +22,7 @@ export default function CoatingWarrantyPage() {
         </p>
       }
       notice="保証の期間・対象・条件は業者とコーティングの種類によって異なります。ここで紹介する内容は各社の公式サイトに掲載された一例であり、契約前に必ず保証書の内容をご確認ください。"
+      caution={<DaikenCoatingNotice className="mb-8" />}
       sections={[
         {
           heading: "施工後のメンテナンスは「汚れを落とすこと」が中心です",

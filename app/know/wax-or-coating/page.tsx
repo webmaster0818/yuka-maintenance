@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
+import DaikenCoatingNotice from "@/app/components/DaikenCoatingNotice";
 
 export const metadata = {
   title: "ワックスとフロアコーティングのどちらを検討するか｜住まいの前提から絞る",
@@ -123,6 +124,8 @@ export default function WaxOrCoatingPage() {
           <strong>先に前提:</strong>{" "}
           当サイトは、どちらが優れているかという評価を行いません。耐久年数や乾燥にかかる時間といった数値も、床の状態や施工条件によって変わるため掲載していません。ここで扱うのは、判断に入る前に自分で確かめられる項目です。
         </div>
+
+        <DaikenCoatingNotice className="mb-8" />
 
         {/* H2-1 */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
+import DaikenCoatingNotice from "@/app/components/DaikenCoatingNotice";
 
 export const metadata = {
   title: "フロアコーティングの種類の違い｜膜の素材別の考え方と確認事項",
@@ -89,6 +90,8 @@ export default function CoatingTypesPage() {
           <strong>先に前提:</strong>{" "}
           同じ区分名でも、製品ごとに構成も仕上がりも異なります。当ページでは、耐久の年数や乾燥にかかる時間といった数値の目安は示しません。実際の性能・条件は、施工する会社が提示する製品の資料と保証書で確認してください。
         </div>
+
+        <DaikenCoatingNotice className="mb-8" />
 
         {/* H2-1 */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">

@@ -21,6 +21,7 @@ type Props = {
   h1: string;
   lead: ReactNode;
   notice?: ReactNode;
+  caution?: ReactNode;
   sections: KnowSection[];
   primary: { href: string; label: string };
   secondary: { href: string; label: string };
@@ -42,7 +43,7 @@ function Arrow() {
   );
 }
 
-export default function KnowArticle({ crumb, h1, lead, notice, sections, primary, secondary, related, sources }: Props) {
+export default function KnowArticle({ crumb, h1, lead, notice, caution, sections, primary, secondary, related, sources }: Props) {
   return (
     <>
       <Breadcrumb items={[{ label: "床メンテナンスの基礎知識" }, { label: crumb }]} />
@@ -56,6 +57,8 @@ export default function KnowArticle({ crumb, h1, lead, notice, sections, primary
         {notice && (
           <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900 mb-8">{notice}</div>
         )}
+
+        {caution}
 
         {sections.map((s) => (
           <section key={s.heading} className={`${toneClass[s.tone ?? "white"]} rounded-xl p-5 mb-6`}>

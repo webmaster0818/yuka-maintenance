@@ -5,6 +5,7 @@ import SourcedRating from "@/app/components/SourcedRating";
 import { hasReviewArticle } from "@/app/lib/verifiedRating";
 import Link from "next/link";
 import companyAnswers from "@/data/company-answers.json";
+import DaikenCoatingNotice from "@/app/components/DaikenCoatingNotice";
 
 // 検索語に即答する冒頭・FAQ（公式出典つき）を持つ社だけ、data/company-answers.json で上書きする
 type CompanyAnswer = {
@@ -109,6 +110,8 @@ export default async function CompanyPage({
             </div>
           </div>
         </div>
+
+        {company.floorServices.some((s) => s.includes("コーティング")) && <DaikenCoatingNotice />}
 
         {answer && (
           <section className="bg-white rounded-2xl border border-[#D6D3D1] p-6 mb-6 shadow-sm">

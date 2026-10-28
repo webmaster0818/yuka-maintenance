@@ -3,6 +3,7 @@ import Breadcrumb from "@/app/components/Breadcrumb";
 import services from "@/data/services.json";
 import Link from "next/link";
 import RelatedKnow from "@/app/components/RelatedKnow";
+import DaikenCoatingNotice from "@/app/components/DaikenCoatingNotice";
 
 const relatedKnow: Record<string, { href: string; label: string }[]> = {
   wax: [
@@ -85,6 +86,8 @@ export default async function ServicePage({
             </div>
           </div>
         </div>
+
+        {service.slug === "floor-coating" && <DaikenCoatingNotice />}
 
         {/* Description */}
         <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
