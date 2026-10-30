@@ -2,23 +2,54 @@ import Link from "next/link";
 import KnowArticle from "@/app/components/KnowArticle";
 
 export const metadata = {
-  title: "フローリングにワックスをかけないとどうなるか｜不要な床と必要な床の違い",
+  title: "フローリングにワックスをかけないとどうなる？ワックス不要の床なら問題なし｜必要な床との違い",
   alternates: { canonical: "/know/skip-wax/" },
   description:
-    "フローリングにワックスをかけないとどうなるかは、床材がワックス不要の製品かどうかで変わります。床材メーカーの案内をもとに、ワックスをかけない場合の手入れ、かける場合の頻度と注意点を解説します。",
+    "ワックス不要のフローリングは、ワックスをかけなくても不具合は起きません（朝日ウッドテック・パナソニック）。かけると塗膜の性能が発揮されなくなります。ワックス塗布が推奨される床材もあるため、取扱説明書で確認してください。",
+};
+
+const faqs = [
+  {
+    q: "フローリングにワックスをかけないと傷みますか？",
+    a: "ワックス不要の床材であれば、かけなくても傷むことはありません。パナソニックは、ワックス不要の商品はワックスがけをしなくても美しさが長持ちすると案内しています。",
+  },
+  {
+    q: "ワックス不要の床にワックスをかけるとどうなりますか？",
+    a: "朝日ウッドテックは、表面がワックスの被膜になるため、傷の付きにくさや抗菌・抗ウイルス性などの塗膜性能が発揮されなくなると案内しています。防滑塗装品とサニタリー用フローリングにはワックスをかけられません。",
+  },
+  {
+    q: "ワックスをかけたほうがよい床はありますか？",
+    a: "あります。東リは、複層ビニル床タイルのワックス塗布推奨品では、ワックスを塗ることで汚れが付きにくく、付いた汚れを拭き取りやすくなると案内しています。",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
 export default function SkipWaxPage() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
     <KnowArticle
       crumb="ワックスをかけない場合"
-      h1="フローリングにワックスをかけないとどうなるか｜不要な床と必要な床の違い"
+      h1="フローリングにワックスをかけないとどうなる？ワックス不要の床なら問題ありません"
       lead={
-        <p>
-          現在の住宅用フローリングには、表面にあらかじめ保護の塗装を施し、<strong>ワックスをかけなくても美観を保てるように作られた製品</strong>が多くあります。
-          こうした床では、ワックスをかけないことで不具合が起きるわけではなく、かえってワックスが床材の性能を妨げる場合もあります。
-          一方で、ワックスの塗布が推奨されている床材もあります。このページでは、床材ごとの違いと、ワックスをかけない場合・かける場合の手入れをご説明します。
-        </p>
+        <>
+          <p className="mb-3">
+            <strong>ワックス不要のフローリングは、ワックスをかけなくても不具合は起きません。</strong>
+            朝日ウッドテックは同社の床材についてワックスがけは必要ないと案内し、パナソニックもワックス不要の商品はワックスがけをしなくても美しさが長持ちするとしています。
+          </p>
+          <p className="mb-3">
+            反対に、ワックス不要の床にワックスをかけると、表面がワックスの被膜になり、傷の付きにくさなどの塗膜性能が発揮されなくなります（朝日ウッドテック）。
+            ワックスをかけない床で大切なのは、ほこりを乾いた道具で取り、汚れは固く絞った雑巾で拭いてから、から拭きすることです。
+          </p>
+          <p>
+            ただし、複層ビニル床タイルのようにワックス塗布が推奨されている床材もあります。ご自宅の床がどちらかは、床材の取扱説明書やメーカーの案内で確認してください。
+          </p>
+        </>
       }
       notice="ワックスの要否は床材のメーカーと製品ごとに異なります。最終的な判断は、床材の取扱説明書やメーカーの案内に従ってください。"
       sections={[
@@ -85,6 +116,10 @@ export default function SkipWaxPage() {
             </>
           ),
         },
+        {
+          heading: "よくある質問",
+          cards: faqs.map((f) => ({ t: f.q, b: f.a })),
+        },
       ]}
       primary={{ href: "/know/no-wax-floor/", label: "ワックス不要の床材の見分け方を見る" }}
       secondary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
@@ -95,11 +130,12 @@ export default function SkipWaxPage() {
         { href: "/know/wax-price-official/", label: "ワックスがけ料金の比較" },
       ]}
       sources={[
-        { label: "朝日ウッドテック公式サイト「フリーワックス」", href: "https://www.woodtec.co.jp/maintenance/index04/", checked: "2026年10月17日" },
-        { label: "朝日ウッドテック公式サイト「日常のお手入れ」", href: "https://www.woodtec.co.jp/maintenance/index01/", checked: "2026年10月17日" },
-        { label: "パナソニック「木質床材・フローリングのお手入れ（お掃除）」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年10月17日" },
-        { label: "東リ「複層ビニル床タイルのメンテナンス（よくあるご質問）」", href: "https://www.toli.co.jp/faq/floor/32.html", checked: "2026年10月17日" },
+        { label: "朝日ウッドテック公式サイト「フリーワックス」", href: "https://www.woodtec.co.jp/maintenance/index04/", checked: "2026年10月30日" },
+        { label: "朝日ウッドテック公式サイト「日常のお手入れ」", href: "https://www.woodtec.co.jp/maintenance/index01/", checked: "2026年10月30日" },
+        { label: "パナソニック「木質床材・フローリングのお手入れ（お掃除）」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年10月30日" },
+        { label: "東リ「複層ビニル床タイルのメンテナンス（よくあるご質問）」", href: "https://www.toli.co.jp/faq/floor/32.html", checked: "2026年10月30日" },
       ]}
     />
+    </>
   );
 }
