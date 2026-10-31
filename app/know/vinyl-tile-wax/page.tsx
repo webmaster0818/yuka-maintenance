@@ -2,23 +2,53 @@ import Link from "next/link";
 import KnowArticle from "@/app/components/KnowArticle";
 
 export const metadata = {
-  title: "タイルの床にワックスは必要か｜ビニル床タイルと磁器タイルで異なる手入れ",
+  title: "フロアタイルにワックスは必要？製品により必要・不要が分かれます｜磁器タイルとの違い",
   alternates: { canonical: "/know/vinyl-tile-wax/" },
   description:
-    "「タイル」と呼ばれる床には、ビニル床タイル（フロアタイル）と磁器などのセラミックタイルがあり、ワックスの考え方が異なります。床材メーカーの案内をもとに、ワックスが必要な製品・不要な製品の見分け方と手入れの流れを解説します。",
+    "フロアタイル（ビニル床タイル）のワックスは、ワックス塗布推奨品なら必要、ワックス不要の製品なら不要です（東リ）。サンゲツは家庭用フロアタイルに施工後の樹脂ワックス塗布を案内しています。磁器タイルは洗剤での洗浄が中心です。",
+};
+
+const faqs = [
+  {
+    q: "フロアタイルにワックスは必要ですか？",
+    a: "製品によります。東リは、複層ビニル床タイルにはワックス塗布推奨品とワックス塗布が不要な製品があり、推奨品ではワックスを塗る必要があると案内しています。品番が分かれば、床材メーカーの案内で確認できます。",
+  },
+  {
+    q: "住宅のフロアタイルでもワックスを塗るべきですか？",
+    a: "東リは、ワックス塗布を推奨する複層ビニル床タイルでも、住宅内のように土足で使用しない部位では必ずしもワックスを塗布する必要はないとしています。サンゲツは、家庭用フロアタイルの施工後に、洗浄・乾燥してから指定または同等の樹脂ワックスを塗布するよう案内しています。",
+  },
+  {
+    q: "磁器タイルの床にもワックスを塗りますか？",
+    a: "LIXILの浴室の床タイルのお手入れ案内は、浴室用洗剤をかけてブラシなどでこすり洗いし、十分な水で洗い流す方法が中心です。ワックスやコーティングを検討する場合は、床材メーカーや施工業者に可否を確認してください。",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
 export default function VinylTileWaxPage() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
     <KnowArticle
       crumb="タイルの床とワックス"
-      h1="タイルの床にワックスは必要か｜ビニル床タイルと磁器タイルで異なる手入れ"
+      h1="フロアタイルにワックスは必要？製品によって必要・不要が分かれます"
       lead={
-        <p>
-          「タイルの床」には、塩化ビニル樹脂でできたビニル床タイル（フロアタイル）と、磁器などを焼き固めたセラミックタイルがあります。
-          <strong>ワックスの塗布を前提とした製品があるのは主にビニル床タイルで、同じビニル床タイルでもワックス不要の製品があります</strong>。
-          このページでは、床材メーカーの案内をもとに、タイルの種類ごとのワックスの考え方と手入れの流れをご説明します。
-        </p>
+        <>
+          <p className="mb-3">
+            <strong>フロアタイル（ビニル床タイル）のワックスは、ワックス塗布推奨品なら必要、ワックス塗布が不要な製品なら不要です。</strong>
+            東リは、推奨品ではワックスを塗ることで汚れが付きにくく、付いた汚れを拭き取りやすくなると案内しています。ただし、推奨品でも住宅内のように土足で使わない部位では、必ずしも塗る必要はないとしています。
+          </p>
+          <p className="mb-3">
+            サンゲツは、家庭用フロアタイルについて、施工後に表面を洗浄・乾燥させてから指定または同等の樹脂ワックスを塗布し、目地から水や洗浄液が入り込まないよう塗布量を調整するよう案内しています。
+          </p>
+          <p>
+            磁器などのセラミックタイルは、洗剤によるこすり洗いが手入れの中心です。ご自宅の床がどちらの製品かは、施工会社や床材メーカーに品番を確認すると確実です。
+          </p>
+        </>
       }
       notice="ワックスの要否と使えるワックスは製品ごとに異なります。品番が分かる場合は、床材メーカーの案内を優先してください。"
       sections={[
@@ -84,6 +114,10 @@ export default function VinylTileWaxPage() {
             </>
           ),
         },
+        {
+          heading: "よくある質問",
+          cards: faqs.map((f) => ({ t: f.q, b: f.a })),
+        },
       ]}
       primary={{ href: "/floor/tile/", label: "タイルのガイドを見る" }}
       secondary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
@@ -94,10 +128,12 @@ export default function VinylTileWaxPage() {
         { href: "/floor/cushion-floor/", label: "クッションフロア" },
       ]}
       sources={[
-        { label: "東リ「複層ビニル床タイルのメンテナンス（よくあるご質問）」", href: "https://www.toli.co.jp/faq/floor/32.html", checked: "2026年10月17日" },
+        { label: "東リ「複層ビニル床タイルのメンテナンス（よくあるご質問）」", href: "https://www.toli.co.jp/faq/floor/32.html", checked: "2026年10月31日" },
+        { label: "サンゲツ「ご家庭でのフロアタイルの『お手入れ方法』と『使用上のご注意』」（PDF）", href: "https://contents.sangetsu.co.jp/doc/technical-data/%E3%83%95%E3%83%AD%E3%82%A2%E3%82%BF%E3%82%A4%E3%83%AB_%E3%81%94%E5%AE%B6%E5%BA%AD%E3%81%A7%E3%81%AE%E3%81%94%E4%BD%BF%E7%94%A8%E4%B8%8A%E3%81%AE%E6%B3%A8%E6%84%8F.pdf", checked: "2026年10月31日" },
         { label: "サンゲツ「メンテナンス資料ダウンロード」（ビニル系床材メンテナンスガイド）", href: "https://www.sangetsu.co.jp/download/maintenance.html", checked: "2026年10月17日" },
-        { label: "LIXIL「タイルのお手入れ方法」", href: "https://www.lixil.co.jp/support/clean/tile_01.htm", checked: "2026年10月17日" },
+        { label: "LIXIL「タイルのお手入れ方法」", href: "https://www.lixil.co.jp/support/clean/tile_01.htm", checked: "2026年10月31日" },
       ]}
     />
+    </>
   );
 }
