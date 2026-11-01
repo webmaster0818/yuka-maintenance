@@ -59,8 +59,8 @@ export default async function AreaPage({ params }: Props) {
 
   // focus.questions / questionsHeading は後から追加した任意項目。
   // 既存エリアのデータには存在しないため、存在するときだけ描画する。
-  // focus は既存エリアのみが持つ。2026-11-01 追加の県は focus を持たず、
-  // 代わりに公式・公的な出典つきの localFacts を持つ。
+  // focus は既存24エリアのみが持つ。2026-11-01 追加の県は focus を持たない。
+  // 公式・公的な出典つきの localFacts は2026-11-01以降、全47都道府県が持つ。
   const focus = (area as { focus?: unknown }).focus as
     | {
         heading: string;
