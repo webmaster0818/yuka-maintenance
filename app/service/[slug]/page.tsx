@@ -14,10 +14,16 @@ const relatedKnow: Record<string, { href: string; label: string }[]> = {
   ],
   "floor-coating": [
     { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+    { href: "/service/uv-coating/", label: "UVフロアコーティング" },
+    { href: "/service/glass-coating/", label: "ガラスフロアコーティング" },
   ],
   "regular-maintenance": [
     { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
     { href: "/know/floor-cleaning-menu/", label: "床クリーニングの作業内容" },
+    { href: "/facility/office/", label: "オフィスの床清掃" },
+    { href: "/facility/restaurant/", label: "飲食店の床清掃" },
+    { href: "/facility/hospital-care-facility/", label: "病院・高齢者施設の床清掃" },
+    { href: "/facility/school-nursery/", label: "学校・保育園の床清掃" },
   ],
   "scratch-repair": [
     { href: "/know/floor-sanding/", label: "フローリングの研磨" },

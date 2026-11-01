@@ -132,6 +132,14 @@ export default function SiteFooter() {
             <Link href="/product/rinrei-wax-hagashi-jouzu/" className="hover:text-[#F59E0B] transition-colors">ワックスはがし上手</Link>
             <Link href="/product/rinrei-ishiyuka-wax/" className="hover:text-[#F59E0B] transition-colors">石床用樹脂ワックス</Link>
             <Link href="/floor/chemical-floor/" className="hover:text-[#F59E0B] transition-colors">Pタイル・長尺シート</Link>
+            <Link href="/maker/osmo/" className="hover:text-[#F59E0B] transition-colors">オスモカラー塗装の床</Link>
+            <Link href="/service/uv-coating/" className="hover:text-[#F59E0B] transition-colors">UVフロアコーティング</Link>
+            <Link href="/service/glass-coating/" className="hover:text-[#F59E0B] transition-colors">ガラスフロアコーティング</Link>
+            <Link href="/service/carpet-cleaning/" className="hover:text-[#F59E0B] transition-colors">カーペットクリーニング</Link>
+            <Link href="/facility/hospital-care-facility/" className="hover:text-[#F59E0B] transition-colors">病院・高齢者施設の床清掃</Link>
+            <Link href="/facility/school-nursery/" className="hover:text-[#F59E0B] transition-colors">学校・保育園の床清掃</Link>
+            <Link href="/facility/restaurant/" className="hover:text-[#F59E0B] transition-colors">飲食店の床清掃</Link>
+            <Link href="/facility/office/" className="hover:text-[#F59E0B] transition-colors">オフィスの床清掃</Link>
           </div>
         </div>
 
