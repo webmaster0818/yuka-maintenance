@@ -76,6 +76,11 @@ export default function NoWaxFloorPage() {
           after: [
             "他のメーカーの床材も、品番や商品名をもとに、各メーカーの公式サイトやお客様窓口で確認できます。",
           ],
+          note: (
+            <>
+              メーカーごとの区分と推奨ワックスは、<Link href="/maker/eidai/" className="underline">永大産業</Link>・<Link href="/maker/daiken/" className="underline">DAIKEN</Link>・<Link href="/maker/panasonic/" className="underline">パナソニック</Link>・<Link href="/maker/woodtec/" className="underline">朝日ウッドテック</Link>・<Link href="/maker/noda/" className="underline">ノダ</Link>の各ページにまとめています。
+            </>
+          ),
         },
         {
           heading: "水まわりとペット向けの床は特に確認が必要です",

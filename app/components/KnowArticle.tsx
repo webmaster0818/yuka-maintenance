@@ -18,6 +18,7 @@ export type KnowSource = { label: string; href: string; checked: string };
 
 type Props = {
   crumb: string;
+  crumbParent?: string;
   h1: string;
   lead: ReactNode;
   notice?: ReactNode;
@@ -43,10 +44,10 @@ function Arrow() {
   );
 }
 
-export default function KnowArticle({ crumb, h1, lead, notice, caution, sections, primary, secondary, related, sources }: Props) {
+export default function KnowArticle({ crumb, crumbParent = "床メンテナンスの基礎知識", h1, lead, notice, caution, sections, primary, secondary, related, sources }: Props) {
   return (
     <>
-      <Breadcrumb items={[{ label: "床メンテナンスの基礎知識" }, { label: crumb }]} />
+      <Breadcrumb items={[{ label: crumbParent }, { label: crumb }]} />
 
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">

@@ -116,6 +116,14 @@ export default function SiteFooter() {
             <Link href="/know/floor-cleaning-menu/" className="hover:text-[#F59E0B] transition-colors">床クリーニングの作業内容</Link>
             <Link href="/know/wax-price-official/" className="hover:text-[#F59E0B] transition-colors">ワックスがけ料金の比較</Link>
             <Link href="/know/store-office-floor/" className="hover:text-[#F59E0B] transition-colors">店舗・事務所の床清掃</Link>
+            <Link href="/maker/eidai/" className="hover:text-[#F59E0B] transition-colors">永大産業の適応ワックス</Link>
+            <Link href="/maker/daiken/" className="hover:text-[#F59E0B] transition-colors">DAIKENの床のお手入れ</Link>
+            <Link href="/maker/panasonic/" className="hover:text-[#F59E0B] transition-colors">パナソニックの床のお手入れ</Link>
+            <Link href="/maker/woodtec/" className="hover:text-[#F59E0B] transition-colors">朝日ウッドテックの床のお手入れ</Link>
+            <Link href="/maker/noda/" className="hover:text-[#F59E0B] transition-colors">ノダの床材のお手入れ</Link>
+            <Link href="/product/rinrei-hightech-flooring-coat/" className="hover:text-[#F59E0B] transition-colors">ハイテクフローリングコート</Link>
+            <Link href="/product/rinrei-flooring-wax-tsuyanashi/" className="hover:text-[#F59E0B] transition-colors">フローリング専用ワックスつやなし</Link>
+            <Link href="/product/daiken-dk-wax-neo/" className="hover:text-[#F59E0B] transition-colors">DKワックスネオ</Link>
           </div>
         </div>
 
