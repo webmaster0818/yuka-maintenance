@@ -59,18 +59,22 @@ export default async function AreaPage({ params }: Props) {
 
   // focus.questions / questionsHeading は後から追加した任意項目。
   // 既存エリアのデータには存在しないため、存在するときだけ描画する。
-  const focus = area.focus as {
-    heading: string;
-    intro: string;
-    points: { title: string; body: string }[];
-    questionsHeading?: string;
-    questions?: string[];
-  };
+  // focus は既存エリアのみが持つ。2026-11-01 追加の県は focus を持たず、
+  // 代わりに公式・公的な出典つきの localFacts を持つ。
+  const focus = (area as { focus?: unknown }).focus as
+    | {
+        heading: string;
+        intro: string;
+        points: { title: string; body: string }[];
+        questionsHeading?: string;
+        questions?: string[];
+      }
+    | undefined;
 
   // 既存4エリア（tokyo/osaka/kanagawa/aichi）のページ文言は変更しない方針のため、
   // 今回追加したエリア（questions を持つもの）だけ、共通セクションの見出しに
   // 県名を含めてページ間の見出し重複を避ける。
-  const scopedHeading = Boolean(focus.questions);
+  const scopedHeading = !focus || Boolean(focus.questions);
 
   // coverage は、公式サイトの対応エリアを個別に確認したエリアだけが持つ任意項目。
   const coverage = (area as {
@@ -82,6 +86,15 @@ export default async function AreaPage({ params }: Props) {
       note?: string;
     };
   }).coverage;
+  // localFacts は、県内の公的機関や掲載社の公式ページで確認した県固有の事実（出典つき）。
+  const localFacts = (area as {
+    localFacts?: {
+      heading: string;
+      intro: string;
+      checkedOn: string;
+      items: { title: string; body: string; sourceLabel: string; sourceUrl: string }[];
+    };
+  }).localFacts;
   const coverageRows = coverage
     ? coverage.items.flatMap((item) => {
         const company = companies.find((c) => c.slug === item.slug);
@@ -181,6 +194,30 @@ export default async function AreaPage({ params }: Props) {
             <p className="text-xs text-[#78716C] mt-3 leading-relaxed">
               {coverage.checkedOn}に各社の公式サイトで確認しました。
               {coverage.note}
+            </p>
+          </div>
+        )}
+
+        {localFacts && localFacts.items.length > 0 && (
+          <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-8">
+            <h2 className="text-lg font-bold text-[#1C1917] mb-2">{localFacts.heading}</h2>
+            <p className="text-sm text-[#57534E] mb-4">{localFacts.intro}</p>
+            <div className="space-y-4">
+              {localFacts.items.map((item) => (
+                <div key={item.title} className="border-b border-[#F0ECE8] pb-4 last:border-0 last:pb-0">
+                  <h3 className="font-bold text-sm text-[#1C1917] mb-1">{item.title}</h3>
+                  <p className="text-sm text-[#57534E] leading-relaxed">
+                    {item.body}（出典：
+                    <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">
+                      {item.sourceLabel}
+                    </a>
+                    ）
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-[#78716C] mt-3 leading-relaxed">
+              {localFacts.checkedOn}に各ページで確認しました。料金や受付方法は変更されることがあるため、最新の案内は各出典ページでご確認ください。
             </p>
           </div>
         )}
@@ -299,6 +336,7 @@ export default async function AreaPage({ params }: Props) {
         </div>
 
         {/* 4. エリア固有の切り口 */}
+        {focus && (
         <div className="bg-[#FFFBEB] border border-[#D6D3D1] rounded-xl p-5 mb-8">
           <h2 className="text-lg font-bold text-[#1C1917] mb-2">{focus.heading}</h2>
           <p className="text-sm text-[#57534E] mb-4">{focus.intro}</p>
@@ -333,6 +371,7 @@ export default async function AreaPage({ params }: Props) {
             </div>
           )}
         </div>
+        )}
 
         {/* 掲載社カード（公式サイト導線） */}
         <div className="space-y-4 mb-8">
