@@ -2,10 +2,31 @@ import Link from "next/link";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
 export const metadata = {
-  title: "フローリングワックスの塗り替え時期の目安｜製品の耐久性と床のサインで判断",
+  title: "フローリングワックスの塗り替え時期の目安は？製品の耐久性表示（約1ヶ月〜約2年）とツヤ・はがれで判断",
   alternates: { canonical: "/know/recoat-timing/" },
   description:
-    "フローリングワックスの塗り替え時期は、使っている製品の耐久性の表示が目安です。リンレイの家庭用ワックスは製品により約1ヶ月〜約2年と公表されています。耐久性の一覧と、つや・感触・汚れの落ち方など床に出る塗り替えのサイン、塗り重ねと剥離の分かれ目をご説明します。",
+    "塗り替え時期の目安は、使っているワックスの耐久性表示です（リンレイは製品により約1ヶ月〜約2年）。ツヤがなくなり汚れが目立ち始めたら汚れを落として塗り直し、膜がはがれていれば古い膜をはがしてから塗り直します。",
+};
+
+const faqs = [
+  {
+    q: "フローリングワックスの塗り替え時期の目安は？",
+    a: "使っているワックスの容器や公式サイトに表示されている耐久性が目安です。リンレイの家庭用ワックスは、シート・スプレータイプで約1〜4ヶ月、一般的な樹脂ワックスで約6ヶ月〜約1年、ウルトラタフコートで約2年と公表されています。",
+  },
+  {
+    q: "塗り替えるとき、古いワックスははがす必要がありますか？",
+    a: "リンレイは、ツヤがなくなり塗膜の汚れが目立ち始めたら床用クリーナーで汚れを落としてからワックスを塗り、古いワックスの膜がはがれているときは古い膜をはがしてから塗り直すよう案内しています。",
+  },
+  {
+    q: "ワックスは何回も塗り重ねてよいですか？",
+    a: "リンレイは、ワックスを何層も塗り重ねると層の間に汚れが入り込んで黒く濁ることがあるとして、3回以上塗り重ねる場合は注意するよう案内しています。異なるメーカーのワックスを塗り重ねると、本来の効果が出ない場合もあります。",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
 const visualSigns = [
@@ -71,6 +92,7 @@ const roomFactors = [
 export default function RecoatTimingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Breadcrumb
         items={[
           { label: "床メンテナンスの基礎知識" },
@@ -81,7 +103,7 @@ export default function RecoatTimingPage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
-            フローリングワックスの塗り替え時期の目安｜製品の耐久性と床のサインで判断
+            フローリングワックスの塗り替え時期の目安は？製品の耐久性表示とツヤ・はがれで判断します
           </h1>
           <p className="text-[#57534E] leading-relaxed mb-3">
             塗り替え時期の目安は、<strong>使っているワックスの容器や公式サイトに表示されている「耐久性」</strong>です。
@@ -89,14 +111,13 @@ export default function RecoatTimingPage() {
             一般的な樹脂ワックスで約6ヶ月〜約1年、耐久性を高めた製品で約2年と公表しています。
           </p>
           <p className="text-[#57534E] leading-relaxed">
-            ただし耐久性は目安で、通行の多い場所や水まわりでは早く傷みます。表示の期間が近づいたら、
-            このページで紹介する床のサイン（つや・感触・汚れの落ち方）を確認し、塗り重ねでよいのか、
-            いったん剥がす必要があるのかを判断してください。
+            期間の途中でも、<strong>ツヤがなくなり塗膜の汚れが目立ち始めたら、床用クリーナーで汚れを落としてからワックスを塗り直します。
+            古いワックスの膜がはがれているときは、古い膜をはがしてから塗り直します</strong>（リンレイ公式のよくある質問）。
+            耐久性は目安のため、通行の多い場所や水まわりでは、このページで紹介する床の変化（つや・感触・汚れの落ち方）もあわせて確認してください。
           </p>
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm text-amber-900 mb-8">
-          <strong>先に前提:</strong>{" "}
           膜の持ちは、使った製品・床材・その家の使い方によって大きく変わります。下の耐久性はメーカーが公表している製品ごとの目安で、すべての床にあてはまる期間ではありません。業者に施工を依頼した場合は、使用したワックスと塗り替えの目安を施工者に確認してください。
         </div>
 
@@ -127,7 +148,7 @@ export default function RecoatTimingPage() {
             <a href="https://www.rinrei.co.jp/home_care/howto/" target="_blank" rel="noopener noreferrer" className="underline">
               リンレイ公式「ワックスの準備から塗り方」
             </a>
-            （2026年10月20日確認）。他社の製品は、容器の表示や各メーカーの公式サイトでご確認ください。
+            （2026年11月1日確認）。他社の製品は、容器の表示や各メーカーの公式サイトでご確認ください。
           </p>
         </div>
 
@@ -151,7 +172,7 @@ export default function RecoatTimingPage() {
               },
               {
                 t: "部屋ごとの差を反映できない",
-                b: "家全体を同じ時期に一律で判断すると、痛みの早い場所と遅い場所の差を取りこぼします。",
+                b: "家全体を同じ時期に一律で判断すると、傷みの早い場所と遅い場所の差を取りこぼします。",
               },
               {
                 t: "前回の施工内容が分からない",
@@ -246,6 +267,11 @@ export default function RecoatTimingPage() {
           <h2 className="text-lg font-bold text-[#1C1917] mb-3">
             塗り重ねでよい場合と、いったん剥がす必要がある場合
           </h2>
+          <p className="text-sm text-[#57534E] leading-relaxed mb-3">
+            リンレイは、樹脂ワックスの膜は劣化するとうろこ状にひび割れてはがれることがあり、その場合は一度ワックスをはがしてから塗り直すよう案内しています。
+            また、ワックスを何層も塗り重ねると層の間に汚れが入り込んで黒く濁ることがあるため、3回以上塗り重ねる場合は注意するよう記載しています。
+            ロウワックス（水性・油性・乳化性）と樹脂ワックスは互いに上から塗れないため、種類を変えるときも一度はがす必要があります。
+          </p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-[#059669]/5 border border-[#059669]/20 rounded-lg p-4">
               <div className="font-bold text-sm text-[#059669] mb-2">塗り重ねが検討される状態</div>
@@ -315,6 +341,29 @@ export default function RecoatTimingPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="bg-white border border-[#D6D3D1] rounded-xl p-5 mb-6">
+          <h2 className="text-lg font-bold text-[#1C1917] mb-3">よくある質問</h2>
+          <div className="space-y-4">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="font-bold text-sm text-[#1C1917] mb-1">{f.q}</h3>
+                <p className="text-sm text-[#57534E] leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-[#78716C] mt-4 leading-relaxed">
+            出典：
+            <a href="https://www.rinrei.co.jp/home_care/howto/" target="_blank" rel="noopener noreferrer" className="underline">
+              リンレイ公式「ワックスの準備から塗り方」
+            </a>
+            、
+            <a href="https://www.rinrei.co.jp/home_care/question/" target="_blank" rel="noopener noreferrer" className="underline">
+              リンレイ公式「ワックス製品について」のよくある質問
+            </a>
+            （いずれも2026年11月1日確認）
+          </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
