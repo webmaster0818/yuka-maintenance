@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "どの床材メーカーがハイテクフローリングコートを推奨していますか？",
-    a: "今回確認した範囲では、永大産業（光沢のある一部の製品）、朝日ウッドテック（ピュアハード塗装・シートフローリング）、ノダ（艶を高く仕上げる場合）が推奨品として名前を挙げています。DAIKENは同社の「DKワックスネオ」を指定しています。",
+    a: "今回確認した範囲では、永大産業（光沢のある一部の製品）、朝日ウッドテック（ピュアハード塗装・シートフローリング）、ノダ（艶を高く仕上げる場合）が推奨品として名前を挙げています。LIXILは、ノンワックス仕様の床材にワックスをかける場合はハイテクフローリングコートを使うよう案内しています。DAIKENは同社の「DKワックスネオ」を指定しています。",
   },
 ];
 
@@ -92,6 +92,7 @@ export default function HightechFlooringCoatPage() {
                 ["朝日ウッドテック", "ピュアハード塗装フローリング、シートフローリング。", <Link key="w" href="/maker/woodtec/" className="underline">朝日ウッドテックのページ</Link>],
                 ["ノダ", "艶を高く仕上げる場合。水拭き後のワックス掛けでは「木質床材用樹脂ワックス、もしくはハイテクフローリングコート」を使うよう案内。", <Link key="n" href="/maker/noda/" className="underline">ノダのページ</Link>],
                 ["DAIKEN", "ワックスは同社の「DKワックスネオ」を指定。艶を抑えたい場合は「ハイテクフローリングコートつや消し20」（ハイテクフローリングコートとは別製品）を勧めている。", <Link key="d" href="/maker/daiken/" className="underline">DAIKENのページ</Link>],
+                ["LIXIL", "ノンワックス仕様の床材にお客さまの都合でワックスがけをする場合、リンレイ社の「ハイテクフローリングコート」を使うよう案内（他のワックスは不具合の原因になるとしている）。ワックスはく離剤は使用しないよう案内。", <Link key="l" href="/maker/lixil/" className="underline">LIXILのページ</Link>],
                 ["パナソニック", "公式のお手入れページでは銘柄の指定なし（水性樹脂タイプ、ニス塗り木質床用・塗装木質床用の表示のものを推奨）。", <Link key="p" href="/maker/panasonic/" className="underline">パナソニックのページ</Link>],
               ],
               caption: "永大産業は、低光沢の製品には「フローリング専用ワックスつやなし」または「ハイテクフローリングコートつや消し20」を指定しています。艶の高い仕上がりになるため、低光沢の床にハイテクフローリングコートを使う指定にはなっていません。",
@@ -132,7 +133,7 @@ export default function HightechFlooringCoatPage() {
           { href: "/product/daiken-dk-wax-neo/", label: "DKワックスネオ" },
           { href: "/maker/eidai/", label: "永大産業の適応ワックス" },
           { href: "/maker/woodtec/", label: "朝日ウッドテックの床" },
-          { href: "/maker/noda/", label: "ノダの床材" },
+          { href: "/maker/lixil/", label: "LIXILの床のお手入れ" },
           { href: "/know/recoat-timing/", label: "塗り替え時期の目安" },
           { href: "/know/no-wax-floor/", label: "ワックス不要の床の見分け方" },
           { href: "/cost/diy-vs-pro/", label: "自分でやるか業者か" },
@@ -144,6 +145,7 @@ export default function HightechFlooringCoatPage() {
           { label: "株式会社ノダ「床材についてのよくあるご質問」", href: "https://www.noda-co.jp/support/faq/floor/", checked: "2026年11月1日" },
           { label: "DAIKEN よくあるご質問「床材のお手入れ方法一覧」", href: "https://faq.daiken.jp/faq/show/3189?site_domain=user", checked: "2026年11月1日" },
           { label: "パナソニック「木質床材・フローリングのお手入れ（床のお掃除）」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年11月1日" },
+          { label: "LIXIL Q&A「フローリング（床材）のワックス」", href: "https://faq.lixil.co.jp/%E3%83%95%E3%83%AD%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%EF%BC%88%E5%BA%8A%E6%9D%90%EF%BC%89%E3%81%AE%E3%83%AF%E3%83%83%E3%82%AF%E3%82%B9-626cd6cb906696001d03676b", checked: "2026年11月1日" },
         ]}
       />
     </>

@@ -124,6 +124,14 @@ export default function SiteFooter() {
             <Link href="/product/rinrei-hightech-flooring-coat/" className="hover:text-[#F59E0B] transition-colors">ハイテクフローリングコート</Link>
             <Link href="/product/rinrei-flooring-wax-tsuyanashi/" className="hover:text-[#F59E0B] transition-colors">フローリング専用ワックスつやなし</Link>
             <Link href="/product/daiken-dk-wax-neo/" className="hover:text-[#F59E0B] transition-colors">DKワックスネオ</Link>
+            <Link href="/maker/toli/" className="hover:text-[#F59E0B] transition-colors">東リの床材のお手入れ</Link>
+            <Link href="/maker/sangetsu/" className="hover:text-[#F59E0B] transition-colors">サンゲツの床材のお手入れ</Link>
+            <Link href="/maker/tajima/" className="hover:text-[#F59E0B] transition-colors">タジマの床材のお手入れ</Link>
+            <Link href="/maker/lixil/" className="hover:text-[#F59E0B] transition-colors">LIXILの床のお手入れ</Link>
+            <Link href="/product/rinrei-all/" className="hover:text-[#F59E0B] transition-colors">リンレイ オール</Link>
+            <Link href="/product/rinrei-wax-hagashi-jouzu/" className="hover:text-[#F59E0B] transition-colors">ワックスはがし上手</Link>
+            <Link href="/product/rinrei-ishiyuka-wax/" className="hover:text-[#F59E0B] transition-colors">石床用樹脂ワックス</Link>
+            <Link href="/floor/chemical-floor/" className="hover:text-[#F59E0B] transition-colors">Pタイル・長尺シート</Link>
           </div>
         </div>
 
