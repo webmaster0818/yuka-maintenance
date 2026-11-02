@@ -34,7 +34,7 @@ export default async function ReviewPage({ params }: Props) {
   const toc = [
     { id: "basic", label: `${r.companyName}とは（運営会社・基本情報）` },
     { id: "reviews", label: r.reviewsHeading },
-    { id: "strengths", label: "口コミから分かる強み・特徴" },
+    { id: "strengths", label: r.reviews.length > 0 ? "口コミから分かる強み・特徴" : "強み・特徴" },
     { id: "cautions", label: "利用前の注意点" },
     { id: "recommended", label: "このような方におすすめです" },
     { id: "faq", label: "よくある質問" },
@@ -170,7 +170,7 @@ export default async function ReviewPage({ params }: Props) {
 
       {/* Strengths */}
       <section id="strengths" className="scroll-mt-20 mb-12">
-        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">口コミから分かる強み・特徴</h2>
+        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">{r.reviews.length > 0 ? "口コミから分かる強み・特徴" : "強み・特徴"}</h2>
         <div className="space-y-5">
           {r.strengths.map((s: any, i: number) => (
             <div key={i}>
