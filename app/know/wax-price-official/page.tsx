@@ -2,10 +2,10 @@ import Link from "next/link";
 import KnowArticle from "@/app/components/KnowArticle";
 
 export const metadata = {
-  title: "床ワックスがけの料金を公式料金表で比べる｜面積の単位・税表記・追加料金の見方",
+  title: "床ワックスがけを業者に頼む料金を公式料金表で比べる｜面積の単位・税表記・追加料金の見方",
   alternates: { canonical: "/know/wax-price-official/" },
   description:
-    "床のワックスがけの料金を、ダスキン・クリーンクルー・PVSクリーニング・くまハウス・ワクスクリーンの公式料金表で比べます。畳・帖・平方メートルの単位の違い、税込・税別、剥離や家具移動などの追加料金の見方を解説します。",
+    "床のワックスがけを業者に頼むときの料金を、公式サイトに料金表を掲載している5社の表記のまま比べます。畳・帖・平方メートルの単位の違い、税込・税別、剥離や家具移動などの追加料金の見方を解説します。",
 };
 
 const linkCls = "underline";
@@ -14,7 +14,7 @@ export default function WaxPriceOfficialPage() {
   return (
     <KnowArticle
       crumb="ワックスがけ料金の比較"
-      h1="床ワックスがけの料金を公式料金表で比べる｜面積の単位・税表記・追加料金の見方"
+      h1="床ワックスがけを業者に頼む料金を公式料金表で比べる｜面積の単位・税表記・追加料金の見方"
       lead={
         <p>
           床のワックスがけの料金は、会社によって<strong>面積の単位（畳・帖・平方メートル）、含まれる作業、税込・税別の表記</strong>が異なるため、金額だけを並べても正しく比べられません。
@@ -34,8 +34,8 @@ export default function WaxPriceOfficialPage() {
               [
                 <Link key="d" href="/company/duskin/" className={linkCls}>ダスキン「フロアクリーニング」（フローリング・クッションフロア）</Link>,
                 "東京・神奈川（Sエリア）と、茨城・大阪など（Aエリア）：10平方メートル 11,425円〜、17平方メートル 18,929円〜、25平方メートル 26,413円〜。北海道・福岡など（Bエリア）：10平方メートル 10,081円〜、17平方メートル 16,703円〜、25平方メートル 23,305円〜",
-                "税込（税抜額も併記）",
-                "土日・祝日・夜間の作業は、受けられない場合や追加費用が発生する場合があると記載",
+                "税込",
+                <span key="dn">地域区分・税抜額・土日や夜間の条件は<Link href="/company/duskin/" className={linkCls}>ダスキンの床ワックスがけ料金</Link>に掲載</span>,
               ],
               [
                 <Link key="c" href="/company/cleancrew/" className={linkCls}>クリーンクルー「床（フローリング）ワックス」</Link>,
@@ -129,7 +129,7 @@ export default function WaxPriceOfficialPage() {
         { href: "/know/recoat-timing/", label: "塗り替え時期の見きわめ" },
       ]}
       sources={[
-        { label: "ダスキン「フロアクリーニング」価格・料金一覧", href: "https://www.duskin.jp/servicemaster/spot/sm000030/", checked: "2026年10月23日" },
+        { label: "ダスキン「フロアクリーニング」価格・料金一覧", href: "https://www.duskin.jp/servicemaster/spot/sm000030/", checked: "2026年11月2日" },
         { label: "クリーンクルー「床（フローリング）クリーニング」", href: "https://www.cleancrew.jp/housecleaning/product/flooring", checked: "2026年10月17日" },
         { label: "PVSクリーニング「床のクリーニング・ワックスがけ」", href: "https://www.pvs-cleaning.com/menu/floor", checked: "2026年10月17日" },
         { label: "くまハウス「床・天井・カーペットクリーニング」", href: "https://www.kuma-house.jp/house/wax.html", checked: "2026年10月17日" },
