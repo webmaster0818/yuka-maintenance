@@ -98,6 +98,7 @@ export default function FlooringWaxTsuyanashiPage() {
           {
             heading: "他の床材メーカーでは",
             paras: [
+              "ウッドワンは、艶消しの仕上げの床材（無垢ピノアースのレギュラー塗装・クラフト仕上げ、艶消し仕上げの商品）の推奨ワックスとして、この製品と「ノンブライト」「ハイテクフローリングコートつや消し20・40」（業務用）を挙げています（2026年11月2日確認）。",
               "今回確認した朝日ウッドテック・ノダ・DAIKEN・パナソニックの公式の案内では、この製品は推奨品として挙げられていません。艶を抑えた床向けには、朝日ウッドテックが「ハイテクフローリングコートつや消し20」「ハイテクフローリングコートつや消し40」「ノンブライト」（リンレイ）と「ナチュラルック」（リスダンケミカル）を、ノダが「ナチュラルック」「ハイテクフローリングコートつや消し40」「ハイテクフローリングコートつや消し20」を、DAIKENが「ハイテクフローリングコートつや消し20」を挙げています（対象となる床は各社の案内で異なります）。お使いの床材のメーカーの案内をご確認ください。",
             ],
           },
@@ -125,6 +126,7 @@ export default function FlooringWaxTsuyanashiPage() {
           { href: "/product/daiken-dk-wax-neo/", label: "DKワックスネオ" },
           { href: "/maker/woodtec/", label: "朝日ウッドテックの床" },
           { href: "/maker/noda/", label: "ノダの床材" },
+          { href: "/maker/woodone/", label: "ウッドワンの床材" },
           { href: "/know/wax-types/", label: "ワックスの種類と選び方" },
           { href: "/know/recoat-timing/", label: "塗り替え時期の目安" },
           { href: "/know/no-wax-floor/", label: "ワックス不要の床の見分け方" },
@@ -135,6 +137,7 @@ export default function FlooringWaxTsuyanashiPage() {
           { label: "永大産業（EIDAI）「フローリングワックス対応一覧」", href: "https://www.eidai.com/product/flooring/index3.html", checked: "2026年11月1日" },
           { label: "朝日ウッドテック公式サイト「フリーワックス」", href: "https://www.woodtec.co.jp/maintenance/index04/", checked: "2026年11月1日" },
           { label: "株式会社ノダ「床材についてのよくあるご質問」", href: "https://www.noda-co.jp/support/faq/floor/", checked: "2026年11月1日" },
+          { label: "ウッドワン「木質床材お手入れマニュアル」（床材全般・PDF）", href: "https://www.woodone.co.jp/static/digitalcatalog/pdf/461_F-AL.pdf", checked: "2026年11月2日" },
           { label: "DAIKEN よくあるご質問「床材のお手入れ方法一覧」", href: "https://faq.daiken.jp/faq/show/3189?site_domain=user", checked: "2026年11月1日" },
         ]}
       />

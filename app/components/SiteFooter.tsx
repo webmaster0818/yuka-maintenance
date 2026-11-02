@@ -163,6 +163,13 @@ export default function SiteFooter() {
             <Link href="/facility/school-nursery/" className="hover:text-[#F59E0B] transition-colors">学校・保育園の床清掃</Link>
             <Link href="/facility/restaurant/" className="hover:text-[#F59E0B] transition-colors">飲食店の床清掃</Link>
             <Link href="/facility/office/" className="hover:text-[#F59E0B] transition-colors">オフィスの床清掃</Link>
+            <Link href="/maker/woodone/" className="hover:text-[#F59E0B] transition-colors">ウッドワンの床材のお手入れ</Link>
+            <Link href="/product/rinrei-non-bright/" className="hover:text-[#F59E0B] transition-colors">リンレイ ノンブライト</Link>
+            <Link href="/trouble/wax-whitening/" className="hover:text-[#F59E0B] transition-colors">ワックスが白くなる</Link>
+            <Link href="/trouble/wax-sticky/" className="hover:text-[#F59E0B] transition-colors">ワックスがベタつく</Link>
+            <Link href="/trouble/wax-peeling/" className="hover:text-[#F59E0B] transition-colors">ワックスがはがれる</Link>
+            <Link href="/trouble/wax-darkening/" className="hover:text-[#F59E0B] transition-colors">ワックスが黒ずむ・ムラになる</Link>
+            <Link href="/trouble/wax-slippery/" className="hover:text-[#F59E0B] transition-colors">ワックスを塗って滑る</Link>
           </div>
         </div>
 
