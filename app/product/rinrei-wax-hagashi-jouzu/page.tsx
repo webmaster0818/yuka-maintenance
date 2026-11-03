@@ -123,6 +123,7 @@ export default function WaxHagashiJouzuPage() {
         primary={{ href: "/service/stripping-wash/", label: "剥離洗浄の内容を見る" }}
         secondary={{ href: "/know/stripping-decision/", label: "剥離洗浄の判断" }}
         related={[
+          { href: "/trouble/wax-spot-repair/", label: "足跡・髪の毛・シミの部分補修" },
           { href: "/product/rinrei-all/", label: "リンレイ オール" },
           { href: "/product/rinrei-hightech-flooring-coat/", label: "ハイテクフローリングコート" },
           { href: "/maker/panasonic/", label: "パナソニックの床" },

@@ -364,6 +364,8 @@ export default function DailyCarePage() {
               { href: "/floor/flooring/", label: "フローリングのガイド" },
               { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
               { href: "/know/toilet-sanitary-floor/", label: "トイレ・洗面所の床" },
+              { href: "/know/steam-mop-floor/", label: "床にスチームモップは使えるか" },
+              { href: "/know/robot-cleaner-floor/", label: "ロボット掃除機と床" },
             ].map((l) => (
               <Link
                 key={l.href}

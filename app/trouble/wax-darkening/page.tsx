@@ -98,6 +98,7 @@ export default function WaxDarkeningPage() {
         primary={{ href: "/service/stripping-wash/", label: "剥離洗浄の内容を見る" }}
         secondary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         related={[
+          { href: "/trouble/wax-spot-repair/", label: "足跡・髪の毛・シミの部分補修" },
           { href: "/trouble/wax-whitening/", label: "ワックスが白くなる" },
           { href: "/trouble/wax-sticky/", label: "ワックスがベタつく" },
           { href: "/trouble/wax-peeling/", label: "ワックスがはがれる" },

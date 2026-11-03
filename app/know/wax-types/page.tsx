@@ -306,6 +306,8 @@ export default function WaxTypesPage() {
               { href: "/floor/flooring/", label: "フローリングのガイド" },
               { href: "/know/vinyl-tile-wax/", label: "タイルの床とワックス" },
               { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
+              { href: "/product/rinrei-wax-compare/", label: "リンレイ家庭用ワックスの比較" },
+              { href: "/know/floor-heating-wax/", label: "床暖房の床のワックスがけ" },
             ].map((l) => (
               <Link
                 key={l.href}

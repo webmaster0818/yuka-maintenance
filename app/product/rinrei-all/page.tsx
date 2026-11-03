@@ -119,6 +119,8 @@ export default function RinreiAllPage() {
         primary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         secondary={{ href: "/know/wax-types/", label: "ワックスの種類と選び方" }}
         related={[
+          { href: "/product/rinrei-wax-compare/", label: "リンレイ家庭用ワックスの比較" },
+          { href: "/know/wax-storage-disposal/", label: "ワックスの保管と処分" },
           { href: "/product/rinrei-hightech-flooring-coat/", label: "ハイテクフローリングコート" },
           { href: "/product/rinrei-flooring-wax-tsuyanashi/", label: "フローリング専用ワックスつやなし" },
           { href: "/product/rinrei-wax-hagashi-jouzu/", label: "ワックスはがし上手" },

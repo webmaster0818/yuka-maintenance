@@ -101,6 +101,7 @@ export default function WaxStickyPage() {
         primary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         secondary={{ href: "/service/stripping-wash/", label: "剥離洗浄の内容を見る" }}
         related={[
+          { href: "/know/floor-heating-wax/", label: "床暖房の床のワックスがけ" },
           { href: "/trouble/wax-whitening/", label: "ワックスが白くなる" },
           { href: "/trouble/wax-peeling/", label: "ワックスがはがれる" },
           { href: "/trouble/wax-darkening/", label: "ワックスが黒ずむ・ムラになる" },
