@@ -31,3 +31,77 @@ body {
 
 .label { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
 .mono { font-family: var(--font-mono); font-feature-settings: "tnum" 1; }
+
+/* ======================================================================
+ * TOP 刷新（2026-11-04・redesign-20261104 ブランチ）
+ * 木の床を思わせる焦げ茶（--yk-wood）を操作色に、生成りの背景と細い枠線で区切る。
+ * 操作ボタンはすべて同じ焦げ茶。グラデーションは FV の写真の上だけ。大きな角丸・影は使わない。
+ * ====================================================================== */
+:root {
+  --yk-ink: #2A2018;
+  --yk-wood: #6B4423;
+  --yk-wood-dark: #4A2E17;
+  --yk-oak: #C8945C;
+  --yk-oak-dark: #9A6A38;
+  --yk-wash: #F3EEE6;
+  --yk-paper: #F7F5F1;
+  --yk-border: #DDD4C6;
+  --yk-border-strong: #A8977F;
+  --yk-muted: #5C5142;
+}
+
+@layer components {
+.yk-page { background: var(--yk-paper); color: var(--yk-ink); font-feature-settings: "palt" 1; }
+.yk-page a { -webkit-tap-highlight-color: transparent; }
+.yk-page :focus-visible { outline: 3px solid var(--yk-oak); outline-offset: 2px; }
+
+.yk-container { max-width: 1160px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+@media (min-width: 768px) { .yk-container { padding-left: 24px; padding-right: 24px; } }
+
+.yk-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  min-height: 52px; padding: 0.8rem 1.5rem; border-radius: 4px;
+  background: var(--yk-wood); color: #fff; border: 1px solid var(--yk-wood);
+  font-weight: 700; letter-spacing: 0.04em; line-height: 1.35; text-align: center;
+  transition: background-color .2s ease;
+}
+.yk-btn:hover { background: var(--yk-wood-dark); }
+.yk-btn--lg { min-height: 64px; font-size: 18px; padding: 0.9rem 1.5rem; }
+@media (min-width: 768px) { .yk-btn--lg { min-height: 72px; font-size: 20px; } }
+.yk-btn--ghost { background: #fff; color: var(--yk-wood); border-color: var(--yk-wood); }
+.yk-btn--ghost:hover { background: var(--yk-wash); }
+
+.yk-card { background: #fff; border: 1px solid var(--yk-border); border-radius: 4px; }
+.yk-card-link { transition: border-color .2s ease, background-color .2s ease; }
+.yk-card-link:hover { border-color: var(--yk-wood); background: #FCFBF8; }
+
+.yk-h2 {
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  font-size: 24px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.4;
+  padding-bottom: 12px; border-bottom: 2px solid var(--yk-ink); margin-bottom: 24px;
+}
+@media (min-width: 768px) { .yk-h2 { font-size: 30px; margin-bottom: 32px; } }
+.yk-h2 small { font-size: 13px; font-weight: 500; color: var(--yk-muted); letter-spacing: 0.02em; }
+.yk-h3 { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; padding-left: 12px; border-left: 4px solid var(--yk-oak); line-height: 1.4; }
+@media (min-width: 768px) { .yk-h3 { font-size: 20px; } }
+
+.yk-section { padding: 56px 0; }
+@media (min-width: 768px) { .yk-section { padding: 88px 0; } }
+.yk-band { background: #fff; border-top: 1px solid var(--yk-border); border-bottom: 1px solid var(--yk-border); }
+
+.yk-dot { position: relative; padding-left: 14px; }
+.yk-dot::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--yk-oak); }
+
+.yk-acc > summary { list-style: none; cursor: pointer; }
+.yk-acc > summary::-webkit-details-marker { display: none; }
+.yk-acc[open] > summary .yk-chev { transform: rotate(180deg); }
+.yk-chev { transition: transform .25s ease; }
+}
+
+/* スクロールで順に表示（JS 実行後に html.yk-js を付ける。JS 無効・印刷・reduced-motion では常に表示） */
+.yk-js .yk-reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.yk-js .yk-reveal.yk-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .yk-js .yk-reveal { opacity: 1; transform: none; transition: none; }
+}
+@media print { .yk-js .yk-reveal { opacity: 1 !important; transform: none !important; } }

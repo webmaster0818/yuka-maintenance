@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { YkMark } from "./top/YkLogo";
 
 export default function SiteFooter() {
   return (
@@ -8,17 +9,9 @@ export default function SiteFooter() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6 text-[#F59E0B]"
-              >
-                <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-1.72-1.72V5.25a.75.75 0 00-.75-.75h-1.5a.75.75 0 00-.75.75v1.79l-5.47-5.47a.75.75 0 00-1.06 0L2.78 11.47a.75.75 0 101.06 1.06l7.63-7.69z" />
-                <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
-              </svg>
-              <span className="font-bold text-white">
-                床メンテナンス<span className="text-[#F59E0B]">110番</span>
+              <YkMark size={30} tone="light" />
+              <span className="font-bold text-white tracking-[0.06em]">
+                床メンテナンス<span className="text-[#C8945C]">110番</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-[#A8A29E]">
