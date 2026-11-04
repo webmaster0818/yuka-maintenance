@@ -3,6 +3,7 @@ import companies from "@/data/companies.json";
 import SourcedRating from "@/app/components/SourcedRating";
 import floors from "@/data/floors.json";
 import services from "@/data/services.json";
+import reviews from "@/data/reviews.json";
 import { areaCount } from "@/data/areaRegions";
 import TaskIcon from "./components/top/TaskIcon";
 import AreaFinder from "./components/top/AreaFinder";
@@ -136,7 +137,7 @@ function TrustBadges() {
     { k: "掲載業者", v: String(companies.length), u: "社", desc: "公式情報をもとに比較" },
     { k: "エリア別ページ", v: String(areaCount), u: "都道府県", desc: "都道府県ごとのページ" },
     { k: "床種別ガイド", v: String(floors.length), u: "種類", desc: "床材別ガイドを掲載" },
-    { k: "口コミ", v: "出典つき", u: "", desc: "出典を確認できた口コミのみ掲載" },
+    { k: "評判のまとめ", v: String(reviews.length), u: "社", desc: "公式の利用者の声と公開情報で整理" },
   ];
   return (
     <section className="border-b border-[color:var(--yk-border)] bg-white">
