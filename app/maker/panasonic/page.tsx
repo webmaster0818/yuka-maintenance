@@ -112,6 +112,8 @@ export default function PanasonicMakerPage() {
         primary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         secondary={{ href: "/know/skip-wax/", label: "ワックスをかけない場合" }}
         related={[
+          { href: "/trouble/floor-scratch-repair/", label: "フローリングの傷・へこみの補修" },
+          { href: "/know/heater-hot-carpet-floor/", label: "暖房器具・ホットカーペットと床" },
           { href: "/maker/eidai/", label: "永大産業の適応ワックス" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
           { href: "/maker/woodtec/", label: "朝日ウッドテックの床" },

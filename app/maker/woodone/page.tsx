@@ -130,6 +130,8 @@ export default function WoodoneMakerPage() {
         primary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         secondary={{ href: "/service/scratch-repair/", label: "傷補修の内容を見る" }}
         related={[
+          { href: "/know/floor-water-damage/", label: "水こぼし・結露から床を守る" },
+          { href: "/know/heater-hot-carpet-floor/", label: "暖房器具・ホットカーペットと床" },
           { href: "/product/rinrei-non-bright/", label: "リンレイ ノンブライト" },
           { href: "/product/rinrei-hightech-flooring-coat/", label: "ハイテクフローリングコート" },
           { href: "/product/rinrei-flooring-wax-tsuyanashi/", label: "フローリング専用ワックスつやなし" },

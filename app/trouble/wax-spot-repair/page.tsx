@@ -100,6 +100,7 @@ export default function WaxSpotRepairPage() {
         primary={{ href: "/service/stripping-wash/", label: "剥離洗浄の内容を見る" }}
         secondary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         related={[
+          { href: "/trouble/floor-stain-removal/", label: "床のシミ・汚れの落とし方" },
           { href: "/product/rinrei-wax-hagashi-jouzu/", label: "ワックスはがし上手" },
           { href: "/trouble/wax-darkening/", label: "ワックスが黒ずむ・ムラになる" },
           { href: "/trouble/wax-whitening/", label: "ワックスが白くなる" },

@@ -366,6 +366,9 @@ export default function DailyCarePage() {
               { href: "/know/toilet-sanitary-floor/", label: "トイレ・洗面所の床" },
               { href: "/know/steam-mop-floor/", label: "床にスチームモップは使えるか" },
               { href: "/know/robot-cleaner-floor/", label: "ロボット掃除機と床" },
+              { href: "/know/floor-scratch-prevention/", label: "床の傷・へこみを防ぐ" },
+              { href: "/know/floor-water-damage/", label: "水こぼし・結露から床を守る" },
+              { href: "/trouble/floor-stain-removal/", label: "床のシミ・汚れの落とし方" },
             ].map((l) => (
               <Link
                 key={l.href}

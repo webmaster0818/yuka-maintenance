@@ -119,6 +119,8 @@ export default function WoodtecMakerPage() {
         primary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         secondary={{ href: "/know/no-wax-floor/", label: "ワックス不要の床の見分け方" }}
         related={[
+          { href: "/trouble/floor-scratch-repair/", label: "フローリングの傷・へこみの補修" },
+          { href: "/know/floor-scratch-prevention/", label: "床の傷・へこみを防ぐ" },
           { href: "/product/rinrei-hightech-flooring-coat/", label: "ハイテクフローリングコート" },
           { href: "/maker/eidai/", label: "永大産業の適応ワックス" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },

@@ -355,6 +355,8 @@ export default function FloorSymptomsPage() {
               { href: "/know/coating-types/", label: "コーティングの種類" },
               { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
               { href: "/know/floor-sanding/", label: "フローリングの研磨" },
+              { href: "/know/floor-sunlight-fade/", label: "床の日焼け・色あせ" },
+              { href: "/trouble/floor-scratch-repair/", label: "フローリングの傷・へこみの補修" },
             ].map((l) => (
               <Link
                 key={l.href}

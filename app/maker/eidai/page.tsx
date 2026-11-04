@@ -189,6 +189,8 @@ export default function EidaiMakerPage() {
         primary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         secondary={{ href: "/know/no-wax-floor/", label: "ワックス不要の床の見分け方" }}
         related={[
+          { href: "/know/pet-floor-care/", label: "ペットと暮らす床の手入れ" },
+          { href: "/know/floor-sunlight-fade/", label: "床の日焼け・色あせ" },
           { href: "/product/rinrei-hightech-flooring-coat/", label: "ハイテクフローリングコート" },
           { href: "/product/rinrei-flooring-wax-tsuyanashi/", label: "フローリング専用ワックスつやなし" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
