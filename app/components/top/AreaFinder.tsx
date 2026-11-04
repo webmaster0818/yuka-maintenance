@@ -46,7 +46,7 @@ export default function AreaFinder() {
             <span className="text-[18px] font-bold tracking-[0.06em]">東京都</span>
           </div>
           <div className="grid gap-3 p-4 md:p-6">
-            <a href={`/area/${tokyo.slug}/`} className="yk-btn w-full justify-between sm:w-fit sm:min-w-[340px]">
+            <a href={`/area/${tokyo.slug}/`} className="yk-btn w-full justify-between !px-4 text-[15px] sm:w-fit sm:min-w-[340px] sm:!px-6 sm:text-base">
               東京都の床メンテナンス業者を見る
               <Arrow className="h-4 w-4" />
             </a>
