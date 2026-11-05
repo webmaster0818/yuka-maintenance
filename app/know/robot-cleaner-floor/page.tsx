@@ -89,6 +89,7 @@ export default function RobotCleanerFloorPage() {
         secondary={{ href: "/service/floor-coating/", label: "フロアコーティングの内容を見る" }}
         related={[
           { href: "/know/steam-mop-floor/", label: "床にスチームモップは使えるか" },
+          { href: "/know/tatami-care/", label: "和紙畳・樹脂畳のお手入れ" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
           { href: "/maker/woodone/", label: "ウッドワンの床材のお手入れ" },
           { href: "/maker/eidai/", label: "EIDAIのフローリング" },

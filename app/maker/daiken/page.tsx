@@ -121,6 +121,7 @@ export default function DaikenMakerPage() {
           { href: "/maker/panasonic/", label: "パナソニックの床" },
           { href: "/know/wax-or-coating/", label: "ワックスかコーティングか" },
           { href: "/know/daily-care/", label: "日常の手入れ" },
+          { href: "/know/tatami-care/", label: "和紙畳・樹脂畳のお手入れ" },
           { href: "/know/no-wax-floor/", label: "ワックス不要の床の見分け方" },
           { href: "/service/floor-coating/", label: "フロアコーティング" },
         ]}

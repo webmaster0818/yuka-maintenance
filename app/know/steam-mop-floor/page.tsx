@@ -96,6 +96,7 @@ export default function SteamMopFloorPage() {
         secondary={{ href: "/service/wax/", label: "ワックスがけの内容を見る" }}
         related={[
           { href: "/know/robot-cleaner-floor/", label: "ロボット掃除機と床" },
+          { href: "/know/tatami-care/", label: "和紙畳・樹脂畳のお手入れ" },
           { href: "/trouble/wax-whitening/", label: "ワックスが白くなる" },
           { href: "/maker/panasonic/", label: "パナソニックの床のお手入れ" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },

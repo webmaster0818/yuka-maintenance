@@ -594,7 +594,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/know/daily-care/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -696,7 +696,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/maker/daiken/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -882,13 +882,19 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/know/steam-mop-floor/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yuka-maintenance.com/know/tatami-care/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yuka-maintenance.com/know/robot-cleaner-floor/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

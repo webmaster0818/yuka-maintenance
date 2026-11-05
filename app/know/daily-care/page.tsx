@@ -369,6 +369,7 @@ export default function DailyCarePage() {
               { href: "/know/floor-scratch-prevention/", label: "床の傷・へこみを防ぐ" },
               { href: "/know/floor-water-damage/", label: "水こぼし・結露から床を守る" },
               { href: "/trouble/floor-stain-removal/", label: "床のシミ・汚れの落とし方" },
+              { href: "/know/tatami-care/", label: "和紙畳・樹脂畳のお手入れ" },
             ].map((l) => (
               <Link
                 key={l.href}
