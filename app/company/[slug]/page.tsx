@@ -16,6 +16,8 @@ type CompanyAnswer = {
   priceTable?: { caption: string; head: string[]; rows: string[][]; note: string; sourceHref: string };
   faq: { q: string; a: string }[];
   sources: { label: string; href: string; checked: string }[];
+  /** 会社ページの紹介欄だけを公式の事実で上書きする（companies.json は TOP・地域・ランキングにも流れるため触らない） */
+  profile?: { catchphrase: string; features: string[]; floorServices: string[]; description: string };
 };
 const answers = companyAnswers as Record<string, CompanyAnswer>;
 
@@ -56,9 +58,10 @@ export default async function CompanyPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const company = companies.find((c) => c.slug === slug);
-  if (!company) notFound();
-  const answer = answers[company.slug];
+  const found = companies.find((c) => c.slug === slug);
+  if (!found) notFound();
+  const answer = answers[found.slug];
+  const company = answer?.profile ? { ...found, ...answer.profile } : found;
   const faqLd = answer
     ? {
         "@context": "https://schema.org",
