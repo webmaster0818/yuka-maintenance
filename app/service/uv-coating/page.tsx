@@ -130,6 +130,7 @@ export default function UvCoatingPage() {
           { href: "/company/fsscoat/", label: "FSSCOAT" },
           { href: "/company/osoujihonpo/", label: "おそうじ本舗" },
           { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+          { href: "/service/wet-area-coating/", label: "水まわりコーティング" },
           { href: "/know/wax-or-coating/", label: "ワックスかコーティングか" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
           { href: "/maker/lixil/", label: "LIXILの床のお手入れ" },
