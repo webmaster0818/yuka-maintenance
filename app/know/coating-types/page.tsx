@@ -276,6 +276,7 @@ export default function CoatingTypesPage() {
               { href: "/know/no-wax-floor/", label: "ワックス不可の床材" },
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
               { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+              { href: "/service/silicone-coating/", label: "シリコンフロアコーティングの比較" },
             ].map((l) => (
               <Link
                 key={l.href}

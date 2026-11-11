@@ -17,6 +17,7 @@ const relatedKnow: Record<string, { href: string; label: string }[]> = {
     { href: "/service/uv-coating/", label: "UVフロアコーティング" },
     { href: "/service/glass-coating/", label: "ガラスフロアコーティング" },
     { href: "/service/wet-area-coating/", label: "水まわりコーティング" },
+    { href: "/service/silicone-coating/", label: "シリコンフロアコーティング" },
   ],
   "regular-maintenance": [
     { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
