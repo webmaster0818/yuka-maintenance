@@ -177,7 +177,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/floor/tile/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -203,7 +203,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/service/floor-coating/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -588,7 +588,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/know/coating-types/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -967,6 +967,18 @@
   <url>
     <loc>https://yuka-maintenance.com/service/silicone-coating/</loc>
     <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yuka-maintenance.com/service/stone-tile-coating/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yuka-maintenance.com/service/shiraki-coating/</loc>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

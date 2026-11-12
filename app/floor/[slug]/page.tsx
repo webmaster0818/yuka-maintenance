@@ -17,6 +17,7 @@ const relatedKnow: Record<string, { href: string; label: string }[]> = {
   tile: [
     { href: "/know/vinyl-tile-wax/", label: "タイルの床とワックス" },
     { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
+    { href: "/service/stone-tile-coating/", label: "玄関タイル・石材のコーティング" },
   ],
 };
 

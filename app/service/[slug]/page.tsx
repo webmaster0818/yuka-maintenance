@@ -18,6 +18,8 @@ const relatedKnow: Record<string, { href: string; label: string }[]> = {
     { href: "/service/glass-coating/", label: "ガラスフロアコーティング" },
     { href: "/service/wet-area-coating/", label: "水まわりコーティング" },
     { href: "/service/silicone-coating/", label: "シリコンフロアコーティング" },
+    { href: "/service/stone-tile-coating/", label: "玄関タイル・石材のコーティング" },
+    { href: "/service/shiraki-coating/", label: "和室の白木コーティング" },
   ],
   "regular-maintenance": [
     { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },

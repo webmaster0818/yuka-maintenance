@@ -277,6 +277,8 @@ export default function CoatingTypesPage() {
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
               { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
               { href: "/service/silicone-coating/", label: "シリコンフロアコーティングの比較" },
+              { href: "/service/stone-tile-coating/", label: "玄関タイル・石材のコーティングの比較" },
+              { href: "/service/shiraki-coating/", label: "和室の白木コーティングの比較" },
             ].map((l) => (
               <Link
                 key={l.href}
