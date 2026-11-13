@@ -5,7 +5,7 @@ export const metadata = {
   title: "フローリングワックスの違い｜水性（樹脂系）・乳化性・油性の見分け方と選び方",
   alternates: { canonical: "/know/wax-types/" },
   description:
-    "フローリングワックスの違いは、容器の「種類」の表示で分かります。家庭用品品質表示法の規程は、ワックスの種類を水性・乳化性・油性で表示し、合成樹脂が主成分なら「樹脂系」を付けると定めています。フローリングに使う種類はメーカーの指定で確認します。",
+    "水性樹脂ワックスは、合成樹脂を主成分とし水に溶かしたり乳化させたりしたワックスで、容器の種類の欄に「水性（樹脂系）」と表示されます。水性・乳化性・油性の違いを家庭用品品質表示法の規程で確認し、使う種類は床材メーカーの指定で選びます。",
 };
 
 const glossTable: [string, string][] = [
@@ -71,9 +71,10 @@ const faqs = [
 ];
 
 const sources = [
-  { label: "消費者庁「雑貨工業品品質表示規程（三十 住宅用又は家具用のワックス）」", href: "https://www.caa.go.jp/policies/policy/representation/household_goods/law/law_07/item_030.html", checked: "2026年10月24日" },
-  { label: "パナソニック「木質床材・フローリングのお手入れ（お掃除）」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年10月24日" },
-  { label: "東リ 床材FAQ「複層ビニル床タイルのメンテナンスでは、ワックスが必要でしょうか」", href: "https://www.toli.co.jp/faq/floor/32.html", checked: "2026年10月24日" },
+  { label: "消費者庁「雑貨工業品品質表示規程（三十 住宅用又は家具用のワックス）」", href: "https://www.caa.go.jp/policies/policy/representation/household_goods/law/law_07/item_030.html", checked: "2026年11月13日" },
+  { label: "パナソニック「木質床材・フローリングのお手入れ（お掃除）」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年11月13日" },
+  { label: "東リ 床材FAQ「複層ビニル床タイルのメンテナンスでは、ワックスが必要でしょうか」", href: "https://www.toli.co.jp/faq/floor/32.html", checked: "2026年11月13日" },
+  { label: "株式会社リンレイ「オール」", href: "https://www.rinrei.co.jp/home_care/wax/02/all.html", checked: "2026年11月13日" },
 ];
 
 const faqLd = {
@@ -98,6 +99,21 @@ export default function WaxTypesPage() {
           <h1 className="text-2xl md:text-3xl font-bold text-[#1C1917] mb-3">
             フローリングワックスの違い｜水性（樹脂系）・乳化性・油性の見分け方と選び方
           </h1>
+          <div className="bg-[#FFFBEB] border border-[#F0ECE8] rounded-lg px-4 py-3 mb-4">
+            <p className="font-bold text-[#1C1917] mb-1">水性樹脂ワックスとは</p>
+            <p className="text-sm text-[#57534E] leading-relaxed mb-2">
+              合成樹脂を主成分とし、水に溶かしたり乳化させたりしたワックスです。
+              容器の品質表示では、種類の欄に「水性（樹脂系）」と書かれています。
+            </p>
+            <p className="text-sm text-[#57534E] leading-relaxed mb-2">
+              たとえばリンレイの家庭用ワックス「オール」は、種類が「水性(樹脂系)」、成分が「合成樹脂(アクリル樹脂)、水」と表示されています。
+              用途はフローリング床（樹脂塗装された木製の床）とビニール製の床で、ロウ仕上げなど油加工された床や、塗装されていない木の床には使えないとしています。
+            </p>
+            <p className="text-sm text-[#57534E] leading-relaxed">
+              パナソニックは、同社の木質床材に使うワックスとして水性樹脂タイプを挙げ、塗りやすく乾くのも早く、塗った後のから拭きも不要と案内しています。
+              ロウタイプ・油性タイプは使わないよう案内しています。
+            </p>
+          </div>
           <p className="text-[#57534E] leading-relaxed mb-3">
             フローリングワックスの違いは、容器の「種類」と「成分」の表示で確かめられます。家庭用品品質表示法にもとづく消費者庁の雑貨工業品品質表示規程は、住宅用のワックスの種類を「水性」「乳化性」「油性」のいずれかで表示し、合成樹脂を主成分とするものは「水性（樹脂系）」のように「樹脂系」と書き添えるよう定めています。
           </p>
