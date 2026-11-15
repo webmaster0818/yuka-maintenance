@@ -39,14 +39,14 @@ export default function WaxStorageDisposalPage() {
         lead={
           <>
             <p className="mb-3">
-              リンレイは、床用ワックスに<strong>特に使用期限はない</strong>としています。ただし保管状況によって腐敗・変質することがあり、異臭などがなければ使えるとしています。
+              使い切れなかった床用ワックスは、<strong>布や新聞紙に含ませて燃えるゴミとして出す</strong>よう、リンレイはよくある質問で案内しています。空き容器は、お住まいの地域の廃棄方法に従って出します。
             </p>
             <p>
-              残ったワックスは容器に戻さず、フタを締めて冷暗所に保管します。捨てるときは布や新聞紙に含ませて燃えるゴミに出すよう案内されています。
+              使用期限については、リンレイは<strong>特に使用期限はない</strong>としています。保管状況によって腐敗・変質することがあり、異臭などがなければ使えるとしています。残ったワックスは容器に戻さず、フタを締めて冷暗所に保管します。
             </p>
           </>
         }
-        notice="このページはリンレイのよくある質問・製品ページと、DAIKEN「DKワックスネオ」の使用方法（いずれも2026年11月3日確認）をもとにしています。"
+        notice="このページはリンレイのよくある質問・製品ページと、DAIKEN「DKワックスネオ」の使用方法（いずれも2026年11月15日確認）をもとにしています。"
         sections={[
           {
             heading: "保管のしかた",
@@ -105,9 +105,9 @@ export default function WaxStorageDisposalPage() {
           { href: "/know/wax-types/", label: "ワックスの種類と選び方" },
         ]}
         sources={[
-          { label: "株式会社リンレイ「ワックス製品について」のよくある質問", href: "https://www.rinrei.co.jp/home_care/question/", checked: "2026年11月3日" },
-          { label: "株式会社リンレイ「オール」（使用上の注意）", href: "https://www.rinrei.co.jp/home_care/wax/02/all.html", checked: "2026年11月3日" },
-          { label: "DAIKENパーツショップ「お手入れ製品：DKワックスネオのご使用方法」", href: "https://www.daiken.jp/service/s/report_03", checked: "2026年11月3日" },
+          { label: "株式会社リンレイ「ワックス製品について」のよくある質問", href: "https://www.rinrei.co.jp/home_care/question/", checked: "2026年11月15日" },
+          { label: "株式会社リンレイ「オール」（使用上の注意）", href: "https://www.rinrei.co.jp/home_care/wax/02/all.html", checked: "2026年11月15日" },
+          { label: "DAIKENパーツショップ「お手入れ製品：DKワックスネオのご使用方法」", href: "https://www.daiken.jp/service/s/report_03", checked: "2026年11月15日" },
         ]}
       />
     </>
