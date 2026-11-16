@@ -42,15 +42,19 @@ export default function WaxWhiteningPage() {
         lead={
           <>
             <p className="mb-3">
-              ワックスを塗った床が白くなる原因として、メーカーの公式の案内で最も多く挙げられているのは<strong>水分やアルコールを含む液の放置</strong>です。
-              リンレイは、ワックスが元の液体の状態に戻ろうとする性質により白く濁るとしています。
+              床のワックスが白くなる主な原因は、<strong>こぼした水やアルコールを含む液の放置</strong>と、<strong>目地に溜まったワックス</strong>です。
+              リンレイは、水分などが付いたまま放置されるとワックスが元の液体の状態に戻ろうとする性質により白く濁り、目地に溜まったワックスは乾燥の途中で白く濁ることがあるとしています。
+            </p>
+            <p className="mb-3">
+              直し方は、<strong>白くなった部分のワックスを一度取り除いてから塗り直す</strong>ことです。ノダは、白化したワックスは一度取り除かないと元には戻らないとし、住居用中性洗剤を薄めて布に付けて剥がすよう案内しています。
+              リンレイは、シミの部分をマスキングテープで囲んで養生し、床クリーナーかワックスはがし剤で一度ワックスをはがしてから塗り替えるよう案内しています。
             </p>
             <p>
-              白くなったワックスは、<strong>一度取り除いてから塗り直す</strong>のが各社に共通する対処です。このページでは、原因ごとの直し方と予防を、ワックスメーカーと床材メーカーの公式の案内から整理しています。
+              ただし、ノダのようにワックスの剥離剤の使用を禁じている床材メーカーもあります。はがす前に、お使いの床材メーカーの案内を確認してください。このページでは、原因ごとの直し方と予防を、ワックスメーカーと床材メーカーの公式の案内から整理しています。
             </p>
           </>
         }
-        notice="このページはリンレイ・ノダ・ウッドワン・パナソニックの公式の案内（いずれも2026年11月2日確認）をもとにしています。"
+        notice="このページはリンレイ・ノダ・ウッドワン・パナソニックの公式の案内（2026年11月2日確認。リンレイ「ワックス製品について」のよくある質問とノダの床材FAQは2026年11月16日に再確認）をもとにしています。"
         sections={[
           {
             heading: "白くなる原因（メーカーの案内）",
@@ -130,9 +134,9 @@ export default function WaxWhiteningPage() {
           { href: "/know/toilet-sanitary-floor/", label: "トイレ・洗面所の床" },
         ]}
         sources={[
-          { label: "株式会社リンレイ「ワックス製品について」のよくある質問", href: "https://www.rinrei.co.jp/home_care/question/", checked: "2026年11月2日" },
+          { label: "株式会社リンレイ「ワックス製品について」のよくある質問", href: "https://www.rinrei.co.jp/home_care/question/", checked: "2026年11月16日" },
           { label: "株式会社リンレイ「防水タフコート」（家庭用製品）", href: "https://www.rinrei.co.jp/home_care/wax/02/bousui_tough.html", checked: "2026年11月2日" },
-          { label: "株式会社ノダ「床材についてのよくあるご質問」", href: "https://www.noda-co.jp/support/faq/floor/", checked: "2026年11月2日" },
+          { label: "株式会社ノダ「床材についてのよくあるご質問」", href: "https://www.noda-co.jp/support/faq/floor/", checked: "2026年11月16日" },
           { label: "ウッドワン「木質床材お手入れマニュアル」（床材全般・PDF）", href: "https://www.woodone.co.jp/static/digitalcatalog/pdf/461_F-AL.pdf", checked: "2026年11月2日" },
           { label: "パナソニック「床のお掃除｜木質床材・フローリングのお手入れ」", href: "https://sumai.panasonic.jp/support/care/floor/01/", checked: "2026年11月2日" },
         ]}
