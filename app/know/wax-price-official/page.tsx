@@ -16,12 +16,20 @@ export default function WaxPriceOfficialPage() {
       crumb="ワックスがけ料金の比較"
       h1="床ワックスがけを業者に頼む料金を公式料金表で比べる｜面積の単位・税表記・追加料金の見方"
       lead={
+        <>
+        <p className="mb-3">
+          <strong>業者に床のワックスがけ（洗浄とワックス塗布）を頼む料金は、公式サイトに料金表がある住宅向けの4社では、最も小さい面積の区分で1万円台です。</strong>
+          ダスキンは10平方メートル 10,081円〜（北海道・九州などのBエリア。東京・神奈川とAエリアは11,425円〜）、くまハウスは6畳（約10平方メートル）まで 11,000円、
+          PVSクリーニングは20平方メートル以下 16,500円、クリーンクルーは10帖まで 17,600円です（クリーンクルーは床洗浄または床剥離の作業が別に必要と記載）。
+          ダスキン・PVSクリーニング・クリーンクルーは税込、くまハウスは税表記の記載がありません（各社の公式サイトで2026年11月17日に確認）。
+        </p>
         <p>
           床のワックスがけの料金は、会社によって<strong>面積の単位（畳・帖・平方メートル）、含まれる作業、税込・税別の表記</strong>が異なるため、金額だけを並べても正しく比べられません。
           このページでは、公式サイトに料金表を掲載している5社の料金を、確認した表記のまま整理し、比べるときの注意点をご説明します。
         </p>
+        </>
       }
-      notice="掲載している料金は、各社公式サイトで2026年10月17日に確認した内容です。料金は変更される場合があり、床の状態・地域・作業日時によって追加費用が発生することがあります。ご依頼前に各社の公式サイトと見積もりで最新の料金をご確認ください。"
+      notice="掲載している料金は、各社公式サイトで2026年11月17日に確認した内容です。料金は変更される場合があり、床の状態・地域・作業日時によって追加費用が発生することがあります。ご依頼前に各社の公式サイトと見積もりで最新の料金をご確認ください。"
       sections={[
         {
           heading: "各社の公式料金表（洗浄とワックス塗布）",
@@ -129,11 +137,11 @@ export default function WaxPriceOfficialPage() {
         { href: "/know/recoat-timing/", label: "塗り替え時期の見きわめ" },
       ]}
       sources={[
-        { label: "ダスキン「フロアクリーニング」価格・料金一覧", href: "https://www.duskin.jp/servicemaster/spot/sm000030/", checked: "2026年11月2日" },
-        { label: "クリーンクルー「床（フローリング）クリーニング」", href: "https://www.cleancrew.jp/housecleaning/product/flooring", checked: "2026年10月17日" },
-        { label: "PVSクリーニング「床のクリーニング・ワックスがけ」", href: "https://www.pvs-cleaning.com/menu/floor", checked: "2026年10月17日" },
-        { label: "くまハウス「床・天井・カーペットクリーニング」", href: "https://www.kuma-house.jp/house/wax.html", checked: "2026年10月17日" },
-        { label: "ワクスクリーン「価格表一覧」", href: "https://waksclean.jp/wacs_price/", checked: "2026年10月17日" },
+        { label: "ダスキン「フロアクリーニング」価格・料金一覧", href: "https://www.duskin.jp/servicemaster/spot/sm000030/", checked: "2026年11月17日" },
+        { label: "クリーンクルー「床（フローリング）クリーニング」", href: "https://www.cleancrew.jp/housecleaning/product/flooring", checked: "2026年11月17日" },
+        { label: "PVSクリーニング「床のクリーニング・ワックスがけ」", href: "https://www.pvs-cleaning.com/menu/floor", checked: "2026年11月17日" },
+        { label: "くまハウス「床・天井・カーペットクリーニング」", href: "https://www.kuma-house.jp/house/wax.html", checked: "2026年11月17日" },
+        { label: "ワクスクリーン「価格表一覧」", href: "https://waksclean.jp/wacs_price/", checked: "2026年11月17日" },
       ]}
     />
   );
