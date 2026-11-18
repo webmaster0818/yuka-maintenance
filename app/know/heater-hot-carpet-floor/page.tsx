@@ -113,6 +113,7 @@ export default function HeaterHotCarpetFloorPage() {
           { href: "/know/floor-scratch-prevention/", label: "床の傷・へこみを防ぐ" },
           { href: "/maker/woodone/", label: "ウッドワンの床材のお手入れ" },
           { href: "/maker/sangetsu/", label: "サンゲツの床材のお手入れ" },
+          { href: "/trouble/floor-squeak/", label: "フローリングの床鳴り・すき間" },
         ]}
         sources={[
           { label: "パナソニック「床への気配り」（木質床材・フローリングのお手入れ）", href: "https://sumai.panasonic.jp/support/care/floor/02/", checked: CHECKED },

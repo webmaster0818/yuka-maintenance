@@ -357,6 +357,7 @@ export default function FloorSymptomsPage() {
               { href: "/know/floor-sanding/", label: "フローリングの研磨" },
               { href: "/know/floor-sunlight-fade/", label: "床の日焼け・色あせ" },
               { href: "/trouble/floor-scratch-repair/", label: "フローリングの傷・へこみの補修" },
+              { href: "/trouble/floor-squeak/", label: "フローリングの床鳴り" },
             ].map((l) => (
               <Link
                 key={l.href}
