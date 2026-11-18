@@ -279,6 +279,9 @@ export default function CoatingTypesPage() {
               { href: "/service/silicone-coating/", label: "シリコンフロアコーティングの比較" },
               { href: "/service/stone-tile-coating/", label: "玄関タイル・石材のコーティングの比較" },
               { href: "/service/shiraki-coating/", label: "和室の白木コーティングの比較" },
+              { href: "/know/new-home-coating/", label: "新築のフロアコーティング" },
+              { href: "/know/pet-coating/", label: "ペット向けコーティングの保証" },
+              { href: "/know/coating-diy/", label: "フロアコーティングのDIY" },
             ].map((l) => (
               <Link
                 key={l.href}

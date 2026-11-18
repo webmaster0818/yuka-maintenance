@@ -107,6 +107,7 @@ export default function FloorStainRemovalPage() {
           { href: "/trouble/wax-spot-repair/", label: "足跡・髪の毛・シミの部分補修" },
           { href: "/know/pet-floor-care/", label: "ペットと暮らす床の手入れ" },
           { href: "/know/floor-water-damage/", label: "水こぼし・結露から床を守る" },
+          { href: "/know/flooring-cleaning/", label: "フローリングの掃除方法" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
           { href: "/maker/toli/", label: "東リの床材のお手入れ" },
         ]}

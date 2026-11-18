@@ -17,7 +17,7 @@
   <!-- Ranking -->
   <url>
     <loc>https://yuka-maintenance.com/ranking/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -161,6 +161,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://yuka-maintenance.com/company/morinoshizuku/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Floors -->
   <url>
@@ -203,7 +209,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/service/floor-coating/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -588,7 +594,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/know/coating-types/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -882,7 +888,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/know/steam-mop-floor/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -894,7 +900,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/know/robot-cleaner-floor/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -936,7 +942,7 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/trouble/floor-stain-removal/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -948,6 +954,30 @@
   </url>
   <url>
     <loc>https://yuka-maintenance.com/trouble/floor-squeak/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yuka-maintenance.com/know/flooring-cleaning/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yuka-maintenance.com/know/coating-diy/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yuka-maintenance.com/know/new-home-coating/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yuka-maintenance.com/know/pet-coating/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
