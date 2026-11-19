@@ -358,6 +358,7 @@ export default function FloorSymptomsPage() {
               { href: "/know/floor-sunlight-fade/", label: "床の日焼け・色あせ" },
               { href: "/trouble/floor-scratch-repair/", label: "フローリングの傷・へこみの補修" },
               { href: "/trouble/floor-squeak/", label: "フローリングの床鳴り" },
+              { href: "/trouble/floor-insect-holes/", label: "フローリングの小さな穴と木の粉（虫食い）" },
             ].map((l) => (
               <Link
                 key={l.href}

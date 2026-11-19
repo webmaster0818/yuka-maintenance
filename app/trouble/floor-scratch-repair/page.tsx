@@ -112,6 +112,7 @@ export default function FloorScratchRepairPage() {
           { href: "/maker/woodtec/", label: "朝日ウッドテックの床のお手入れ" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
           { href: "/maker/panasonic/", label: "パナソニックのフローリングのお手入れ" },
+          { href: "/trouble/floor-insect-holes/", label: "フローリングの小さな穴と木の粉（虫食い）" },
         ]}
         sources={[
           { label: "朝日ウッドテック「フローリング・床 傷や凹みの補修方法とアイテム」", href: "https://www.woodtec.co.jp/maintenance/index03/", checked: CHECKED },

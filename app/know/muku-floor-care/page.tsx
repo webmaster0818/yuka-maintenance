@@ -104,6 +104,7 @@ export default function MukuFloorCarePage() {
         { href: "/know/skip-wax/", label: "ワックスをかけない場合" },
         { href: "/know/wax-types/", label: "ワックスの種類と選び方" },
         { href: "/service/scratch-repair/", label: "傷補修" },
+        { href: "/trouble/floor-insect-holes/", label: "フローリングの小さな穴と木の粉（虫食い）" },
       ]}
       sources={[
         { label: "朝日ウッドテック公式サイト「天然木フロアの特性による現象」", href: "https://www.woodtec.co.jp/maintenance/index07/", checked: "2026年10月17日" },
