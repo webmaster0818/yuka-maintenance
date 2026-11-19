@@ -282,6 +282,8 @@ export default function CoatingTypesPage() {
               { href: "/know/new-home-coating/", label: "新築のフロアコーティング" },
               { href: "/know/pet-coating/", label: "ペット向けコーティングの保証" },
               { href: "/know/coating-diy/", label: "フロアコーティングのDIY" },
+              { href: "/know/coating-demerit/", label: "フロアコーティングのデメリット" },
+              { href: "/know/sheet-flooring-coating/", label: "シートフローリングのコーティング" },
             ].map((l) => (
               <Link
                 key={l.href}

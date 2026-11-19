@@ -23,6 +23,8 @@ const relatedKnow: Record<string, { href: string; label: string }[]> = {
     { href: "/know/new-home-coating/", label: "新築のフロアコーティング" },
     { href: "/know/pet-coating/", label: "ペット向けコーティングの保証" },
     { href: "/know/coating-diy/", label: "フロアコーティングのDIY" },
+    { href: "/know/coating-demerit/", label: "フロアコーティングのデメリット" },
+    { href: "/know/sheet-flooring-coating/", label: "シートフローリングのコーティング" },
   ],
   "regular-maintenance": [
     { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
