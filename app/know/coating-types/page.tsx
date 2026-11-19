@@ -284,6 +284,10 @@ export default function CoatingTypesPage() {
               { href: "/know/coating-diy/", label: "フロアコーティングのDIY" },
               { href: "/know/coating-demerit/", label: "フロアコーティングのデメリット" },
               { href: "/know/sheet-flooring-coating/", label: "シートフローリングのコーティング" },
+              { href: "/know/coating-merit/", label: "フロアコーティングのメリット" },
+              { href: "/know/matte-coating/", label: "つや消しのフロアコーティング" },
+              { href: "/know/floor-heating-coating/", label: "床暖房の床のフロアコーティング" },
+              { href: "/know/coating-showroom/", label: "フロアコーティングのショールーム" },
             ].map((l) => (
               <Link
                 key={l.href}
