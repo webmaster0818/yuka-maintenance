@@ -288,6 +288,8 @@ export default function CoatingTypesPage() {
               { href: "/know/matte-coating/", label: "つや消しのフロアコーティング" },
               { href: "/know/floor-heating-coating/", label: "床暖房の床のフロアコーティング" },
               { href: "/know/coating-showroom/", label: "フロアコーティングのショールーム" },
+              { href: "/know/urethane-coating/", label: "床のウレタンコーティング" },
+              { href: "/know/rental-coating/", label: "賃貸のフロアコーティング" },
             ].map((l) => (
               <Link
                 key={l.href}

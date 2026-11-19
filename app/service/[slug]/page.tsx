@@ -29,6 +29,8 @@ const relatedKnow: Record<string, { href: string; label: string }[]> = {
     { href: "/know/matte-coating/", label: "つや消しのフロアコーティング" },
     { href: "/know/floor-heating-coating/", label: "床暖房の床のフロアコーティング" },
     { href: "/know/coating-showroom/", label: "フロアコーティングのショールーム" },
+    { href: "/know/urethane-coating/", label: "床のウレタンコーティング" },
+    { href: "/know/rental-coating/", label: "賃貸のフロアコーティング" },
   ],
   "regular-maintenance": [
     { href: "/know/store-office-floor/", label: "店舗・事務所の床清掃" },
