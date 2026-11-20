@@ -124,6 +124,7 @@ export default function DaikenMakerPage() {
           { href: "/know/tatami-care/", label: "和紙畳・樹脂畳のお手入れ" },
           { href: "/know/no-wax-floor/", label: "ワックス不要の床の見分け方" },
           { href: "/service/floor-coating/", label: "フロアコーティング" },
+          { href: "/trouble/soundproof-floor-soft/", label: "防音フローリングが沈む感じ" },
         ]}
         sources={[
           { label: "DAIKEN よくあるご質問「床材のお手入れ方法一覧」", href: "https://faq.daiken.jp/faq/show/3189?site_domain=user", checked: "2026年11月1日" },

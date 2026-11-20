@@ -199,6 +199,7 @@ export default function EidaiMakerPage() {
           { href: "/maker/panasonic/", label: "パナソニックの床" },
           { href: "/know/skip-wax/", label: "ワックスをかけない場合" },
           { href: "/know/recoat-timing/", label: "塗り替え時期の目安" },
+          { href: "/trouble/soundproof-floor-soft/", label: "防音フローリングが沈む感じ" },
         ]}
         sources={[
           { label: "永大産業（EIDAI）「フローリングワックス対応一覧」", href: "https://www.eidai.com/product/flooring/index3.html", checked: "2026年11月1日" },
