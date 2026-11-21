@@ -104,6 +104,7 @@ export default function FloorSunlightFadePage() {
           { href: "/know/muku-floor-care/", label: "無垢フローリングの手入れ" },
           { href: "/maker/panasonic/", label: "パナソニックのフローリングのお手入れ" },
           { href: "/maker/woodone/", label: "ウッドワンの床材のお手入れ" },
+          { href: "/trouble/floor-color-variation/", label: "フローリングの色・柄のバラツキ（板ごとの色違い・節）" },
         ]}
         sources={[
           { label: "パナソニック「床への気配り」（木質床材・フローリングのお手入れ）", href: "https://sumai.panasonic.jp/support/care/floor/02/", checked: CHECKED },
