@@ -273,6 +273,7 @@ export default function AfterWorkTroublePage() {
               { href: "/service/stripping-wash/", label: "剥離洗浄" },
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
               { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
+              { href: "/trouble/floor-odor/", label: "新しいフローリングの臭い・目がしみる" },
             ].map((l) => (
               <Link
                 key={l.href}

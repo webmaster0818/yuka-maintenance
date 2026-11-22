@@ -361,6 +361,7 @@ export default function FloorSymptomsPage() {
               { href: "/trouble/floor-insect-holes/", label: "フローリングの小さな穴と木の粉（虫食い）" },
               { href: "/trouble/soundproof-floor-soft/", label: "防音フローリングが沈む感じ" },
               { href: "/trouble/floor-color-variation/", label: "フローリングの色・柄のバラツキ（板ごとの色違い・節）" },
+              { href: "/trouble/floor-odor/", label: "新しいフローリングの臭い・目がしみる" },
             ].map((l) => (
               <Link
                 key={l.href}
