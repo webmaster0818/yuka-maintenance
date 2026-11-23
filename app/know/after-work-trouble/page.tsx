@@ -274,6 +274,7 @@ export default function AfterWorkTroublePage() {
               { href: "/cost/diy-vs-pro/", label: "DIYと業者依頼の比較" },
               { href: "/know/coating-warranty/", label: "コーティングの保証と点検" },
               { href: "/trouble/floor-odor/", label: "新しいフローリングの臭い・目がしみる" },
+              { href: "/trouble/floor-gloss-loss/", label: "フローリングのツヤがなくなった・素足の跡でくもる" },
             ].map((l) => (
               <Link
                 key={l.href}

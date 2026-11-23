@@ -362,6 +362,7 @@ export default function FloorSymptomsPage() {
               { href: "/trouble/soundproof-floor-soft/", label: "防音フローリングが沈む感じ" },
               { href: "/trouble/floor-color-variation/", label: "フローリングの色・柄のバラツキ（板ごとの色違い・節）" },
               { href: "/trouble/floor-odor/", label: "新しいフローリングの臭い・目がしみる" },
+              { href: "/trouble/floor-gloss-loss/", label: "フローリングのツヤがなくなった・素足の跡でくもる" },
             ].map((l) => (
               <Link
                 key={l.href}
