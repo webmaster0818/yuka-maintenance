@@ -78,6 +78,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yuka-maintenance.com/company/emeao/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yuka-maintenance.com/company/sumai-hotline/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -304,6 +310,7 @@
   <url><loc>https://yuka-maintenance.com/review/kurashino-market/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yuka-maintenance.com/review/meetsmore/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yuka-maintenance.com/review/flexpartner/</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yuka-maintenance.com/review/emeao/</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://yuka-maintenance.com/review/sumai-hotline/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Area -->
