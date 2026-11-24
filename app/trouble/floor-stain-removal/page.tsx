@@ -108,6 +108,7 @@ export default function FloorStainRemovalPage() {
           { href: "/know/pet-floor-care/", label: "ペットと暮らす床の手入れ" },
           { href: "/know/floor-water-damage/", label: "水こぼし・結露から床を守る" },
           { href: "/know/flooring-cleaning/", label: "フローリングの掃除方法" },
+          { href: "/trouble/floor-vomit-disinfection/", label: "フローリングに吐いたときの拭き取りと消毒" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
           { href: "/maker/toli/", label: "東リの床材のお手入れ" },
         ]}
