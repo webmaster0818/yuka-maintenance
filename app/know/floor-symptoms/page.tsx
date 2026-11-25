@@ -364,6 +364,7 @@ export default function FloorSymptomsPage() {
               { href: "/trouble/floor-odor/", label: "新しいフローリングの臭い・目がしみる" },
               { href: "/trouble/floor-gloss-loss/", label: "フローリングのツヤがなくなった・素足の跡でくもる" },
               { href: "/trouble/floor-vomit-disinfection/", label: "フローリングに吐いたときの拭き取りと消毒" },
+              { href: "/trouble/floor-surface-peeling/", label: "フローリングの表面がはがれる・めくれる" },
             ].map((l) => (
               <Link
                 key={l.href}

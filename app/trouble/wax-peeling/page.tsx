@@ -118,6 +118,7 @@ export default function WaxPeelingPage() {
           { href: "/trouble/wax-sticky/", label: "ワックスがベタつく" },
           { href: "/trouble/wax-darkening/", label: "ワックスが黒ずむ・ムラになる" },
           { href: "/trouble/wax-slippery/", label: "ワックスを塗って滑る" },
+          { href: "/trouble/floor-surface-peeling/", label: "フローリングの表面（床材）がはがれる" },
           { href: "/product/rinrei-wax-hagashi-jouzu/", label: "ワックスはがし上手" },
           { href: "/know/stripping-decision/", label: "剥離の判断" },
           { href: "/know/wax-types/", label: "ワックスの種類と選び方" },
