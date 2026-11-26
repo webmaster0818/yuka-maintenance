@@ -104,6 +104,7 @@ export default function FloorWaterDamagePage() {
           { href: "/know/steam-mop-floor/", label: "床にスチームモップは使えるか" },
           { href: "/know/heater-hot-carpet-floor/", label: "暖房器具・ホットカーペットと床" },
           { href: "/trouble/floor-stain-removal/", label: "床のシミ・汚れの落とし方" },
+          { href: "/trouble/floor-mold/", label: "フローリング・床のカビ" },
           { href: "/maker/noda/", label: "ノダの床材のお手入れ" },
         ]}
         sources={[

@@ -365,6 +365,7 @@ export default function FloorSymptomsPage() {
               { href: "/trouble/floor-gloss-loss/", label: "フローリングのツヤがなくなった・素足の跡でくもる" },
               { href: "/trouble/floor-vomit-disinfection/", label: "フローリングに吐いたときの拭き取りと消毒" },
               { href: "/trouble/floor-surface-peeling/", label: "フローリングの表面がはがれる・めくれる" },
+              { href: "/trouble/floor-mold/", label: "フローリング・床にカビが生えた" },
             ].map((l) => (
               <Link
                 key={l.href}
