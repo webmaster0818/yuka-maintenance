@@ -366,6 +366,7 @@ export default function FloorSymptomsPage() {
               { href: "/trouble/floor-vomit-disinfection/", label: "フローリングに吐いたときの拭き取りと消毒" },
               { href: "/trouble/floor-surface-peeling/", label: "フローリングの表面がはがれる・めくれる" },
               { href: "/trouble/floor-mold/", label: "フローリング・床にカビが生えた" },
+              { href: "/trouble/mat-rubber-discoloration/", label: "マットやゴムの跡で床が変色した（ゴム汚染）" },
             ].map((l) => (
               <Link
                 key={l.href}

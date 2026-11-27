@@ -111,6 +111,7 @@ export default function FloorStainRemovalPage() {
           { href: "/trouble/floor-vomit-disinfection/", label: "フローリングに吐いたときの拭き取りと消毒" },
           { href: "/maker/daiken/", label: "DAIKENの床のお手入れ" },
           { href: "/maker/toli/", label: "東リの床材のお手入れ" },
+          { href: "/trouble/mat-rubber-discoloration/", label: "マットやゴムの跡で床が変色した" },
         ]}
         sources={[
           { label: "永大産業（EIDAI）「木質フローリング快適生活マニュアル」（PDF）", href: "https://www.eidai.com/contact/oteire/pdf/K1892609.pdf", checked: CHECKED },
