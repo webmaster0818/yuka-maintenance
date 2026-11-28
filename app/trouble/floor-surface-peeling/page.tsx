@@ -144,6 +144,7 @@ export default function FloorSurfacePeelingPage() {
           { href: "/know/floor-symptoms/", label: "床の症状の切り分け方" },
           { href: "/trouble/wax-peeling/", label: "床のワックスがはがれる" },
           { href: "/trouble/floor-scratch-repair/", label: "フローリングの傷・へこみの補修" },
+          { href: "/trouble/floor-tape-damage/", label: "床に貼ったテープで表面が傷んだ" },
           { href: "/know/floor-water-damage/", label: "水こぼし・結露から床を守る" },
           { href: "/know/pet-floor-care/", label: "ペットと暮らす床のお手入れ" },
           { href: "/know/robot-cleaner-floor/", label: "ロボット掃除機と床" },

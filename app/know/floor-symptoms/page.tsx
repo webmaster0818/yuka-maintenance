@@ -367,6 +367,7 @@ export default function FloorSymptomsPage() {
               { href: "/trouble/floor-surface-peeling/", label: "フローリングの表面がはがれる・めくれる" },
               { href: "/trouble/floor-mold/", label: "フローリング・床にカビが生えた" },
               { href: "/trouble/mat-rubber-discoloration/", label: "マットやゴムの跡で床が変色した（ゴム汚染）" },
+              { href: "/trouble/floor-tape-damage/", label: "床に貼ったテープをはがしたら表面が傷んだ・跡が残った" },
             ].map((l) => (
               <Link
                 key={l.href}
